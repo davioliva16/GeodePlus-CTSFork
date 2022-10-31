@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "O": {
+      "item": "minecraft:oak_wood"
+    },
+    "W": {
+      "item": "geode:wrappist_shard"
+    }
+  },
+  "pattern": [
+    "W W",
+    "O#O"
+  ],
+  "result": {
+    "item": "geode:wrappist_pedestal"
+  }
+}

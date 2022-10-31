@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/goat_horn",
+  "textures": {
+    "layer0": "geode:item/wrappist_goat_horn"
+  }
+}
