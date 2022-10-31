@@ -4,6 +4,7 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.forge.registry.GeodeModBiomeModifiersRegistry;
+import net.yeoxuhang.geodeplus.forge.registry.GeodeModLootModifiersRegistry;
 import net.yeoxuhang.geodeplus.platform.forge.ClientHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -33,6 +34,7 @@ public class GeodePlusForge {
         RegistryHelperImpl.PLACED_FEATURES.register(eventBus);
 
         GeodeModBiomeModifiersRegistry.register(eventBus);
+        GeodeModLootModifiersRegistry.register(eventBus);
     }
 
     @Mod.EventBusSubscriber(modid = GeodePlus.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
