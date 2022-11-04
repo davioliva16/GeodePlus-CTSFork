@@ -5,6 +5,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.forge.registry.GeodeModBiomeModifiersRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodeModLootModifiersRegistry;
+import net.yeoxuhang.geodeplus.platform.forge.BlockEntityTypeHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.ClientHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -28,8 +29,6 @@ public class GeodePlusForge {
         RegistryHelperImpl.ITEMS.register(eventBus);
         RegistryHelperImpl.BLOCKS.register(eventBus);
         RegistryHelperImpl.BLOCK_ENTITIES.register(eventBus);
-//        RegistryHelperImpl.LOOT_MODIFIERS
-
         RegistryHelperImpl.FEATURES.register(eventBus);
         RegistryHelperImpl.PLACED_FEATURES.register(eventBus);
 

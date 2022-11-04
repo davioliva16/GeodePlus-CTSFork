@@ -4,7 +4,6 @@ import com.kyanite.paragon.api.ConfigOption;
 import com.kyanite.paragon.api.annotation.ModConfig;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class GeodeModCommonConfigs implements ModConfig {

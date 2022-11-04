@@ -9,7 +9,7 @@ modLoader = "javafml" #mandatory
 loaderVersion = "[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license = "MIT"
+license = "All Rights Reserved"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL = "https://github.com/YeoXuHang/Geode-Plus/issues"
 # A list of mods - how many allowed here is determined by the individual mod loader
@@ -21,7 +21,7 @@ modId = "geode" #mandatory
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version = "${version}" #mandatory
 # A display name for the mod
-displayName = "Geode Plus" #mandatory
+displayName = "Geode+" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -42,10 +42,10 @@ authors = "yeoxuhang, mineblock11, SquizzleDizzle" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-A mod that add geodes to Minecraft Overworld, Nether and even The End! 
+A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The End!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.geode-plus]] #optional
+[[dependencies.geode]] #optional
 # the modid of the dependency
 modId = "forge" #mandatory
 # Does this dependency have to exist - if not, ordering below must be specified
@@ -57,7 +57,7 @@ ordering = "NONE"
 # Side this dependency is applied on - BOTH, CLIENT or SERVER
 side = "BOTH"
 # Here's another dependency
-[[dependencies.geode-plus]]
+[[dependencies.geode]]
 modId = "minecraft"
 mandatory = true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
