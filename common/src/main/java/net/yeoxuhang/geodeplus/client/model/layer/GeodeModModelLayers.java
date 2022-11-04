@@ -15,6 +15,5 @@ public class GeodeModModelLayers {
     private static ModelLayerLocation register(String model, String layer, Supplier<LayerDefinition> createBodyLayer) {
         return ClientHelper.registerModelLayer(new ModelLayerLocation(new ResourceLocation(GeodePlus.MOD_ID, model), layer), createBodyLayer);
     }
-
     public static void initialize() {};
 }

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "geode",
   "version": "${version}",
-  "name": "Geode Plus",
-  "description": "A mod that add geodes to Minecraft Overworld, Nether and even The End!",
+  "name": "Geode+",
+  "description": "A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The End! ",
   "authors": [
     "yeoxuhang",
     "mineblock11",
@@ -25,8 +25,7 @@
     ]
   },
   "mixins": [
-    "geode-plus.mixins.json",
-    "geode-plus-common.mixins.json"
+    "geode-plus.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.10",

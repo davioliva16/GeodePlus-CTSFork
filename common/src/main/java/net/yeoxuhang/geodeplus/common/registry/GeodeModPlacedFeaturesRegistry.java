@@ -35,21 +35,21 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> DIAMOND_GEODE = RegistryHelper.registerPlacedFeature("diamond_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DIAMOND_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementRareModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> DEEPSLATE_LAPIS_GEODE = RegistryHelper.registerPlacedFeature("deepslate_lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> DEEPSLATE_LAPIS_GEODE = RegistryHelper.registerPlacedFeature("deepslate_lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementDeepOreModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> DEEPSLATE_REDSTONE_GEODE = RegistryHelper.registerPlacedFeature("deepslate_redstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_REDSTONE_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> DEEPSLATE_REDSTONE_GEODE = RegistryHelper.registerPlacedFeature("deepslate_redstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_REDSTONE_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementDeepOreModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> DEEPSLATE_EMERALD_GEODE = RegistryHelper.registerPlacedFeature("deepslate_emerald_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_EMERALD_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementRareModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> DEEPSLATE_EMERALD_GEODE = RegistryHelper.registerPlacedFeature("deepslate_emerald_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_EMERALD_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementDeepOreModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> DEEPSLATE_DIAMOND_GEODE = RegistryHelper.registerPlacedFeature("deepslate_diamond_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_DIAMOND_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementRareModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> DEEPSLATE_DIAMOND_GEODE = RegistryHelper.registerPlacedFeature("deepslate_diamond_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.DEEPSLATE_DIAMOND_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementDeepOreModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> SCULK_LAPIS_GEODE = RegistryHelper.registerPlacedFeature("sculk_lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> SCULK_LAPIS_GEODE = RegistryHelper.registerPlacedFeature("sculk_lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> SCULK_REDSTONE_GEODE = RegistryHelper.registerPlacedFeature("sculk_redstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_REDSTONE_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> SCULK_REDSTONE_GEODE = RegistryHelper.registerPlacedFeature("sculk_redstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_REDSTONE_GEODE, List.of(rarityOreGeode(), inSquarePlacement(),  placementDeepDarkModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> SCULK_EMERALD_GEODE = RegistryHelper.registerPlacedFeature("sculk_emerald_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_EMERALD_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementRareModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> SCULK_EMERALD_GEODE = RegistryHelper.registerPlacedFeature("sculk_emerald_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_EMERALD_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(),  placementDeepDarkModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> SCULK_DIAMOND_GEODE = RegistryHelper.registerPlacedFeature("sculk_diamond_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_DIAMOND_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(), placementRareModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> SCULK_DIAMOND_GEODE = RegistryHelper.registerPlacedFeature("sculk_diamond_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.SCULK_DIAMOND_GEODE, List.of(rarityRareOreGeode(), inSquarePlacement(),  placementDeepDarkModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> QUARTZ_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("quartz_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.CRYSTAL_SPIKE, List.of(inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
 
@@ -87,11 +87,11 @@ public class GeodeModPlacedFeaturesRegistry {
     }
 
     private static RarityFilter rarityOreGeode() {
-        return RarityFilter.onAverageOnceEvery(24);
+        return RarityFilter.onAverageOnceEvery(16);
     }
 
     private static RarityFilter rarityRareOreGeode() {
-        return RarityFilter.onAverageOnceEvery(32);
+        return RarityFilter.onAverageOnceEvery(8);
     }
 
     private static InSquarePlacement inSquarePlacement() {
@@ -114,7 +114,11 @@ public class GeodeModPlacedFeaturesRegistry {
     }
 
     private static PlacementModifier placementOreModifier() {
-        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(136));
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
+    }
+
+    private static PlacementModifier placementDeepOreModifier() {
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
     }
 
     private static PlacementModifier placementRareModifier() {

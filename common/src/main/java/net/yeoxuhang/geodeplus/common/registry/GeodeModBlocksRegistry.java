@@ -237,10 +237,10 @@ public class GeodeModBlocksRegistry {
     public static final Supplier<Block> SMALL_ECHO_BUD = registerBlock("small_echo_bud",
             () -> new EchoCrystalBlock(3, 4, BlockBehaviour.Properties.copy(ECHO_CRYSTAL.get()).sound(SoundType.SCULK_CATALYST)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-    public static final Supplier<Block> WRAPPIST_PEDESTAL = registerBlock("wrappist_pedestal",
+    public static final Supplier<Block> WRAPPIST_PEDESTAL = registerBlockWithoutBlockItem("wrappist_pedestal",
             () -> new WrappistPedestalBlock(BlockBehaviour.Properties.copy(WRAPPIST_BLOCK.get()).noOcclusion().lightLevel((p_60929_) -> {
                 return 8;
-            })), CreativeModeTab.TAB_BUILDING_BLOCKS);
+            })));
 
     private static <T extends Block> Supplier<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return RegistryHelper.registerBlock(name, block);

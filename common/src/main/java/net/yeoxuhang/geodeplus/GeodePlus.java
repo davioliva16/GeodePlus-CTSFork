@@ -1,9 +1,8 @@
 package net.yeoxuhang.geodeplus;
 
 import com.kyanite.paragon.api.ConfigRegistry;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers;
 import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.*;
 import net.yeoxuhang.geodeplus.platform.ClientHelper;
@@ -17,13 +16,12 @@ public class GeodePlus {
         GeodeModBlocksRegistry.initialize();
         GeodeModBlockEntitiesRegistry.initialize();
 
+        GeodeModModelLayers.initialize();
 //        GeodeModLootModifiersRegistry.initialize();
 
         GeodeModFeaturesRegistry.initialize();
         GeodeModPlacedFeaturesRegistry.initialize();
-//        GeodeModBiomeModifiersRegistry.initialize();
-        
-        ConfigRegistry.register("geode", new GeodeModCommonConfigs());
+        ConfigRegistry.register(GeodePlus.MOD_ID , new GeodeModCommonConfigs());
     }
 
     public static void initClient() {
