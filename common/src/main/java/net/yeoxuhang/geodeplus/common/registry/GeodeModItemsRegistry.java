@@ -9,10 +9,10 @@ import java.util.function.Supplier;
 
 public class GeodeModItemsRegistry {
     public static final Supplier<Item> WRAPPIST_SHARD = RegistryHelper.registerItem("wrappist_shard",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(GeodeModCreativeModeTabsRegistry.TAB)));
 
     public static final Supplier<Item> WRAPPIST_GOAT_HORN = RegistryHelper.registerItem("wrappist_goat_horn",
-            () -> new WrappistGoatHornItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
+            () -> new WrappistGoatHornItem(new Item.Properties().tab(GeodeModCreativeModeTabsRegistry.TAB).stacksTo(1)));
 
     public static void initialize() {};
 }

@@ -70,7 +70,6 @@ public class GeodePlus {
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(), RenderType.cutout());
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get(), RenderType.cutout());
 
-
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get(), RenderType.cutout());
     }
 }

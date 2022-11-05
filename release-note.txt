@@ -1,0 +1,115 @@
+Fisrt Release of Geode+
+
+Changelog for 1.0.0
+---------------------------------------------------------
+Add
+∎Config File
+---------------------------------------------------------
+Added Blocks
+∎Budding Diamond
+∎Budding Deepslate Diamond
+∎Budding Sculk Diamond
+∎Diamond Crystal
+∎Large Diamond Bud
+∎Medium Diamond Bud
+∎Small Diamond Bud
+
+∎Budding Emerald
+∎Budding Deepslate Emerald
+∎Budding Sculk Emerald
+∎Emerald Cluster
+∎Large Emerald Bud
+∎Medium Emerald Bud
+∎Small Emerald Bud
+
+∎Budding Lapis
+∎Budding Deepslate Lapis
+∎Budding Sculk Lapis
+∎Lapis Cluster
+∎Large Lapis Bud
+∎Medium Lapis Bud
+∎Small Lapis Bud
+
+∎Budding Redstone
+∎Budding Deepslate Redstone
+∎Budding Sculk Redstone
+∎Redstone Crystal
+∎Large Redstone Bud
+∎Medium Redstone Bud
+∎Small Redstone Bud
+
+∎Budding Echo
+∎Echo Crystal
+∎Large Echo Bud
+∎Medium Echo Bud
+∎Small Echo Bud
+
+∎Budding Nether Quartz
+∎Budding Basalt Quartz
+∎Budding Blackstone Quartz
+∎Quartz Crystal Block
+∎Quartz Crystal
+∎Large Quartz Bud
+∎Medium Quartz Bud
+∎Small Quartz Bud
+
+
+∎Budding Gold Nugget
+∎Nether Gold Nugget Cluster
+∎Large Nether Gold Nugget Bud
+∎Medium Nether Gold Nugget Bud
+∎Small Nether Gold Nugget Bud
+
+∎Budding Glowstone
+∎Budding Basalt Glowstone
+∎Budding Glowstone Glowstone
+∎Glowstone Cluster
+∎Large Glowstone Bud
+∎Medium Glowstone Bud
+∎Small Glowstone Bud
+
+∎Budding Wrappist
+∎Wrappist Pedestal
+∎Wrappist Block
+∎Wrappist Cluster
+∎Large Wrappist Bud
+∎Medium Wrappist Bud
+∎Small Wrappist Bud
+
+∎Galcite
+∎Smooth Endstone
+---------------------------------------------------------
+Added Item
+∎Wrappist Shard
+∎Wrappist Goat Horn
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Diamond Geode
+∎Deepslate Diamond Geode
+∎Sculk Diamond Geode
+∎Emerald Geode
+∎Deepslate Emerald Geode
+∎Sculk Emerald Geode
+∎Lapis Geode
+∎Deepslate Lapis Geode
+∎Sculk Lapis Geode
+∎Redstone Geode
+∎Deepslate Redstone Geode
+∎Sculk Redstone Geode
+∎Echo Geode
+∎Quartz Geode
+∎Basalt Quartz Geode
+∎Blackstone Quartz Geode
+∎Gold Nugget Geode
+∎Glowstone Geode
+∎Basalt Glowstone Geode
+∎Blackstone Glowstone Geode
+∎Wrappist Geode
+
+-Large Crystal
+∎Large Echo Crystal
+∎Large Quartz Crystal
+∎Large Glowstone Crystal
+∎Large Wrappist Crystal
+---------------------------------------------------------

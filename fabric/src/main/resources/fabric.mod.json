@@ -14,7 +14,6 @@
     "issues": "https://github.com/YeoXuHang/Geode-Plus/issues"
   },
   "license": "MIT",
-  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

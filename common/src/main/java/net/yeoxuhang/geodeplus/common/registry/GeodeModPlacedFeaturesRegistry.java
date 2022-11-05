@@ -87,11 +87,11 @@ public class GeodeModPlacedFeaturesRegistry {
     }
 
     private static RarityFilter rarityOreGeode() {
-        return RarityFilter.onAverageOnceEvery(16);
+        return RarityFilter.onAverageOnceEvery(32);
     }
 
     private static RarityFilter rarityRareOreGeode() {
-        return RarityFilter.onAverageOnceEvery(8);
+        return RarityFilter.onAverageOnceEvery(64);
     }
 
     private static InSquarePlacement inSquarePlacement() {
@@ -114,11 +114,11 @@ public class GeodeModPlacedFeaturesRegistry {
     }
 
     private static PlacementModifier placementOreModifier() {
-        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(64), VerticalAnchor.absolute(30));
     }
 
     private static PlacementModifier placementDeepOreModifier() {
-        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(0));
     }
 
     private static PlacementModifier placementRareModifier() {

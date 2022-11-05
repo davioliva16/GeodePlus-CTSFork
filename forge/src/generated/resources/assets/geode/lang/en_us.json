@@ -62,5 +62,6 @@
   "block.geode.wrappist_cluster": "Wrappist Cluster",
   "block.geode.wrappist_pedestal": "Wrappist Pedestal",
   "item.geode.wrappist_goat_horn": "Wrappist Goat Horn",
-  "item.geode.wrappist_shard": "Wrappist Shard"
+  "item.geode.wrappist_shard": "Wrappist Shard",
+  "itemGroup.geode": "Geode+"
 }

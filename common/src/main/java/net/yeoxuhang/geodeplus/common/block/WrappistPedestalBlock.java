@@ -18,6 +18,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class WrappistPedestalBlock extends BaseEntityBlock {
@@ -44,10 +45,9 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
         return this.mayPlaceOn(groundState, levelReader, blockpos);
     }
 
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
+    public InteractionResult use(@NotNull BlockState state, Level worldIn, @NotNull BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
         ItemStack heldItem = player.getItemInHand(handIn);
-        if (worldIn.getBlockEntity(pos) instanceof WrappistPedestalBlockEntity && (!player.isShiftKeyDown()  && heldItem.getItem() != this.asItem())) {
-            WrappistPedestalBlockEntity wrappistPedestalBlock = (WrappistPedestalBlockEntity) worldIn.getBlockEntity(pos);
+        if (worldIn.getBlockEntity(pos) instanceof WrappistPedestalBlockEntity wrappistPedestalBlock && (!player.isShiftKeyDown()  && heldItem.getItem() != this.asItem())) {
             ItemStack stack = heldItem.copy();
             stack.setCount(1);
             if(wrappistPedestalBlock.getItem(0).isEmpty()){
