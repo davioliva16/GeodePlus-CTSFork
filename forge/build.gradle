@@ -6,20 +6,6 @@ architectury {
     forge()
 }
 
-loom {
-    forge{
-        dataGen {
-            mod "geode"
-        }
-    }
-
-    launches {
-        data {
-            arg "--existing", project(":common").file("src/main/resources").absolutePath
-        }
-    }
-}
-
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
@@ -34,8 +20,24 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    modImplementation('maven.modrinth:paragon:forge-1.0.0b-1.19.2')
+    include modImplementation('maven.modrinth:paragon:forge-1.0.0b-1.19.2')
 }
+
+
+loom {
+    forge {
+        dataGen {
+            mod "geode"
+        }
+    }
+
+    launches {
+        data {
+            arg "--existing", project(":common").file("src/main/resources").absolutePath
+        }
+    }
+}
+
 
 processResources {
     inputs.property "version", project.version
