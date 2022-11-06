@@ -8,17 +8,18 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
 
 public class GeodeCrystalSpikeConfig implements FeatureConfiguration {
-    public static final Codec<GeodeCrystalSpikeConfig> CODEC = RecordCodecBuilder.create((codec) -> {
-        return codec.group(BlockState.CODEC.fieldOf("crystal_state").forGetter((config) -> {
+    public static final Codec<GeodeCrystalSpikeConfig> CODEC = RecordCodecBuilder.create(codec -> {
+        return codec.group(BlockState.CODEC.fieldOf("crystal_state").forGetter(config -> {
             return config.crystal_state;
-        }), BlockState.CODEC.fieldOf("cluster_state").forGetter((config) -> {
+        }), BlockState.CODEC.fieldOf("cluster_state").forGetter(config -> {
             return config.cluster_state;
-        }), IntProvider.CODEC.fieldOf("xz_radius").forGetter((config) -> {
+        }), IntProvider.CODEC.fieldOf("xz_radius").forGetter(config -> {
             return config.xzRadius;
-        }), CaveSurface.CODEC.fieldOf("crystal_direction").forGetter((config) -> {
+        }), CaveSurface.CODEC.fieldOf("crystal_direction").forGetter(config -> {
             return config.crystal_direction;
         })).apply(codec, GeodeCrystalSpikeConfig::new);
     });
+
     public final BlockState crystal_state;
     public final BlockState cluster_state;
     public final IntProvider xzRadius;
