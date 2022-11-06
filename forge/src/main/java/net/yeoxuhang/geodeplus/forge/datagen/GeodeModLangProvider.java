@@ -27,6 +27,7 @@ public class GeodeModLangProvider extends LanguageProvider {
         RegistryHelperImpl.BLOCKS.getEntries().forEach(this::addBlock);
         RegistryHelperImpl.ITEMS.getEntries().stream().filter(item -> !(item.get() instanceof BlockItem)).forEach(this::addItem);
         add("itemGroup.geode", "Geode+");
+        add("itemGroup.geode.geode", "Geode+");
     }
 
     @Override

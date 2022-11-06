@@ -60,6 +60,11 @@ public class GeodePlus {
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get(), RenderType.cutout());
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get(), RenderType.cutout());
 
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(), RenderType.cutout());
+
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(), RenderType.cutout());
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get(), RenderType.cutout());
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get(), RenderType.cutout());

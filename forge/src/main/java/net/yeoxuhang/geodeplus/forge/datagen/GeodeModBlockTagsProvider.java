@@ -77,7 +77,13 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 GeodeModBlocksRegistry.LARGE_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.SMALL_ECHO_BUD.get(),
-                GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get());
+                GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get(),
+                GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get(),
+                GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
+                GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(),
+                GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(),
+                GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()
+        );
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 GeodeModBlocksRegistry.LAPIS_CLUSTER.get(),
                 GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get(),
@@ -129,19 +135,25 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get(),
                 GeodeModBlocksRegistry.SMOOTH_END_STONE.get(),
                 GeodeModBlocksRegistry.GALCITE.get(),
-                GeodeModBlocksRegistry.WRAPPIST_BLOCK.get(),
-                GeodeModBlocksRegistry.BUDDING_WRAPPIST.get(),
-                GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get(),
-                GeodeModBlocksRegistry.LARGE_WRAPPIST_BUD.get(),
-                GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(),
-                GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get(),
                 GeodeModBlocksRegistry.BUDDING_ECHO.get(),
                 GeodeModBlocksRegistry.ECHO_CRYSTAL.get(),
                 GeodeModBlocksRegistry.LARGE_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.SMALL_ECHO_BUD.get(),
-                GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get(),
                 GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get()
+        );
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                GeodeModBlocksRegistry.WRAPPIST_BLOCK.get(),
+                GeodeModBlocksRegistry.BUDDING_WRAPPIST.get(),
+                GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get(),
+                GeodeModBlocksRegistry.LARGE_WRAPPIST_BUD.get(),
+                GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(),
+                GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get(),
+                GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get(),
+                GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
+                GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(),
+                GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(),
+                GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()
         );
         this.tag(GeodeModTagsRegistry.Blocks.CAN_LARGE_ECHO_CRYSTAL_PLACE).add(Blocks.SCULK,
                 Blocks.STONE,

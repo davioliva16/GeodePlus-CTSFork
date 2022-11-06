@@ -52,6 +52,11 @@ public class GeodeModItemModelProvider extends ItemModelProvider {
         simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD);
         simpleSingleBlockItem(GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD);
 
+        simpleSingleBlockItem(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD);
+
         simpleSingleBlockItem(GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER);
         simpleSingleBlockItem(GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD);
         simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD);
@@ -71,8 +76,8 @@ public class GeodeModItemModelProvider extends ItemModelProvider {
         simpleSingleBlockItem(GeodeModBlocksRegistry.SMALL_QUARTZ_BUD);
         simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD);
         simpleSingleBlockItem(GeodeModBlocksRegistry.LARGE_QUARTZ_BUD);
-    }
 
+    }
     private ItemModelBuilder simpleItem(Supplier<Item> item) {
         return withExistingParent(((RegistryObject<Item>) item).getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",

@@ -26,6 +26,7 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
         simpleBlock(GeodeModBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get());
         simpleBlock(GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get());
+        simpleBlock(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_LAPIS.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_REDSTONE.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_EMERALD.get());
@@ -83,6 +84,15 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
                 blockTexture(GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get())));
         directionalBlock(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get(), models().cross(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get().getLootTable().getPath(),
                 blockTexture(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get())));
+
+        directionalBlock(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(), models().cross(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get())));
+        directionalBlock(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get())));
+        directionalBlock(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get())));
+        directionalBlock(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get())));
 
         directionalBlock(GeodeModBlocksRegistry.LAPIS_CLUSTER.get(), models().cross(GeodeModBlocksRegistry.LAPIS_CLUSTER.get().getLootTable().getPath(),
                 blockTexture(GeodeModBlocksRegistry.LAPIS_CLUSTER.get())));

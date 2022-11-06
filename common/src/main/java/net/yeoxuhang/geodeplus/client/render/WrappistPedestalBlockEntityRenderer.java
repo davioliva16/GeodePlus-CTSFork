@@ -17,6 +17,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers;
 import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
 
@@ -25,7 +26,7 @@ import java.util.Random;
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
     private final Random random = new Random();
     private final ItemRenderer itemRenderer;
-    private static final ResourceLocation TEXTURE = new ResourceLocation("geode:textures/entity/wrappist_pedestal/wrappist_pedestal.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
     private static ModelPart wrappist_pedestal;
     private final ModelPart crystals;
     private final ModelPart crystal1;
@@ -42,21 +43,6 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         this.crystal3 = this.crystals.getChild("crystal3");
         this.crystal4 = this.crystals.getChild("crystal4");
         this.itemRenderer = context.getItemRenderer();
-    }
-
-    protected int getModelCount(ItemStack stack) {
-        int i = 1;
-        if (stack.getCount() > 48) {
-            i = 5;
-        } else if (stack.getCount() > 32) {
-            i = 4;
-        } else if (stack.getCount() > 16) {
-            i = 3;
-        } else if (stack.getCount() > 1) {
-            i = 2;
-        }
-
-        return i;
     }
 
     public static LayerDefinition createBodyLayer() {

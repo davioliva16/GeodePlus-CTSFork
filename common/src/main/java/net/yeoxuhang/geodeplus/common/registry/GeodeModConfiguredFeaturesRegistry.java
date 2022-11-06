@@ -59,6 +59,21 @@ public class GeodeModConfiguredFeaturesRegistry {
                             BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
+    public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> ANCIENT_DEBRIS_GEODE =
+            FeatureUtils.register("ancient_debris_geode", Feature.GEODE,
+                    new GeodeConfiguration(
+                            new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get()),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    List.of(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
+                                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                            new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> GOLD_NUGGET_GEODE =
             FeatureUtils.register("gold_nugget_geode", Feature.GEODE,
                     new GeodeConfiguration(

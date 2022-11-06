@@ -50,18 +50,11 @@
     "geode:small_glowstone_bud",
     "geode:smooth_end_stone",
     "geode:galcite",
-    "geode:wrappist_block",
-    "geode:budding_wrappist",
-    "geode:wrappist_cluster",
-    "geode:large_wrappist_bud",
-    "geode:medium_wrappist_bud",
-    "geode:small_wrappist_bud",
     "geode:budding_echo",
     "geode:echo_crystal",
     "geode:large_echo_bud",
     "geode:medium_echo_bud",
     "geode:small_echo_bud",
-    "geode:wrappist_pedestal",
     "geode:budding_gold_nugget"
   ]
 }

@@ -1,12 +1,10 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.minecraft.world.level.block.*;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.yeoxuhang.geodeplus.common.block.*;
@@ -188,10 +186,31 @@ public class GeodeModBlocksRegistry {
                 return 2;
             })), GeodeModCreativeModeTabsRegistry.TAB);
 
+    public static final Supplier<Block> BUDDING_ANCIENT_DEBRIS = registerBlock("budding_ancient_debris",
+            () -> new BuddingAncientDebrisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(10F).sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops().lightLevel((p_152632_) -> {
+                return 10;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> ANCIENT_DEBRIS_CLUSTER = registerBlock("ancient_debris_cluster",
+            () -> new WrappistClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.ANCIENT_DEBRIS).strength(10F).lightLevel((p_60929_) ->{
+                return 8;
+            } )), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> LARGE_ANCIENT_DEBRIS_BUD = registerBlock("large_ancient_debris_bud",
+            () -> new AncientDebrisClusterBlock(5, 3, BlockBehaviour.Properties.copy(ANCIENT_DEBRIS_CLUSTER.get()).sound(SoundType.ANCIENT_DEBRIS).lightLevel((p_60929_) -> {
+                return 5;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> MEDIUM_ANCIENT_DEBRIS_BUD = registerBlock("medium_ancient_debris_bud",
+            () -> new AncientDebrisClusterBlock(4, 3, BlockBehaviour.Properties.copy(ANCIENT_DEBRIS_CLUSTER.get()).sound(SoundType.ANCIENT_DEBRIS).lightLevel((p_60929_) -> {
+                return 3;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> SMALL_ANCIENT_DEBRIS_BUD = registerBlock("small_ancient_debris_bud",
+            () -> new AncientDebrisClusterBlock(3, 4, BlockBehaviour.Properties.copy(ANCIENT_DEBRIS_CLUSTER.get()).sound(SoundType.ANCIENT_DEBRIS).lightLevel((p_60929_) -> {
+                return 2;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+
     public static final Supplier<Block> SMOOTH_END_STONE = registerBlock("smooth_end_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(0.5f).sound(SoundType.BASALT)), GeodeModCreativeModeTabsRegistry.TAB);
-
+                    .strength(4f).sound(SoundType.BASALT)), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> GALCITE = registerBlock("galcite",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f, 1200).sound(SoundType.CALCITE)), GeodeModCreativeModeTabsRegistry.TAB);

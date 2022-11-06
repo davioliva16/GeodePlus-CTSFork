@@ -1,7 +1,7 @@
 package net.yeoxuhang.geodeplus.common.config;
 
 import com.kyanite.paragon.api.ConfigOption;
-import com.kyanite.paragon.api.annotation.ModConfig;
+import com.kyanite.paragon.api.interfaces.ModConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,8 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GLOWSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_GLOWSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GOLD_GEODE;
+
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_GEODE;
 
     //Crystals
@@ -70,6 +72,7 @@ public class GeodeModCommonConfigs implements ModConfig {
         SHOULD_GENERATE_NETHER_GLOWSTONE_GEODE = registerConfigOption("Enable Nether Glowstone Geode", true);
         SHOULD_GENERATE_BASALT_GLOWSTONE_GEODE = registerConfigOption("Enable Basalt Glowstone Geode", true);
         SHOULD_GENERATE_NETHER_GOLD_GEODE = registerConfigOption("Enable Nether Gold Nugget Geode", true);
+        SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE = registerConfigOption("Enable Nether Ancient Debris Geode", false);
         SHOULD_GENERATE_END_WRAPPIST_GEODE = registerConfigOption("Enable End Wrappist Geode", true);
         SHOULD_GENERATE_ECHO_LARGE_CRYSTAL = registerConfigOption("Enable Echo Large Crystal", true);
         SHOULD_GENERATE_NETHER_QUARTZ_LARGE_CRYSTAL = registerConfigOption("Enable Nether Quartz Large Crystal", true);
