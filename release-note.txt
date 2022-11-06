@@ -113,3 +113,18 @@ Added Feature
 ∎Large Glowstone Crystal
 ∎Large Wrappist Crystal
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.1
+---------------------------------------------------------
+Fix
+∎Wrappist Large Crystal crash in End Dimension
+---------------------------------------------------------
+Added Blocks
+∎Budding Ancient Debris
+∎Ancient Debris Cluster
+∎Large Ancient Debris Bud
+∎Medium Ancient Debris Bud
+∎Small Ancient Debris Bud
+---------------------------------------------------------
