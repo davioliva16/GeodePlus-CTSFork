@@ -51,6 +51,9 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.add(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
                 (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.NETHERITE_SCRAP).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
 
+        this.add(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(),
+                (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.PRISMARINE_SHARD).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
+
 
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get());
@@ -62,6 +65,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get());
@@ -73,6 +77,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get());
@@ -84,6 +89,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get());
 
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BASALT_QUARTZ.get());
@@ -107,6 +113,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_SCULK_EMERALD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
     }
 
     @Override

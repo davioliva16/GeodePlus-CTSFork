@@ -16,6 +16,7 @@ public class GeodeModBiomeTagsProvider extends BiomeTagsProvider {
 
     protected void addTags() {
         //Geodes
+        this.tag(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE).addTag(BiomeTags.IS_DEEP_OCEAN);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_LAPIS_GEODE).addTag(BiomeTags.IS_OVERWORLD);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_REDSTONE_GEODE).addTag(BiomeTags.IS_OVERWORLD);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_EMERALD_GEODE).addTag(Tags.Biomes.IS_PEAK).addTag(Tags.Biomes.IS_SLOPE);
@@ -33,5 +34,6 @@ public class GeodeModBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(GeodeModTagsRegistry.Biomes.HAS_QUARTZ_CRYSTAL).add(Biomes.NETHER_WASTES, Biomes.CRIMSON_FOREST, Biomes.WARPED_FOREST, Biomes.SOUL_SAND_VALLEY);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_GLOWSTONE_CRYSTAL).add(Biomes.NETHER_WASTES, Biomes.CRIMSON_FOREST, Biomes.WARPED_FOREST, Biomes.SOUL_SAND_VALLEY);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_CRYSTAL).add(Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS);
+        this.tag(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_CRYSTAL).addTag(BiomeTags.IS_DEEP_OCEAN);
     }
 }

@@ -39,6 +39,7 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
         simpleBlock(GeodeModBlocksRegistry.BUDDING_SCULK_REDSTONE.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_SCULK_EMERALD.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
+        simpleBlock(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
 
         directionalBlock(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(), models().cross(GeodeModBlocksRegistry.ECHO_CRYSTAL.get().getLootTable().getPath(),
                 blockTexture(GeodeModBlocksRegistry.ECHO_CRYSTAL.get())));
@@ -129,6 +130,15 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
                 blockTexture(GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get())));
         directionalBlock(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get(), models().cross(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get().getLootTable().getPath(),
                 blockTexture(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get())));
+
+        directionalBlock(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(), models().cross(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get())));
+        directionalBlock(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get(), models().cross(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get())));
+        directionalBlock(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), models().cross(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get())));
+        directionalBlock(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get(), models().cross(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get().getLootTable().getPath(),
+                blockTexture(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get())));
 
     }
 }

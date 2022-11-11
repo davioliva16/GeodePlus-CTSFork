@@ -30,7 +30,7 @@ public class CrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
         WorldGenLevel world = context.level();
         BlockPos blockPos = context.origin();
         RandomSource random = context.random();
-        GeodeCrystalSpikeConfig config = (GeodeCrystalSpikeConfig)context.config();
+        GeodeCrystalSpikeConfig config = context.config();
         HashSet<BlockPos> trigList = Sets.newHashSet();
         HashSet<BlockPos> clusterPos = Sets.newHashSet();
         boolean flag = false;

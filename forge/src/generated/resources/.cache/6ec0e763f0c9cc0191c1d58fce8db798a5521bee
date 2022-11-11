@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-06T10:53:05.2234357	Item Models: geode
+// 1.19.2	2022-11-12T00:01:58.9684134	Item Models: geode
 7e4c309a295765b59263ae2ef055636b9b99c11c assets/geode/models/item/ancient_debris_cluster.json
 5439293c737590ef3a601c08061bd7a0d24eac4d assets/geode/models/item/diamond_crystal.json
 d56d457d8846ccdb5f747f4f7cb1de0c9d14ab02 assets/geode/models/item/echo_crystal.json
@@ -13,6 +13,7 @@ d27144cd9ea133aadda33a8a5cd51501ecd11a4e assets/geode/models/item/large_emerald_
 a18bafead7e855e771a48d9276e81ba7a803a78d assets/geode/models/item/large_glowstone_bud.json
 87d3d34218f4577fc9cf6bac2d9e813a44992490 assets/geode/models/item/large_gold_nugget_bud.json
 8a37d2e154d2ab883c2f101ffe08adb916fe4dd0 assets/geode/models/item/large_lapis_bud.json
+6c702ba18ff48f2a366d035fdd577d31935b1a07 assets/geode/models/item/large_prismarine_bud.json
 7cf06d0433a1f23b88341feb0829b5aaac4bcc84 assets/geode/models/item/large_quartz_bud.json
 73c9b70ff6a4de4cb193849d96fcfb7188f6da27 assets/geode/models/item/large_redstone_bud.json
 f3d266689c95a0ff59d16954e477be3bf515e427 assets/geode/models/item/large_wrappist_bud.json
@@ -23,9 +24,11 @@ ce11e5ee9011f367e5229826670e7135886fc201 assets/geode/models/item/medium_echo_bu
 c2be67c2acfe3f5f8016894296a90bfca2b01384 assets/geode/models/item/medium_glowstone_bud.json
 61c4d9a8b12eeac60490c7007a6fc429fc01deb0 assets/geode/models/item/medium_gold_nugget_bud.json
 2ea7f37f8f9db6adff614778c595ab7204009ff0 assets/geode/models/item/medium_lapis_bud.json
+3eae178751df7ccfeaa1ac35cacca6db5a741106 assets/geode/models/item/medium_prismarine_bud.json
 04a9730495c84ea9fdaeb7c665f46b379621baa7 assets/geode/models/item/medium_quartz_bud.json
 5d29b777b43b0988cc59e56174602d6957b9a2c0 assets/geode/models/item/medium_redstone_bud.json
 80ab69ff045b1c2cc4262f579d1f2459f77d44dd assets/geode/models/item/medium_wrappist_bud.json
+80afce1c9b675c77c95da22b8c6f586874456ffe assets/geode/models/item/prismarine_cluster.json
 af16447ec9b24fdccd35da340942ed97ddfabfa8 assets/geode/models/item/quartz_crystal.json
 b382f2feef077a5218a2a9915309161d513452cc assets/geode/models/item/redstone_crystal.json
 b8a9e6a49c3fc0c5e0152430e141c9a9a70028cb assets/geode/models/item/small_ancient_debris_bud.json
@@ -35,6 +38,7 @@ c5ea7226198ffbbeb51455d2dd165c3a3b4fb20f assets/geode/models/item/small_emerald_
 0517c0eeacea2c2bc78fddea08b8a0e081aa83ce assets/geode/models/item/small_glowstone_bud.json
 a4e2b8839efc4982850098ca258d85db24c84d11 assets/geode/models/item/small_gold_nugget_bud.json
 9a27bae604fc403c5aea4ca1f9e11d33c82f3b99 assets/geode/models/item/small_lapis_bud.json
+d5c5b354799078db12fd8f09c9e9ddeea3503dac assets/geode/models/item/small_prismarine_bud.json
 a04e19d59dad48b5aaf13a58b4f580f1cfe9fb6d assets/geode/models/item/small_quartz_bud.json
 e355a8a6f1cbe5e89d94042d8cff2f1c76aa4f5c assets/geode/models/item/small_redstone_bud.json
 3595a725c4c1b9ea75dd61f73ebaaaa406b2982a assets/geode/models/item/small_wrappist_bud.json

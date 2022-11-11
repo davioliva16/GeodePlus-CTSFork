@@ -12,6 +12,9 @@ public class GeodeModFeaturesRegistry {
     public static final Supplier<CrystalSpikeFeature> CRYSTAL_SPIKE = RegistryHelper.registerFeature("crystal_spike",
             () -> new CrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
 
+    public static final Supplier<CrystalSpikeFeature> OCEAN_CRYSTAL_SPIKE = RegistryHelper.registerFeature("ocean_crystal_spike",
+            () -> new CrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
+
     public static final Supplier<EchoCrystalSpikeFeature> ECHO_CRYSTAL_SPIKE = RegistryHelper.registerFeature("echo_crystal_spike",
             () -> new EchoCrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
 

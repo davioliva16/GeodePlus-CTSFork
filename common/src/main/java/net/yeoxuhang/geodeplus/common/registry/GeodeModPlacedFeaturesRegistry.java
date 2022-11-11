@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class GeodeModPlacedFeaturesRegistry {
+    public static final Supplier<PlacedFeature> PRISMARINE_GEODE = RegistryHelper.registerPlacedFeature("prismarine_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_GEODE, List.of(rarityOceanGeode(), inSquarePlacement(), placementOceanModifier(), biomeFilter())));
+
     public static final Supplier<PlacedFeature> QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BASALT_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("basalt_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_QUARTZ_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
     //public static final Supplier<PlacedFeature> BLACKSTONE_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("blackstone_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
@@ -70,6 +72,11 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> WRAPPIST_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("wrappist_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
 
+    public static final Supplier<PlacedFeature> PRISMARINE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("prismarine_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementOceanModifier(), biomeFilter())));
+
+    private static RarityFilter rarityOceanGeode() {
+        return RarityFilter.onAverageOnceEvery(16);
+    }
     private static RarityFilter rarityNetherGeode() {
         return RarityFilter.onAverageOnceEvery(16);
     }
@@ -101,6 +108,9 @@ public class GeodeModPlacedFeaturesRegistry {
         return InSquarePlacement.spread();
     }
 
+    private static PlacementModifier placementOceanModifier() {
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
+    }
     private static PlacementModifier placementNetherModifier() {
         return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(110));
     }

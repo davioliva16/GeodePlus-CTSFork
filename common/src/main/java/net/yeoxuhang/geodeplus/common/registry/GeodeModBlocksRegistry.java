@@ -12,6 +12,24 @@ import net.yeoxuhang.geodeplus.common.block.*;
 import java.util.function.Supplier;
 
 public class GeodeModBlocksRegistry {
+
+    public static final Supplier<Block> BUDDING_PRISMARINE = registerBlock("budding_prismarine",
+            () -> new BuddingPrismarineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> PRISMARINE_CLUSTER = registerBlock("prismarine_cluster",
+            () -> new PrismarineClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+                return 8;
+            } )), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> LARGE_PRISMARINE_BUD = registerBlock("large_prismarine_bud",
+            () -> new PrismarineClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 2;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> MEDIUM_PRISMARINE_BUD = registerBlock("medium_prismarine_bud",
+            () -> new PrismarineClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 1;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> SMALL_PRISMARINE_BUD = registerBlock("small_prismarine_bud",
+            () -> new PrismarineClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
+
     public static final Supplier<Block> BUDDING_LAPIS = registerBlock("budding_lapis",
             () -> new BuddingLapisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
 

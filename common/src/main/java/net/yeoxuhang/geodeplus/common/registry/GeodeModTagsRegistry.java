@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.Block;
 public class GeodeModTagsRegistry {
     public static class Biomes {
         //Geodes
+        public static final TagKey<Biome> HAS_PRISMARINE_GEODE
+                = biomeTag("has_prismarine_geode");
         public static final TagKey<Biome> HAS_LAPIS_GEODE
                 = biomeTag("has_lapis_geode");
         public static final TagKey<Biome> HAS_REDSTONE_GEODE
@@ -42,6 +44,9 @@ public class GeodeModTagsRegistry {
                 = biomeTag("has_glowstone_crystal");
         public static final TagKey<Biome> HAS_WRAPPIST_CRYSTAL
                 = biomeTag("has_warppist_crystal");
+
+        public static final TagKey<Biome> HAS_PRISMARINE_CRYSTAL
+                = biomeTag("has_prismarine_crystal");
         private static TagKey<Biome> biomeTag(String name) {
             return TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));
         }
@@ -54,6 +59,10 @@ public class GeodeModTagsRegistry {
 
         public static final TagKey<Block> CAN_LARGE_WRAPPIST_CRYSTAL_PLACE
                 = blockTag("can_large_wrappist_crystal_place");
+
+        public static final TagKey<Block> CAN_LARGE_PRISMARINE_CRYSTAL_PLACE
+                = blockTag("can_large_prismarine_crystal_place");
+
 
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));

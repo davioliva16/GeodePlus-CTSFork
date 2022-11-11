@@ -2,10 +2,6 @@ package net.yeoxuhang.geodeplus.common.world.feature;
 
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
-import net.yeoxuhang.geodeplus.common.block.WrappistClusterBlock;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
-import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -17,13 +13,16 @@ import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.material.Fluids;
+import net.yeoxuhang.geodeplus.common.block.WrappistClusterBlock;
+import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
+import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 
 import java.util.HashSet;
-import java.util.Iterator;
 
-public class WrappistCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
+public class OceanCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
 
-    public WrappistCrystalSpikeFeature(Codec<GeodeCrystalSpikeConfig> codec) {
+    public OceanCrystalSpikeFeature(Codec<GeodeCrystalSpikeConfig> codec) {
         super(codec);
     }
 
@@ -39,7 +38,7 @@ public class WrappistCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig
         int radiusCheck = config.xzRadius.sample(random) + 1;
         final int randomChance = random.nextInt(4);
         final int stepHeight = radiusCheck + 14 + Mth.nextInt(random, 10, 14);
-        if (world.isStateAtPosition(blockPos.relative(config.crystal_direction.getDirection().getOpposite()), DripstoneUtils::isEmptyOrWaterOrLava) && world.getBlockState(blockPos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE)) {
+        if (world.isStateAtPosition(blockPos.relative(config.crystal_direction.getDirection().getOpposite()), DripstoneUtils::isEmptyOrWaterOrLava) && world.getBlockState(blockPos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_PRISMARINE_CRYSTAL_PLACE)) {
             if (this.placeSpike(world, blockPos, radiusCheck, stepHeight, randomChance, trigList, config.crystal_direction.getDirection(), random)) {
                 flag = placeCrystals(world, random, config, trigList, clusterPos, flag);
             }
@@ -130,8 +129,8 @@ public class WrappistCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig
                 for (int y = -height; y <= height; y++) {
                     BlockPos pos = new BlockPos(blockPos.getX() + x, blockPos.getY() + y, blockPos.getZ() + z);
                     for (Direction direction : Direction.values()) {
-                        if (world.getBlockState(pos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
-                            world.setBlock(pos, GeodeModBlocksRegistry.SMOOTH_END_STONE.get().defaultBlockState(), 2);
+                        if (world.getBlockState(pos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_PRISMARINE_CRYSTAL_PLACE) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
+                            world.setBlock(pos, GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get().defaultBlockState(), 2);
                             flag = true;
                         }
                     }

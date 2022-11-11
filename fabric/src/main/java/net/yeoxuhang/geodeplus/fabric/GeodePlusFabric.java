@@ -45,6 +45,9 @@ public class GeodePlusFabric implements ModInitializer {
         
         modifications.add(ModificationPhase.ADDITIONS, biomeSelectionContext -> true, (biomeSelectionContext, builder) -> {
             Holder<Biome> biome = biomeSelectionContext.getBiomeRegistryEntry();
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_PRISMARINE_GEODE.get()) {
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.PRISMARINE_GEODE.get()));
+            }
 
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_LAPIS_GEODE) && !biome.is(Biomes.DEEP_DARK) && GeodeModCommonConfigs.SHOULD_GENERATE_LAPIS_GEODE.get()){
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.LAPIS_GEODE.get()));
@@ -106,6 +109,9 @@ public class GeodePlusFabric implements ModInitializer {
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getKey(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE_FLOOR.get()));
+            }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL.get()) {
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
             }
         });
     }

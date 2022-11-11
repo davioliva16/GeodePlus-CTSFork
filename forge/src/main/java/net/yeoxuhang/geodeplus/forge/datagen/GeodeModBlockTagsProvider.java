@@ -159,6 +159,12 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 Blocks.STONE,
                 Blocks.DEEPSLATE);
 
+        this.tag(GeodeModTagsRegistry.Blocks.CAN_LARGE_PRISMARINE_CRYSTAL_PLACE).add(Blocks.SAND,
+                Blocks.STONE,
+                Blocks.GRAVEL,
+                Blocks.CLAY,
+                Blocks.SANDSTONE);
+
         this.tag(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE).add(Blocks.END_STONE);
     }
 }

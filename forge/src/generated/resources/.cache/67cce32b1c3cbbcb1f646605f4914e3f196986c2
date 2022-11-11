@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-06T10:53:05.2363027	LootTables
+// 1.19.2	2022-11-11T23:57:36.3916619	LootTables
 1f862f29cd3314048359ae6a91206b654a020cd9 data/geode/loot_tables/blocks/ancient_debris_cluster.json
 cbcdfe06672ab517426c0413b13b6d04e73e90bc data/geode/loot_tables/blocks/budding_ancient_debris.json
 23f529e21e8a27bb952fd51a3b665d2ff247e38a data/geode/loot_tables/blocks/budding_basalt_glowstone.json
@@ -16,6 +16,7 @@ e2542ba6f92a1382bf85d1b3f10448aaf1c7c2b5 data/geode/loot_tables/blocks/budding_e
 94e5acad024197a853feac4acb90374785e55df8 data/geode/loot_tables/blocks/budding_gold_nugget.json
 50af47abdb0adb4d18db2b22e0d4e7049704234c data/geode/loot_tables/blocks/budding_lapis.json
 cd359c7c3becea0dbaaa07e6e0c35298098fa1db data/geode/loot_tables/blocks/budding_nether_quartz.json
+1db08600fdbf89e16cfa6041a6566b7f419b295b data/geode/loot_tables/blocks/budding_prismarine.json
 e848d46a9e5446277e7a6f197c4de59c3173cdd8 data/geode/loot_tables/blocks/budding_redstone.json
 f1883a9704eababdd5e4ce17e32358759014a05d data/geode/loot_tables/blocks/budding_sculk_diamond.json
 e6a61ee066dff2cd0444d9aa0d4906a1feeb36ef data/geode/loot_tables/blocks/budding_sculk_emerald.json
@@ -36,6 +37,7 @@ a036eed83efdd27ccd3a074c5a5420d5140fe643 data/geode/loot_tables/blocks/emerald_c
 8c19d05bec39567ee71087fba590a0c8c1a19332 data/geode/loot_tables/blocks/large_glowstone_bud.json
 7a6565b3b9829eb80c2e5b495642a35bccc9a1d2 data/geode/loot_tables/blocks/large_gold_nugget_bud.json
 fb9fdfc7477522e63889c97fdfc5374f63232afd data/geode/loot_tables/blocks/large_lapis_bud.json
+97c38c1d4561e9edd2605c88b1efc984db41dc6e data/geode/loot_tables/blocks/large_prismarine_bud.json
 cc5f266c459b20993ce04e944afcb9bdd5a6eb17 data/geode/loot_tables/blocks/large_quartz_bud.json
 106442b3cf3e34b3a92d63dc0be8e034556a1bf9 data/geode/loot_tables/blocks/large_redstone_bud.json
 742564972d36291c955ea78daccfed9167f96fa9 data/geode/loot_tables/blocks/large_wrappist_bud.json
@@ -46,9 +48,11 @@ c87b5f42bdeffbb640d9b1388204b0fe5e909bc8 data/geode/loot_tables/blocks/medium_ec
 1f8171b0e85c5b71655e643e51b3e30cd3ba95cc data/geode/loot_tables/blocks/medium_glowstone_bud.json
 c8e5a10a16e807b96cd53eaa209f4cc87c424535 data/geode/loot_tables/blocks/medium_gold_nugget_bud.json
 2ecb3aa4268c1eb5d2bf21af4b431dfeb7fc0e9b data/geode/loot_tables/blocks/medium_lapis_bud.json
+dfbd5b4c0174704a22d4fd32621f613680e7b66f data/geode/loot_tables/blocks/medium_prismarine_bud.json
 5a7fcc99bd5c21e5173905135031b0ff10c06d6b data/geode/loot_tables/blocks/medium_quartz_bud.json
 3d9a2cfe1c48d3480fc228436382ce7d1e55605b data/geode/loot_tables/blocks/medium_redstone_bud.json
 7ea2f08b89ad43e2bdd0e5fc2a712d96079baa70 data/geode/loot_tables/blocks/medium_wrappist_bud.json
+02b312ed1889010df518024b2a324fcb96afef87 data/geode/loot_tables/blocks/prismarine_cluster.json
 53855cce1ffb6cc61c00122906acf32d180c7026 data/geode/loot_tables/blocks/quartz_crystal.json
 4f2680a4adf3fc65c8f32c6c189a5283cf590758 data/geode/loot_tables/blocks/quartz_crystal_block.json
 0874d6f471ee36c7d4cf277bd2d6fc959813926b data/geode/loot_tables/blocks/redstone_crystal.json
@@ -59,6 +63,7 @@ f17811421f0a42187dc5ebcd9497c898754f9321 data/geode/loot_tables/blocks/small_ech
 1b3612f96583a910da547d955d1e7dd4d3d36974 data/geode/loot_tables/blocks/small_glowstone_bud.json
 79282dce17d08a8395e2a582a7f11a52d7b09cb3 data/geode/loot_tables/blocks/small_gold_nugget_bud.json
 97b8998278fef229a98488626e76f656d2a1dc42 data/geode/loot_tables/blocks/small_lapis_bud.json
+038db68c64dbc57b379ddd2d0459c20dc27828b7 data/geode/loot_tables/blocks/small_prismarine_bud.json
 51a242d5ed5aa17778a411b9568077ce1531c757 data/geode/loot_tables/blocks/small_quartz_bud.json
 b93119c12df114faac68b64a3eee90976e605cb7 data/geode/loot_tables/blocks/small_redstone_bud.json
 61cd9d4fbcb401a820b4e7fcd1504042b5ad99a4 data/geode/loot_tables/blocks/small_wrappist_bud.json

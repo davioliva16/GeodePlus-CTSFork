@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.forge.biome_modifiers;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.resources.ResourceLocation;
 import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModPlacedFeaturesRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
@@ -13,6 +14,8 @@ import net.minecraftforge.common.world.ModifiableBiomeInfo;
 import net.minecraftforge.fml.ModList;
 import net.yeoxuhang.geodeplus.forge.registry.GeodeModBiomeModifiersRegistry;
 
+import java.util.Objects;
+
 
 public class GeodeModGeodeBiomeModifier implements BiomeModifier {
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
@@ -23,6 +26,9 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
     }
 
     private static void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
+        if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_PRISMARINE_GEODE.get()) {
+            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.PRISMARINE_GEODE.get()));
+        }
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_LAPIS_GEODE) && !biome.is(Biomes.DEEP_DARK) && GeodeModCommonConfigs.SHOULD_GENERATE_LAPIS_GEODE.get()){
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.LAPIS_GEODE.get()));
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.DEEPSLATE_LAPIS_GEODE.get()));
@@ -83,6 +89,16 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE_FLOOR.get()));
+        }
+
+        if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL.get()) {
+            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Holder.direct(GeodeModPlacedFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
+        }
+
+        if (ModList.get().isLoaded("biomesoplenty")){
+            if (biome.is(Objects.requireNonNull(ResourceLocation.tryParse("biomesoplenty:test")))){
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.BASALT_GLOWSTONE_GEODE.get()));
+            }
         }
     }
 

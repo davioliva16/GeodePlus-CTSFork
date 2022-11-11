@@ -75,6 +75,11 @@ public class GeodePlus {
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(), RenderType.cutout());
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get(), RenderType.cutout());
 
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), RenderType.cutout());
+        ClientHelper.putRenderLayer(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get(), RenderType.cutout());
+
         ClientHelper.putRenderLayer(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get(), RenderType.cutout());
     }
 }

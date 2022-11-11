@@ -36,16 +36,16 @@ public class BuddingEchoBlock extends AmethystBlock {
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
                 block = GeodeModBlocksRegistry.SMALL_ECHO_BUD.get();
-                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), (Entity)null, 20);
+                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 5);
             } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
                 block = GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get();
-                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), (Entity)null, 20);
+                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 10);
             } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
                 block = GeodeModBlocksRegistry.LARGE_ECHO_BUD.get();
-                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), (Entity)null, 20);
+                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 15);
             } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
                 block = GeodeModBlocksRegistry.ECHO_CRYSTAL.get();
-                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), (Entity)null, 20);
+                Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 20);
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(EchoCrystalBlock.FACING, direction).setValue(EchoCrystalBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
@@ -53,6 +53,7 @@ public class BuddingEchoBlock extends AmethystBlock {
             }
         }
     }
+
 
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;

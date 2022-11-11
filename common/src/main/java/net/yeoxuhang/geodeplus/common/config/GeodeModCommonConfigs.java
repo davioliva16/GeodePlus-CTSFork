@@ -8,6 +8,7 @@ import java.util.List;
 
 public class GeodeModCommonConfigs implements ModConfig {
     //Geodes
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_PRISMARINE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LAPIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_REDSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_EMERALD_GEODE;
@@ -32,6 +33,8 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_QUARTZ_LARGE_CRYSTAL;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GLOWSTONE_LARGE_CRYSTAL;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL;
+
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL;
 
     /*public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_MINIMAL_HEIGHT;
@@ -58,6 +61,7 @@ public class GeodeModCommonConfigs implements ModConfig {
     }
 
     static {
+        SHOULD_GENERATE_PRISMARINE_GEODE = registerConfigOption("Enable Prismarine Geode", true);
         SHOULD_GENERATE_LAPIS_GEODE = registerConfigOption("Enable Lapis Geode", true);
         SHOULD_GENERATE_REDSTONE_GEODE = registerConfigOption("Enable Redstone Geode", true);
         SHOULD_GENERATE_EMERALD_GEODE = registerConfigOption("Enable Emerald Geode", true);
@@ -78,7 +82,7 @@ public class GeodeModCommonConfigs implements ModConfig {
         SHOULD_GENERATE_NETHER_QUARTZ_LARGE_CRYSTAL = registerConfigOption("Enable Nether Quartz Large Crystal", true);
         SHOULD_GENERATE_NETHER_GLOWSTONE_LARGE_CRYSTAL = registerConfigOption("Enable Nether Glowstone Large Crystal", true);
         SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL = registerConfigOption("Enable End Wrappist Large Crystal", true);
-
+        SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL = registerConfigOption("Enable Prismarine Large Crystal", true);
 
 
 

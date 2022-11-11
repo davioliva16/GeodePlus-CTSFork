@@ -77,6 +77,11 @@ public class GeodeModItemModelProvider extends ItemModelProvider {
         simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD);
         simpleSingleBlockItem(GeodeModBlocksRegistry.LARGE_QUARTZ_BUD);
 
+        simpleSingleBlockItem(GeodeModBlocksRegistry.PRISMARINE_CLUSTER);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD);
+        simpleSingleBlockItem(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD);
+
     }
     private ItemModelBuilder simpleItem(Supplier<Item> item) {
         return withExistingParent(((RegistryObject<Item>) item).getId().getPath(),
