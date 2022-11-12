@@ -95,11 +95,6 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Holder.direct(GeodeModPlacedFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR.get()));
         }
 
-        if (ModList.get().isLoaded("biomesoplenty")){
-            if (biome.is(Objects.requireNonNull(ResourceLocation.tryParse("biomesoplenty:test")))){
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.BASALT_GLOWSTONE_GEODE.get()));
-            }
-        }
     }
 
 

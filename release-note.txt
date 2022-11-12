@@ -127,4 +127,17 @@ Added Blocks
 ∎Large Ancient Debris Bud
 ∎Medium Ancient Debris Bud
 ∎Small Ancient Debris Bud
+
+∎Budding Prismarine
+∎Prismarine Cluster
+∎Large Prismarine Bud
+∎Medium Prismarine Bud
+∎Small Prismarine Bud
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Prismarine Geode
+
+-Large Crystal
+∎Large Prismarine Crystal
 ---------------------------------------------------------
