@@ -29,7 +29,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.add(GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get(),
                 (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.GOLD_NUGGET).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 10.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
         this.add(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get(),
-                (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.QUARTZ).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
+                (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.QUARTZ).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 6.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(8, 10)))));
         this.add(GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get(),
                 (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(GeodeModItemsRegistry.WRAPPIST_SHARD.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
 
@@ -46,7 +46,7 @@ public class GeodeModBlockLootTables extends BlockLoot {
                 (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.EMERALD).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
 
         this.add(GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get(),
-                (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));
+                (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(3, 4)))));
 
         this.add(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
                 (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.NETHERITE_SCRAP).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)).apply(LimitCount.limitCount(IntRange.range(1, 4)))));

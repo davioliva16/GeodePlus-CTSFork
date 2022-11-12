@@ -66,6 +66,11 @@
     "geode:ancient_debris_cluster",
     "geode:large_ancient_debris_bud",
     "geode:medium_ancient_debris_bud",
-    "geode:small_ancient_debris_bud"
+    "geode:small_ancient_debris_bud",
+    "geode:budding_prismarine",
+    "geode:prismarine_cluster",
+    "geode:large_prismarine_bud",
+    "geode:medium_prismarine_bud",
+    "geode:small_prismarine_bud"
   ]
 }

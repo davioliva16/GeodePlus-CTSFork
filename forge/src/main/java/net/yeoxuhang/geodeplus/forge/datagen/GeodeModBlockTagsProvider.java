@@ -82,7 +82,12 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
                 GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(),
                 GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(),
-                GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()
+                GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(),
+                GeodeModBlocksRegistry.BUDDING_PRISMARINE.get(),
+                GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(),
+                GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get(),
+                GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(),
+                GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get()
         );
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 GeodeModBlocksRegistry.LAPIS_CLUSTER.get(),
@@ -140,7 +145,12 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 GeodeModBlocksRegistry.LARGE_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.SMALL_ECHO_BUD.get(),
-                GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get()
+                GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get(),
+                GeodeModBlocksRegistry.BUDDING_PRISMARINE.get(),
+                GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(),
+                GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get(),
+                GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(),
+                GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get()
         );
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 GeodeModBlocksRegistry.WRAPPIST_BLOCK.get(),

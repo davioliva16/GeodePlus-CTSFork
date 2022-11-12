@@ -392,7 +392,7 @@ public class GeodeModConfiguredFeaturesRegistry {
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> PRISMARINE_GEODE =
             FeatureUtils.register("prismarine_geode", Feature.GEODE,
                     new GeodeConfiguration(
-                            new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                            new GeodeBlockSettings(BlockStateProvider.simple(Blocks.WATER),
                                     BlockStateProvider.simple(Blocks.PRISMARINE),
                                     BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get()),
                                     BlockStateProvider.simple(Blocks.PRISMARINE),

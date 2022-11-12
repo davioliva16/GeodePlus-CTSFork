@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-11T23:57:36.3916619	LootTables
+// 1.19.2	2022-11-12T13:14:32.1145323	LootTables
 1f862f29cd3314048359ae6a91206b654a020cd9 data/geode/loot_tables/blocks/ancient_debris_cluster.json
 cbcdfe06672ab517426c0413b13b6d04e73e90bc data/geode/loot_tables/blocks/budding_ancient_debris.json
 23f529e21e8a27bb952fd51a3b665d2ff247e38a data/geode/loot_tables/blocks/budding_basalt_glowstone.json
@@ -23,7 +23,7 @@ e6a61ee066dff2cd0444d9aa0d4906a1feeb36ef data/geode/loot_tables/blocks/budding_s
 3f58064a7d291a145f14096783b283b7c1e71b09 data/geode/loot_tables/blocks/budding_sculk_lapis.json
 1a8dbd6da7a3ebcbc8373b152d92d0289619dfcb data/geode/loot_tables/blocks/budding_sculk_redstone.json
 c738407ae99ec6e625619d5ebfdb7c20896e7ee3 data/geode/loot_tables/blocks/budding_wrappist.json
-2c8c7f7fcdd0485a988e23d3cf0c3e507d5a729e data/geode/loot_tables/blocks/diamond_crystal.json
+0eaba21e371b52aa94ad9a2aca90466e22ae7dd8 data/geode/loot_tables/blocks/diamond_crystal.json
 dc8c8562e60cc30a927f5f4eaa3de7b9edc5b04b data/geode/loot_tables/blocks/echo_crystal.json
 a036eed83efdd27ccd3a074c5a5420d5140fe643 data/geode/loot_tables/blocks/emerald_cluster.json
 56ce81e09c1e5e438051486f8523d6f1721ccf3d data/geode/loot_tables/blocks/galcite.json
@@ -53,7 +53,7 @@ dfbd5b4c0174704a22d4fd32621f613680e7b66f data/geode/loot_tables/blocks/medium_pr
 3d9a2cfe1c48d3480fc228436382ce7d1e55605b data/geode/loot_tables/blocks/medium_redstone_bud.json
 7ea2f08b89ad43e2bdd0e5fc2a712d96079baa70 data/geode/loot_tables/blocks/medium_wrappist_bud.json
 02b312ed1889010df518024b2a324fcb96afef87 data/geode/loot_tables/blocks/prismarine_cluster.json
-53855cce1ffb6cc61c00122906acf32d180c7026 data/geode/loot_tables/blocks/quartz_crystal.json
+ed42f70444ea60e86de0d3b5931f51349690b3a4 data/geode/loot_tables/blocks/quartz_crystal.json
 4f2680a4adf3fc65c8f32c6c189a5283cf590758 data/geode/loot_tables/blocks/quartz_crystal_block.json
 0874d6f471ee36c7d4cf277bd2d6fc959813926b data/geode/loot_tables/blocks/redstone_crystal.json
 c460dcafeb89322a14267b459b2036bd795dead4 data/geode/loot_tables/blocks/small_ancient_debris_bud.json

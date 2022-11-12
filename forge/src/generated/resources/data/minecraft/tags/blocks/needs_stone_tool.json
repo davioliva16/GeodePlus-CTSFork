@@ -55,6 +55,11 @@
     "geode:large_echo_bud",
     "geode:medium_echo_bud",
     "geode:small_echo_bud",
-    "geode:budding_gold_nugget"
+    "geode:budding_gold_nugget",
+    "geode:budding_prismarine",
+    "geode:prismarine_cluster",
+    "geode:large_prismarine_bud",
+    "geode:medium_prismarine_bud",
+    "geode:small_prismarine_bud"
   ]
 }

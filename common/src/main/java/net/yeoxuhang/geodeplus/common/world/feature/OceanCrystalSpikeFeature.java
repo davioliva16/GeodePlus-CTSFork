@@ -9,6 +9,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
@@ -130,7 +131,7 @@ public class OceanCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
                     BlockPos pos = new BlockPos(blockPos.getX() + x, blockPos.getY() + y, blockPos.getZ() + z);
                     for (Direction direction : Direction.values()) {
                         if (world.getBlockState(pos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_PRISMARINE_CRYSTAL_PLACE) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
-                            world.setBlock(pos, GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get().defaultBlockState(), 2);
+                            world.setBlock(pos, Blocks.PRISMARINE.defaultBlockState(), 2);
                             flag = true;
                         }
                     }
