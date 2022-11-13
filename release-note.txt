@@ -141,3 +141,13 @@ Added Feature
 -Large Crystal
 ∎Large Prismarine Crystal
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.2
+---------------------------------------------------------
+Fix
+∎Large Prismarine Crystal didn't generate in Ocean Biomes
+∎Loot Table for Blocks
+∎XP drop
+---------------------------------------------------------
