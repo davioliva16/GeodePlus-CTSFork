@@ -3,7 +3,7 @@ dependencies {
     // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 
-    modImplementation("maven.modrinth:paragon:common-1.0.3b-1.19x")
+    modImplementation("maven.modrinth:paragon:common-1.0.4b-1.19x")
 }
 
 architectury {

@@ -20,7 +20,7 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    include modImplementation("maven.modrinth:paragon:forge-1.0.3b-1.19x")
+    include modImplementation("maven.modrinth:paragon:forge-1.0.4b-1.19x")
 }
 
 
