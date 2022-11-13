@@ -6,6 +6,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -67,7 +69,22 @@ public class EchoCrystalBlock extends AmethystBlock implements SimpleWaterlogged
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        popExperience(serverLevel, blockPos, 5);
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get())) {
+            int i = 1 + serverLevel.random.nextInt(0);
+            this.popExperience(serverLevel, blockPos, i);
+        }
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get())) {
+            int i = 1 + serverLevel.random.nextInt(1);
+            this.popExperience(serverLevel, blockPos, i);
+        }
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get())) {
+            int i = 1 + serverLevel.random.nextInt(5);
+            this.popExperience(serverLevel, blockPos, i);
+        }
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.ECHO_CRYSTAL.get())) {
+            int i = 1 + serverLevel.random.nextInt(10);
+            this.popExperience(serverLevel, blockPos, i);
+        }
     }
 
     public boolean canSurvive(BlockState p_152026_, LevelReader p_152027_, BlockPos p_152028_) {

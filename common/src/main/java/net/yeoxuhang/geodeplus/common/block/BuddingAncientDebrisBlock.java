@@ -48,12 +48,6 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
         }
     }
 
-    @Override
-    public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
-        super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        popExperience(serverLevel, blockPos, 5);
-    }
-
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;
     }
