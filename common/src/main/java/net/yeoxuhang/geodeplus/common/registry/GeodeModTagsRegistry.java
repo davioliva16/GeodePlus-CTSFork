@@ -34,6 +34,8 @@ public class GeodeModTagsRegistry {
                 = biomeTag("has_wrappist_geode");
         public static final TagKey<Biome> HAS_NETHER_GOLD_NUGGET_GEODE
                 = biomeTag("has_nether_gold_nugget_geode");
+        public static final TagKey<Biome> HAS_NETHER_ANCIENT_DEBRIS_GEODE
+                = biomeTag("has_nether_ancient_debris_geode");
 
         //Crystals
         public static final TagKey<Biome> HAS_ECHO_CRYSTAL

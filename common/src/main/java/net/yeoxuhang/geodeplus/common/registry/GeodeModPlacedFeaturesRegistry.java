@@ -22,7 +22,7 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.GLOWSTONE_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
-    //public static final Supplier<PlacedFeature> ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
 

@@ -36,6 +36,7 @@ public class GeodeModCommonConfigs implements ModConfig {
 
     public static final ConfigOption<Boolean> SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL;
 
+
     /*public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_MINIMAL_HEIGHT;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_MAXIMAL_HEIGHT;
