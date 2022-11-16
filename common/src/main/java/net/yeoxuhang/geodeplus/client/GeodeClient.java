@@ -10,10 +10,7 @@ import net.yeoxuhang.geodeplus.platform.ClientHelper;
  */
 public class GeodeClient {
 
-
 	public static void initClient() {
-		GeodeModModelLayers.initialize();
-
 		ClientHelper.putRenderLayer(GeodeModBlocksRegistry.LAPIS_CLUSTER.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get(), RenderType.cutout());

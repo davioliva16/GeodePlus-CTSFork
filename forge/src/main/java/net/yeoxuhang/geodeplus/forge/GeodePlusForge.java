@@ -2,6 +2,7 @@ package net.yeoxuhang.geodeplus.forge;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodeClient;
@@ -29,6 +30,8 @@ public class GeodePlusForge {
         GeodePlus.init();
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers::initialize);
 
         RegistryHelperImpl.ITEMS.register(eventBus);
         RegistryHelperImpl.BLOCKS.register(eventBus);
