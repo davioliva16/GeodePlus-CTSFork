@@ -30,6 +30,18 @@ public class GeodeModTagsRegistry {
                 = biomeTag("has_basalt_quartz_geode");
         public static final TagKey<Biome> HAS_BASALT_GLOWSTONE_GEODE
                 = biomeTag("has_basalt_glowstone_geode");
+
+        public static final TagKey<Biome> HAS_BLACKSTONE_GLOWSTONE_GEODE
+                = biomeTag("has_blackstone_glowstone_geode");
+
+        public static final TagKey<Biome> HAS_BLACKSTONE_QUARTZ_GEODE
+                = biomeTag("has_blackstone_quartz_geode");
+
+        public static final TagKey<Biome> HAS_BASALT_GOLD_NUGGET_GEODE
+                = biomeTag("has_basalt_gold_nugget_geode");
+
+        public static final TagKey<Biome> HAS_BLACKSTONE_GOLD_NUGGET_GEODE
+                = biomeTag("has_blackstone_gold_nugget_geode");
         public static final TagKey<Biome> HAS_WRAPPIST_GEODE
                 = biomeTag("has_wrappist_geode");
         public static final TagKey<Biome> HAS_NETHER_GOLD_NUGGET_GEODE

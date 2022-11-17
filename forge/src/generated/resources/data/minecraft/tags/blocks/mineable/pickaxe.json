@@ -1,5 +1,8 @@
 {
   "values": [
+    "geode:budding_gold_nugget",
+    "geode:budding_basalt_gold_nugget",
+    "geode:budding_blackstone_gold_nugget",
     "geode:lapis_cluster",
     "geode:large_lapis_bud",
     "geode:medium_lapis_bud",

@@ -156,6 +156,12 @@ public class GeodeModBlocksRegistry {
     public static final Supplier<Block> BUDDING_GOLD_NUGGET = registerBlock("budding_gold_nugget",
             () -> new BuddingNetherGoldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
 
+    public static final Supplier<Block> BUDDING_BASALT_GOLD_NUGGET = registerBlock("budding_basalt_gold_nugget",
+            () -> new BuddingNetherGoldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> BUDDING_BLACKSTONE_GOLD_NUGGET = registerBlock("budding_blackstone_gold_nugget",
+            () -> new BuddingNetherGoldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
+
     public static final Supplier<Block> GOLD_NUGGET_CLUSTER = registerBlock("gold_nugget_cluster",
             () -> new NetherGoldClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.NETHER_GOLD_ORE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;

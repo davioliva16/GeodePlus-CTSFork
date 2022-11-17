@@ -93,6 +93,8 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_NETHER_QUARTZ.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_WRAPPIST.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_LAPIS.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_REDSTONE.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_EMERALD.get());

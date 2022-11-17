@@ -16,6 +16,9 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
 
     protected void addTags() {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get(),
+                GeodeModBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get(),
+                GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get(),
                 GeodeModBlocksRegistry.LAPIS_CLUSTER.get(),
                 GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get(),
                 GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get(),
@@ -146,6 +149,8 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.SMALL_ECHO_BUD.get(),
                 GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get(),
+                GeodeModBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get(),
+                GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get(),
                 GeodeModBlocksRegistry.BUDDING_PRISMARINE.get(),
                 GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(),
                 GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get(),

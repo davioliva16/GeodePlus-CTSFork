@@ -1,7 +1,0 @@
-// 1.19.2	2022-11-12T13:14:32.0972754	Tags for minecraft:block
-bdc1945bad1d7896abfcd4a77ab43e5edf8aea4f data/geode/tags/blocks/can_large_echo_crystal_place.json
-c810320bb4788378c975caf758177e7f4a257c3f data/geode/tags/blocks/can_large_prismarine_crystal_place.json
-9994f212884e8264af96eaba34aa7e89696d8994 data/geode/tags/blocks/can_large_wrappist_crystal_place.json
-037e098301b4d036b3651ba5ab7c644516be3d2f data/minecraft/tags/blocks/mineable/pickaxe.json
-81774252eb27c8854de2af99dcf90221b047cd5a data/minecraft/tags/blocks/needs_diamond_tool.json
-e47a73a92eb7b6e9c355acba9eae0192e1521ca1 data/minecraft/tags/blocks/needs_stone_tool.json

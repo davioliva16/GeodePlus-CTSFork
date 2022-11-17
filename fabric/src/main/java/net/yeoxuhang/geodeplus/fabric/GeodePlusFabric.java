@@ -84,8 +84,20 @@ public class GeodePlusFabric implements ModInitializer {
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BASALT_GLOWSTONE_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BASALT_GLOWSTONE_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.BASALT_GLOWSTONE_GEODE.get()));
             }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BLACKSTONE_GLOWSTONE_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BLACKSTONE_GLOWSTONE_GEODE.get()){
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.BLACKSTONE_GLOWSTONE_GEODE.get()));
+            }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BLACKSTONE_QUARTZ_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BLACKSTONE_QUARTZ_GEODE.get()){
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.BLACKSTONE_QUARTZ_GEODE.get()));
+            }
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_NETHER_GOLD_NUGGET_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_NETHER_GOLD_GEODE.get()){
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.GOLD_NUGGET_GEODE.get()));
+            }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BASALT_GOLD_NUGGET_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BASALT_GOLD_GEODE.get()){
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.BASALT_GOLD_NUGGET_GEODE.get()));
+            }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BLACKSTONE_GOLD_NUGGET_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BLACKSTONE_GOLD_GEODE.get()){
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.BLACKSTONE_GOLD_NUGGET_GEODE.get()));
             }
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_NETHER_ANCIENT_DEBRIS_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE.get()){
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.ANCIENT_DEBRIS_GEODE.get()));

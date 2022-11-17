@@ -15,7 +15,7 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BASALT_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("basalt_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_QUARTZ_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
-    //public static final Supplier<PlacedFeature> BLACKSTONE_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("blackstone_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BLACKSTONE_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("blackstone_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> WRAPPIST_GEODE = RegistryHelper.registerPlacedFeature("wrappist_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.WRAPPIST_GEODE, List.of(rarityEndGeode(), inSquarePlacement(), placementEndModifier(), biomeFilter())));
 
@@ -26,9 +26,13 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
 
-    //public static final Supplier<PlacedFeature> BLACKSTONE_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("blackstone_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GLOWSTONE_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BLACKSTONE_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("blackstone_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GLOWSTONE_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+
+    public static final Supplier<PlacedFeature> BASALT_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("basalt_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+
+    public static final Supplier<PlacedFeature> BLACKSTONE_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("blackstone_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> ECHO_GEODE = RegistryHelper.registerPlacedFeature("echo_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_GEODE, List.of(rarityDeepDarkGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter())));
 

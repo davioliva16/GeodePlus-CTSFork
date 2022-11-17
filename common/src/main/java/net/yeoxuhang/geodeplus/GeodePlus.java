@@ -12,9 +12,7 @@ public class GeodePlus {
         GeodeModItemsRegistry.initialize();
         GeodeModBlocksRegistry.initialize();
         GeodeModBlockEntitiesRegistry.initialize();
-
 //        GeodeModLootModifiersRegistry.initialize();
-
         GeodeModFeaturesRegistry.initialize();
         GeodeModPlacedFeaturesRegistry.initialize();
         ConfigRegistry.register(GeodePlus.MOD_ID , new GeodeModCommonConfigs());
