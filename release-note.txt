@@ -151,3 +151,23 @@ Fix
 ∎Loot Table for Blocks
 ∎XP drop
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.3
+---------------------------------------------------------
+Fix
+∎Fail to start Minecraft server
+∎Block Tags
+---------------------------------------------------------
+Added Blocks
+∎Budding Basalt Gold Nugget
+∎Budding Blackstone Gold Nugget
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Basalt Gold Nugget Geode
+∎Blackstone Gold Nugget Geode
+∎Blackstone Quartz Geode
+∎Blackstone Glowstone Geode
+---------------------------------------------------------
