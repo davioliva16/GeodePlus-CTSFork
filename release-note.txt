@@ -171,3 +171,12 @@ Added Feature
 ∎Blackstone Quartz Geode
 ∎Blackstone Glowstone Geode
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.4
+---------------------------------------------------------
+Fix
+∎Geode Features place wrongly
+∎Budding Nether Ancient Debris generate Medium Diamond Buds
+---------------------------------------------------------

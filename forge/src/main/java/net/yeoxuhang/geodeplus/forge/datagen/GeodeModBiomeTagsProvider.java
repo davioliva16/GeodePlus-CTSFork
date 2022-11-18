@@ -1,5 +1,7 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
+import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoader;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
 import net.minecraft.data.DataGenerator;
@@ -15,7 +17,6 @@ public class GeodeModBiomeTagsProvider extends BiomeTagsProvider {
     }
 
     protected void addTags() {
-        //Geodes
         this.tag(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE).addTag(BiomeTags.IS_DEEP_OCEAN);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_LAPIS_GEODE).addTag(BiomeTags.IS_OVERWORLD);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_REDSTONE_GEODE).addTag(BiomeTags.IS_OVERWORLD);

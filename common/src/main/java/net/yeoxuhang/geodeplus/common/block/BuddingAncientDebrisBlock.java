@@ -34,7 +34,7 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
             if (canClusterGrowAtState(blockstate)) {
                 block = GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get();
             } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get();
+                block = GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get();
             } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
                 block = GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get();
             } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {

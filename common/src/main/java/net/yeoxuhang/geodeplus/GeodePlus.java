@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus;
 
 import com.kyanite.paragon.api.ConfigRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.*;
 
@@ -17,5 +18,4 @@ public class GeodePlus {
         GeodeModPlacedFeaturesRegistry.initialize();
         ConfigRegistry.register(GeodePlus.MOD_ID , new GeodeModCommonConfigs());
     }
-
 }
