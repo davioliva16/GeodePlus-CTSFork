@@ -24,6 +24,8 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropSelf(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get());
         this.dropSelf(GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
         this.add(GeodeModBlocksRegistry.SMOOTH_END_STONE.get(), (arg) -> createSingleItemTableWithSilkTouch(arg, Blocks.END_STONE));
+        this.dropSelf(GeodeModBlocksRegistry.SMOOTH_END_STONE_STAIRS.get());
+        this.dropSelf(GeodeModBlocksRegistry.SMOOTH_END_STONE_WALL.get());
         this.add(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(),
                 (arg) -> createSilkTouchDispatchTable(arg,
                         LootItem.lootTableItem(Items.ECHO_SHARD)
@@ -188,6 +190,8 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
+
+        this.add(GeodeModBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), BlockLoot::createSlabItemTable);
     }
     @Override
     protected Iterable<Block> getKnownBlocks() {

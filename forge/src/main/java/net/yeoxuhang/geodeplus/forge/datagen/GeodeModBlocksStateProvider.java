@@ -1,10 +1,17 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+
+import static net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry.SMOOTH_END_STONE;
 
 public class GeodeModBlocksStateProvider extends BlockStateProvider {
     public GeodeModBlocksStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
@@ -13,7 +20,7 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(GeodeModBlocksRegistry.SMOOTH_END_STONE.get());
+        simpleBlock(SMOOTH_END_STONE.get());
         simpleBlock(GeodeModBlocksRegistry.GALCITE.get());
         simpleBlock(GeodeModBlocksRegistry.WRAPPIST_BLOCK.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_WRAPPIST.get());
@@ -42,6 +49,11 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
         simpleBlock(GeodeModBlocksRegistry.BUDDING_SCULK_EMERALD.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
+
+        stairsBlock((StairBlock) GeodeModBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockTexture(SMOOTH_END_STONE.get()));
+        wallBlock((WallBlock) GeodeModBlocksRegistry.SMOOTH_END_STONE_WALL.get(), blockTexture(SMOOTH_END_STONE.get()));
+        slabBlock((SlabBlock) GeodeModBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), blockTexture(SMOOTH_END_STONE.get()),
+                blockTexture(SMOOTH_END_STONE.get()));
 
         directionalBlock(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(), models().cross(GeodeModBlocksRegistry.ECHO_CRYSTAL.get().getLootTable().getPath(),
                 blockTexture(GeodeModBlocksRegistry.ECHO_CRYSTAL.get())));
@@ -143,4 +155,5 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
                 blockTexture(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get())));
 
     }
+
 }

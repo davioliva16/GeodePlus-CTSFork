@@ -6,6 +6,10 @@ dependencies {
     modImplementation("maven.modrinth:paragon:common-1.0.4b-1.19x")
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/geode.accesswidener")
+}
+
 architectury {
     common()
 }

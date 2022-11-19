@@ -235,6 +235,15 @@ public class GeodeModBlocksRegistry {
     public static final Supplier<Block> SMOOTH_END_STONE = registerBlock("smooth_end_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).sound(SoundType.BASALT)), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> SMOOTH_END_STONE_SLAB = registerBlock("smooth_end_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.BASALT)), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> SMOOTH_END_STONE_STAIRS = registerBlock("smooth_end_stone_stairs",
+            () -> new StairBlock(SMOOTH_END_STONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SMOOTH_END_STONE.get())), GeodeModCreativeModeTabsRegistry.TAB);
+    public static final Supplier<Block> SMOOTH_END_STONE_WALL = registerBlock("smooth_end_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(SMOOTH_END_STONE.get())), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> GALCITE = registerBlock("galcite",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f, 1200).sound(SoundType.CALCITE)), GeodeModCreativeModeTabsRegistry.TAB);

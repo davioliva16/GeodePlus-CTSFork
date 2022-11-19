@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
@@ -26,6 +27,13 @@ public class GeodeModRecipeProvider extends RecipeProvider implements ICondition
         ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()).define('S', GeodeModItemsRegistry.WRAPPIST_SHARD.get()).pattern("SS").pattern("SS").unlockedBy("has_wrappist_shard", has(GeodeModItemsRegistry.WRAPPIST_SHARD.get())).save(save);
 
         ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).define('F', GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get()).pattern("FF").pattern("FF").unlockedBy("has_quartz_crystal", has(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get())).save(save);
+        wall(save, GeodeModBlocksRegistry.SMOOTH_END_STONE_WALL.get(), GeodeModBlocksRegistry.SMOOTH_END_STONE.get());
+        slabBuilder(GeodeModBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), Ingredient.of(GeodeModBlocksRegistry.SMOOTH_END_STONE.get())).unlockedBy("has_smooth_end_stone", has(ItemTags.STONE_BRICKS)).save(save);
+        stairBuilder(GeodeModBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), Ingredient.of(GeodeModBlocksRegistry.SMOOTH_END_STONE.get())).unlockedBy("has_smooth_end_stone", has(ItemTags.STONE_BRICKS)).save(save);
+
+        stonecutterResultFromBase(save, GeodeModBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), GeodeModBlocksRegistry.SMOOTH_END_STONE.get());
+        stonecutterResultFromBase(save, GeodeModBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), GeodeModBlocksRegistry.SMOOTH_END_STONE.get(), 2);
+        stonecutterResultFromBase(save, GeodeModBlocksRegistry.SMOOTH_END_STONE_WALL.get(), GeodeModBlocksRegistry.SMOOTH_END_STONE.get());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.END_STONE), GeodeModBlocksRegistry.SMOOTH_END_STONE.get().asItem().asItem(), 0.1F, 200).unlockedBy("has_end_stone", has(Blocks.END_STONE)).save(save);
         ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get()).define('#', Blocks.STONE).define('O', ItemTags.LOGS).define('W', GeodeModItemsRegistry.WRAPPIST_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodeModItemsRegistry.WRAPPIST_SHARD.get())).save(save);
