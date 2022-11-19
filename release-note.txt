@@ -192,3 +192,11 @@ Change
 ∎Smooth End Stone drop End stone when without silkTouch
 ∎Blocks loot
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.6
+---------------------------------------------------------
+Change
+∎Geodes and crystals generation now more rare
+---------------------------------------------------------
