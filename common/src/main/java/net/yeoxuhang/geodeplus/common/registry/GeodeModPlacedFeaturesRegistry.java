@@ -79,33 +79,33 @@ public class GeodeModPlacedFeaturesRegistry {
     public static final Supplier<PlacedFeature> PRISMARINE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("prismarine_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementOceanModifier(), biomeFilter())));
 
     private static RarityFilter rarityOceanGeode() {
-        return RarityFilter.onAverageOnceEvery(16);
+        return RarityFilter.onAverageOnceEvery(32);
     }
     private static RarityFilter rarityNetherGeode() {
-        return RarityFilter.onAverageOnceEvery(16);
+        return RarityFilter.onAverageOnceEvery(32);
     }
 
     private static CountPlacement placementCrystal() {
-        return CountPlacement.of(10);
+        return CountPlacement.of(20);
     }
 
     private static RarityFilter rarityBasaltGeode() {
-        return RarityFilter.onAverageOnceEvery(16);
+        return RarityFilter.onAverageOnceEvery(32);
     }
 
     private static RarityFilter rarityEndGeode() {
-        return RarityFilter.onAverageOnceEvery(32);
+        return RarityFilter.onAverageOnceEvery(48);
     }
     private static RarityFilter rarityDeepDarkGeode() {
-        return RarityFilter.onAverageOnceEvery(8);
+        return RarityFilter.onAverageOnceEvery(16);
     }
 
     private static RarityFilter rarityOreGeode() {
-        return RarityFilter.onAverageOnceEvery(32);
+        return RarityFilter.onAverageOnceEvery(48);
     }
 
     private static RarityFilter rarityRareOreGeode() {
-        return RarityFilter.onAverageOnceEvery(64);
+        return RarityFilter.onAverageOnceEvery(128);
     }
 
     private static InSquarePlacement inSquarePlacement() {
@@ -131,7 +131,7 @@ public class GeodeModPlacedFeaturesRegistry {
     }
 
     private static PlacementModifier placementOreModifier() {
-        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(64), VerticalAnchor.absolute(30));
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(60), VerticalAnchor.absolute(30));
     }
 
     private static PlacementModifier placementDeepOreModifier() {
