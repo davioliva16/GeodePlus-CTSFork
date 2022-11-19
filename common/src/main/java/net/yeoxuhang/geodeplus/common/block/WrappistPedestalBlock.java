@@ -1,6 +1,8 @@
 package net.yeoxuhang.geodeplus.common.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -18,6 +20,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,7 +38,7 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
     }
 
     public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-        return !groundState.is(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get());
+        return !groundState.is(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get()) || groundState.is(GeodeModTagsRegistry.Blocks.WRAPPIST_PEDESTAL_CANNOT_PLACE_ON);
     }
 
     @Override

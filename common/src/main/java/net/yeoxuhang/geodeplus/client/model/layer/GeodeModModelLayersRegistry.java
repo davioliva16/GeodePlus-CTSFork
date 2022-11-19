@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Supplier;
 
-public class GeodeModModelLayers {
+public class GeodeModModelLayersRegistry {
     public static final ModelLayerLocation WRAPPIST_PEDESTAL = register("wrappist_pedestal", "main", WrappistPedestalBlockEntityRenderer::createBodyLayer);
 
     private static ModelLayerLocation register(String model, String layer, Supplier<LayerDefinition> createBodyLayer) {

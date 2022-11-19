@@ -16,11 +16,12 @@ public class WrappistGoatHornItem extends Item {
         ItemStack itemstack = player.getItemInHand(interactionHand);
         if (!player.isCreative()) {
             player.startUsingItem(interactionHand);
-            player.getCooldowns().addCooldown(this, 5);
+            player.getCooldowns().addCooldown(this, 50);
             return InteractionResultHolder.consume(itemstack);
 
         } else{
-            return InteractionResultHolder.fail(itemstack);
+            player.startUsingItem(interactionHand);
+            return InteractionResultHolder.consume(itemstack);
         }
     }
 }

@@ -68,6 +68,9 @@ public class GeodeModTagsRegistry {
     }
 
     public static class Blocks {
+        public static final TagKey<Block> WRAPPIST_PEDESTAL_CANNOT_PLACE_ON
+                = blockTag("wrappist_pedestal_cannot_place_on");
+
         public static final TagKey<Block> CAN_LARGE_ECHO_CRYSTAL_PLACE
                 = blockTag("can_large_echo_crystal_place");
 

@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -26,7 +25,7 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
     }
 
     public void randomTick(BlockState p_220898_, ServerLevel p_220899_, BlockPos p_220900_, RandomSource p_220901_) {
-        if (p_220901_.nextInt(5) == 0) {
+        if (p_220901_.nextInt(20) == 0) {
             Direction direction = DIRECTIONS[p_220901_.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = p_220900_.relative(direction);
             BlockState blockstate = p_220899_.getBlockState(blockpos);

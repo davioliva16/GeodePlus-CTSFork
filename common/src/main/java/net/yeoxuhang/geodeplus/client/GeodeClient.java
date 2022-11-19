@@ -1,12 +1,11 @@
 package net.yeoxuhang.geodeplus.client;
 
 import net.minecraft.client.renderer.RenderType;
-import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
 import net.yeoxuhang.geodeplus.platform.ClientHelper;
 
 /*
- * @author Lucasmellof, Lucas de Mello Freitas created on 16/11/2022
+ * Thx to Lucasmellof, Lucas de Mello Freitas created on 16/11/2022
  */
 public class GeodeClient {
 

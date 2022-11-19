@@ -5,6 +5,8 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -26,7 +28,7 @@ public class GeodeModRecipeProvider extends RecipeProvider implements ICondition
         ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).define('F', GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get()).pattern("FF").pattern("FF").unlockedBy("has_quartz_crystal", has(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get())).save(save);
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.END_STONE), GeodeModBlocksRegistry.SMOOTH_END_STONE.get().asItem().asItem(), 0.1F, 200).unlockedBy("has_end_stone", has(Blocks.END_STONE)).save(save);
-        ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get()).define('#', Blocks.STONE).define('O', Blocks.OAK_WOOD).define('W', GeodeModItemsRegistry.WRAPPIST_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodeModItemsRegistry.WRAPPIST_SHARD.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get()).define('#', Blocks.STONE).define('O', ItemTags.LOGS).define('W', GeodeModItemsRegistry.WRAPPIST_SHARD.get()).pattern("W W").pattern("O#O").unlockedBy("has_wrappist_shard", has(GeodeModItemsRegistry.WRAPPIST_SHARD.get())).save(save);
 
     }
 }

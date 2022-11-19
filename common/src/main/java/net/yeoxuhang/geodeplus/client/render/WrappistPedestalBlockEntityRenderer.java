@@ -3,7 +3,6 @@ package net.yeoxuhang.geodeplus.client.render;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -15,16 +14,14 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers;
+import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayersRegistry;
 import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
 
 import java.util.Random;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
-    private final Random random = new Random();
     private final ItemRenderer itemRenderer;
     private static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
     private static ModelPart wrappist_pedestal;
@@ -35,7 +32,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
     private final ModelPart crystal4;
 
     public WrappistPedestalBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
-        ModelPart modelpart = context.bakeLayer(GeodeModModelLayers.WRAPPIST_PEDESTAL);
+        ModelPart modelpart = context.bakeLayer(GeodeModModelLayersRegistry.WRAPPIST_PEDESTAL);
         wrappist_pedestal = modelpart.getChild("wrappist_pedestal");
         this.crystals = wrappist_pedestal.getChild("crystals");
         this.crystal1 = this.crystals.getChild("crystal1");
@@ -85,9 +82,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
             this.itemRenderer.renderStatic(entity.getItem(0), ItemTransforms.TransformType.NONE, combinedLightIn, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, 0);
             poseStack.popPose();
         }
-
     }
-
     public static void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int p_103015_, int p_103016_, float p_103017_, float p_103018_, float p_103019_, float p_103020_) {
         wrappist_pedestal.render(poseStack, vertexConsumer, p_103015_, p_103016_);
     }

@@ -6,6 +6,7 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodeClient;
+import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayersRegistry;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlockEntitiesRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodeModBiomeModifiersRegistry;
@@ -28,11 +29,8 @@ import java.util.function.Supplier;
 public class GeodePlusForge {
     public GeodePlusForge() {
         GeodePlus.init();
-
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayers::initialize);
-
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> GeodeModModelLayersRegistry::initialize);
         RegistryHelperImpl.ITEMS.register(eventBus);
         RegistryHelperImpl.BLOCKS.register(eventBus);
         BlockEntityTypeHelperImpl.BLOCK_ENTITIES.register(eventBus);

@@ -13,7 +13,6 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_REDSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_EMERALD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DIAMOND_GEODE;
-
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEPSLATE_LAPIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEPSLATE_REDSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEPSLATE_EMERALD_GEODE;
@@ -21,7 +20,6 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_ECHO_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_QUARTZ_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_QUARTZ_GEODE;
-
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_QUARTZ_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GLOWSTONE_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_GLOWSTONE_GEODE;
@@ -29,20 +27,17 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GOLD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_GOLD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_GOLD_GEODE;
-
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_GEODE;
-
     //Crystals
     public static final ConfigOption<Boolean> SHOULD_GENERATE_ECHO_LARGE_CRYSTAL;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_QUARTZ_LARGE_CRYSTAL;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GLOWSTONE_LARGE_CRYSTAL;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL;
-
     public static final ConfigOption<Boolean> SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL;
 
 
-    /*public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_PER_CHUNK;
+    /**public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_MINIMAL_HEIGHT;
     public static final ForgeConfigSpec.ConfigValue<Integer> NETHER_QUARTZ_GEODE_MAXIMAL_HEIGHT;
 
@@ -56,7 +51,7 @@ public class GeodeModCommonConfigs implements ModConfig {
 
     public static final ForgeConfigSpec.ConfigValue<Integer> SCULK_GEODE_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> SCULK_GEODE_MINIMAL_HEIGHT;
-    public static final ForgeConfigSpec.ConfigValue<Integer> SCULK_GEODE_MAXIMAL_HEIGHT;*/
+    public static final ForgeConfigSpec.ConfigValue<Integer> SCULK_GEODE_MAXIMAL_HEIGHT;**/
 
     private static ArrayList<ConfigOption> CONFIG_OPTIONS = new ArrayList<>();
 
@@ -94,10 +89,7 @@ public class GeodeModCommonConfigs implements ModConfig {
         SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL = registerConfigOption("Enable End Wrappist Large Crystal", true);
         SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL = registerConfigOption("Enable Prismarine Large Crystal", true);
 
-
-
-
-        /*NETHER_QUARTZ_GEODE_PER_CHUNK = registerConfigOption("Nether Quartz Geodes Per Chunk", 16);
+        /**NETHER_QUARTZ_GEODE_PER_CHUNK = registerConfigOption("Nether Quartz Geodes Per Chunk", 16);
         NETHER_BASALT_QUARTZ_GEODE_PER_CHUNK = registerConfigOption("Nether Basalt Quartz Geodes Per Chunk", 16);
         WRAPPIST_GEODE_PER_CHUNK = registerConfigOption("Wrappist Geodes Per Chunk", 32);
         SCULK_GEODE_PER_CHUNK = registerConfigOption("Sculk Geodes Per Chunk", 16);
@@ -110,7 +102,7 @@ public class GeodeModCommonConfigs implements ModConfig {
         WRAPPIST_GEODE_MINIMAL_HEIGHT = registerConfigOption("Wrappsit Geodes Minimal Height", 0);
         WRAPPIST_GEODE_MAXIMAL_HEIGHT = registerConfigOption("Wrappist Geodes Maximal Height", true);
         SCULK_GEODE_MINIMAL_HEIGHT = registerConfigOption("Sculk Geodes Minimal Height", 6);
-        SCULK_GEODE_MAXIMAL_HEIGHT = registerConfigOption("Sculk Geodes Maximal Height", 30);*/
+        SCULK_GEODE_MAXIMAL_HEIGHT = registerConfigOption("Sculk Geodes Maximal Height", 30);**/
     }
 
     @Override

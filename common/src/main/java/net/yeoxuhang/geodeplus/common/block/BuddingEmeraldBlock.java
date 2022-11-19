@@ -28,7 +28,7 @@ public class BuddingEmeraldBlock extends AmethystBlock {
     }
 
     public void randomTick(BlockState p_220898_, ServerLevel p_220899_, BlockPos p_220900_, RandomSource p_220901_) {
-        if (p_220901_.nextInt(5) == 0) {
+        if (p_220901_.nextInt(10) == 0) {
             Direction direction = DIRECTIONS[p_220901_.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = p_220900_.relative(direction);
             BlockState blockstate = p_220899_.getBlockState(blockpos);

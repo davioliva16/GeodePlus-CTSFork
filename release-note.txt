@@ -180,3 +180,15 @@ Fix
 ∎Geode Features place wrongly
 ∎Budding Nether Ancient Debris generate Medium Diamond Buds
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.5
+---------------------------------------------------------
+Fix
+∎Wrappist Pedestal break particles
+---------------------------------------------------------
+Change
+∎Smooth End Stone drop End stone when without silkTouch
+∎Blocks loot
+---------------------------------------------------------

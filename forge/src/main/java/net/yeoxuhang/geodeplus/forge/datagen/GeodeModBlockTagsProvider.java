@@ -181,5 +181,9 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
                 Blocks.SANDSTONE);
 
         this.tag(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE).add(Blocks.END_STONE);
+
+        this.tag(GeodeModTagsRegistry.Blocks.WRAPPIST_PEDESTAL_CANNOT_PLACE_ON).add(Blocks.AIR,
+                Blocks.CAVE_AIR,
+                Blocks.VOID_AIR);
     }
 }

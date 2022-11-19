@@ -1,15 +1,16 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.IntRange;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
-import net.minecraft.world.level.storage.loot.functions.LimitCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModItemsRegistry;
@@ -18,35 +19,113 @@ import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 public class GeodeModBlockLootTables extends BlockLoot {
     @Override
     protected void addTables() {
-        this.dropSelf(GeodeModBlocksRegistry.SMOOTH_END_STONE.get());
         this.dropSelf(GeodeModBlocksRegistry.GALCITE.get());
         this.dropSelf(GeodeModBlocksRegistry.WRAPPIST_BLOCK.get());
         this.dropSelf(GeodeModBlocksRegistry.WRAPPIST_PEDESTAL.get());
         this.dropSelf(GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
-
+        this.add(GeodeModBlocksRegistry.SMOOTH_END_STONE.get(), (arg) -> createSingleItemTableWithSilkTouch(arg, Blocks.END_STONE));
         this.add(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(),
-                (block) -> createOreDrop(block, Items.ECHO_SHARD));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.ECHO_SHARD)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.ECHO_SHARD)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
         this.add(GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.GOLD_NUGGET));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.GOLD_NUGGET)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.GOLD_NUGGET)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
+        /**this.add(GeodeModBlocksRegistry.ECHO_CRYSTAL.get(),
+                (block) -> createOreDrop(block, Items.ECHO_SHARD));**/
         this.add(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get(),
-                (block) -> createOreDrop(block, Items.QUARTZ));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.QUARTZ)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.QUARTZ)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F)))))));
         this.add(GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get(),
-                (block) -> createOreDrop(block, GeodeModItemsRegistry.WRAPPIST_SHARD.get()));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(GeodeModItemsRegistry.WRAPPIST_SHARD.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(GeodeModItemsRegistry.WRAPPIST_SHARD.get())
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
         this.add(GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.GLOWSTONE_DUST));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.GLOWSTONE_DUST)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.GLOWSTONE_DUST)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
         this.add(GeodeModBlocksRegistry.LAPIS_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.LAPIS_LAZULI));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.LAPIS_LAZULI)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.LAPIS_LAZULI)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
         this.add(GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get(),
-                (block) -> createOreDrop(block, Items.REDSTONE));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.REDSTONE)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(6F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.REDSTONE)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F)))))));
         this.add(GeodeModBlocksRegistry.EMERALD_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.EMERALD));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.EMERALD)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.EMERALD)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
         this.add(GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get(),
-                (block) -> createOreDrop(block, Items.DIAMOND));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.DIAMOND)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.DIAMOND)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
 
         this.add(GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.NETHERITE_SCRAP));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.NETHERITE_SCRAP)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.NETHERITE_SCRAP)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
         this.add(GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get(),
-                (block) -> createOreDrop(block, Items.PRISMARINE_SHARD));
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(Items.PRISMARINE_SHARD)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.PRISMARINE_SHARD)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F)))))));
 
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_QUARTZ_BUD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get());
@@ -110,7 +189,6 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
     }
-
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return RegistryHelperImpl.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
