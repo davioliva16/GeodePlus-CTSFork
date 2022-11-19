@@ -197,6 +197,10 @@ New Update of Geode+
 
 Changelog for 1.0.6
 ---------------------------------------------------------
+Added Translation
+∎Zh Cn
+∎Zh Tw
+---------------------------------------------------------
 Change
 ∎Geodes and crystals generation now more rare
 ---------------------------------------------------------
