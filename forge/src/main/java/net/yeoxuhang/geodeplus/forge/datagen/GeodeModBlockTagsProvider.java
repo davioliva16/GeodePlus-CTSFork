@@ -191,5 +191,9 @@ public class GeodeModBlockTagsProvider extends BlockTagsProvider {
         this.tag(GeodeModTagsRegistry.Blocks.WRAPPIST_PEDESTAL_CANNOT_PLACE_ON).add(Blocks.AIR,
                 Blocks.CAVE_AIR,
                 Blocks.VOID_AIR);
+
+        this.tag(BlockTags.WALLS).add(
+                GeodeModBlocksRegistry.SMOOTH_END_STONE_WALL.get()
+        );
     }
 }
