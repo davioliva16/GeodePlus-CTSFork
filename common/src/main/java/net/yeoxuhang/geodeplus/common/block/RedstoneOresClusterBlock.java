@@ -2,13 +2,20 @@ package net.yeoxuhang.geodeplus.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -20,15 +27,17 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
 
 import javax.annotation.Nullable;
 
-public class OresClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
+public class RedstoneOresClusterBlock extends RedStoneOreBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static BooleanProperty LIT;
     protected final VoxelShape northAabb;
     protected final VoxelShape southAabb;
     protected final VoxelShape eastAabb;
@@ -36,9 +45,9 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public OresClusterBlock(int box, int i, Properties properties) {
+    public RedstoneOresClusterBlock(int box, int i, Properties properties) {
         super(properties);
-        this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
+        this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(LIT, false).setValue(FACING, Direction.UP));
         this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
         this.downAabb = Block.box((double)i, (double)(16 - box), (double)i, (double)(16 - i), 16.0D, (double)(16 - i));
         this.northAabb = Block.box((double)i, (double)i, (double)(16 - box), (double)(16 - i), (double)(16 - i), 16.0D);
@@ -66,54 +75,96 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
         }
     }
 
+    public void attack(BlockState blockState, Level level, BlockPos blockPos, Player player) {
+        interact(blockState, level, blockPos);
+        super.attack(blockState, level, blockPos, player);
+    }
+
+    public void stepOn(Level level, BlockPos blockPos, BlockState blockState, Entity entity) {
+        if (!entity.isSteppingCarefully()) {
+            interact(blockState, level, blockPos);
+        }
+
+        super.stepOn(level, blockPos, blockState, entity);
+    }
+
+    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if (level.isClientSide) {
+            spawnParticles(level, blockPos);
+        } else {
+            interact(blockState, level, blockPos);
+        }
+
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        return itemStack.getItem() instanceof BlockItem && (new BlockPlaceContext(player, interactionHand, itemStack, blockHitResult)).canPlace() ? InteractionResult.PASS : InteractionResult.SUCCESS;
+    }
+
+    private static void interact(BlockState blockState, Level level, BlockPos blockPos) {
+        spawnParticles(level, blockPos);
+        if (!(Boolean)blockState.getValue(LIT)) {
+            level.setBlock(blockPos, (BlockState)blockState.setValue(LIT, true), 3);
+        }
+
+    }
+
+    public boolean isRandomlyTicking(BlockState blockState) {
+        return (Boolean)blockState.getValue(LIT);
+    }
+
+    public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+        if ((Boolean)blockState.getValue(LIT)) {
+            serverLevel.setBlock(blockPos, (BlockState)blockState.setValue(LIT, false), 3);
+        }
+
+    }
+
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+        if ((Boolean)blockState.getValue(LIT)) {
+            spawnParticles(level, blockPos);
+        }
+
+    }
+
+    private static void spawnParticles(Level level, BlockPos blockPos) {
+        double d = 0.5625;
+        RandomSource randomSource = level.random;
+        Direction[] var5 = Direction.values();
+        int var6 = var5.length;
+
+        for(int var7 = 0; var7 < var6; ++var7) {
+            Direction direction = var5[var7];
+            BlockPos blockPos2 = blockPos.relative(direction);
+            if (!level.getBlockState(blockPos2).isSolidRender(level, blockPos2)) {
+                Direction.Axis axis = direction.getAxis();
+                double e = axis == Direction.Axis.X ? 0.5 + 0.5625 * (double)direction.getStepX() : (double)randomSource.nextFloat();
+                double f = axis == Direction.Axis.Y ? 0.5 + 0.5625 * (double)direction.getStepY() : (double)randomSource.nextFloat();
+                double g = axis == Direction.Axis.Z ? 0.5 + 0.5625 * (double)direction.getStepZ() : (double)randomSource.nextFloat();
+                level.addParticle(DustParticleOptions.REDSTONE, (double)blockPos.getX() + e, (double)blockPos.getY() + f, (double)blockPos.getZ() + g, 0.0, 0.0, 0.0);
+            }
+        }
+
+    }
+
+    static {
+        LIT = RedstoneTorchBlock.LIT;
+    }
+
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(0);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LAPIS_CLUSTER.get())) {
-            int i = 1 + serverLevel.random.nextInt(10);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(0);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(5);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.EMERALD_CLUSTER.get())) {
-            int i = 1 + serverLevel.random.nextInt(10);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(0);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(5);
-            this.popExperience(serverLevel, blockPos, i);
-        }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get())) {
             int i = 1 + serverLevel.random.nextInt(10);
             this.popExperience(serverLevel, blockPos, i);
         }
@@ -153,7 +204,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_152043_) {
-        p_152043_.add(WATERLOGGED, FACING);
+        p_152043_.add(WATERLOGGED, FACING, LIT);
     }
 
     public PushReaction getPistonPushReaction(BlockState p_152047_) {
