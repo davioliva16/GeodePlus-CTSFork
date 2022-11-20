@@ -1,9 +1,11 @@
 {
   "block.geode.ancient_debris_cluster": "远古残骸水晶簇",
   "block.geode.budding_ancient_debris": "远古残骸母岩",
+  "block.geode.budding_basalt_ancient_debris": "玄武岩远古残骸母岩",
   "block.geode.budding_basalt_glowstone": "玄武岩萤石母岩",
   "block.geode.budding_basalt_gold_nugget": "玄武岩金粒母岩",
   "block.geode.budding_basalt_quartz": "玄武岩石英母岩",
+  "block.geode.budding_blackstone_ancient_debris": "黑石远古残骸母岩",
   "block.geode.budding_blackstone_glowstone": "黑石萤石母岩",
   "block.geode.budding_blackstone_gold_nugget": "黑石金粒母岩",
   "block.geode.budding_blackstone_quartz": "黑石石英母岩",

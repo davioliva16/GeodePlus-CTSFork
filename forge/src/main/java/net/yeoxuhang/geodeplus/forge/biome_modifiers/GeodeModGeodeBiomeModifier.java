@@ -82,6 +82,12 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_NETHER_ANCIENT_DEBRIS_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE.get()){
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.ANCIENT_DEBRIS_GEODE.get()));
         }
+        if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BASALT_ANCIENT_DEBRIS_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BASALT_ANCIENT_DEBRIS_GEODE.get()){
+            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.BASALT_ANCIENT_DEBRIS_GEODE.get()));
+        }
+        if (biome.is(GeodeModTagsRegistry.Biomes.HAS_BLACKSTONE_ANCIENT_DEBRIS_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_BLACKSTONE_ANCIENT_DEBRIS_GEODE.get()){
+            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.BLACKSTONE_ANCIENT_DEBRIS_GEODE.get()));
+        }
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_GEODE.get()){
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_GEODE.get()));
         }

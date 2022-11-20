@@ -49,6 +49,11 @@ public class GeodeModTagsRegistry {
         public static final TagKey<Biome> HAS_NETHER_ANCIENT_DEBRIS_GEODE
                 = biomeTag("has_nether_ancient_debris_geode");
 
+        public static final TagKey<Biome> HAS_BASALT_ANCIENT_DEBRIS_GEODE
+                = biomeTag("has_basalt_ancient_debris_geode");
+        public static final TagKey<Biome> HAS_BLACKSTONE_ANCIENT_DEBRIS_GEODE
+                = biomeTag("has_blackstone_ancient_debris_geode");
+
         //Crystals
         public static final TagKey<Biome> HAS_ECHO_CRYSTAL
                 = biomeTag("has_echo_crystal");

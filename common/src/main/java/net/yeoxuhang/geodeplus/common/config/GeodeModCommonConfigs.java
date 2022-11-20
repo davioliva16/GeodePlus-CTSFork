@@ -18,6 +18,9 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEPSLATE_EMERALD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEPSLATE_DIAMOND_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_ECHO_GEODE;
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE;
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_ANCIENT_DEBRIS_GEODE;
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_ANCIENT_DEBRIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_QUARTZ_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_QUARTZ_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_QUARTZ_GEODE;
@@ -27,7 +30,6 @@ public class GeodeModCommonConfigs implements ModConfig {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_GOLD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BASALT_GOLD_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_BLACKSTONE_GOLD_GEODE;
-    public static final ConfigOption<Boolean> SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE;
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_GEODE;
     //Crystals
     public static final ConfigOption<Boolean> SHOULD_GENERATE_ECHO_LARGE_CRYSTAL;
@@ -72,6 +74,9 @@ public class GeodeModCommonConfigs implements ModConfig {
         SHOULD_GENERATE_DEEPSLATE_EMERALD_GEODE = registerConfigOption("Enable Deepslate Emerald Geode", true);
         SHOULD_GENERATE_DEEPSLATE_DIAMOND_GEODE = registerConfigOption("Enable Deepslate Diamond Geode", true);
         SHOULD_GENERATE_ECHO_GEODE = registerConfigOption("Enable Echo Geode", true);
+        SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE = registerConfigOption("Enable Nether Ancient Debris Geode", true);
+        SHOULD_GENERATE_BASALT_ANCIENT_DEBRIS_GEODE = registerConfigOption("Enable Basalt Ancient Debris Geode", true);
+        SHOULD_GENERATE_BLACKSTONE_ANCIENT_DEBRIS_GEODE = registerConfigOption("Enable Blackstone Ancient Debris Geode", true);
         SHOULD_GENERATE_NETHER_QUARTZ_GEODE = registerConfigOption("Enable Nether Quartz Geode", true);
         SHOULD_GENERATE_BASALT_QUARTZ_GEODE = registerConfigOption("Enable Basalt Quartz Geode", true);
         SHOULD_GENERATE_BLACKSTONE_QUARTZ_GEODE = registerConfigOption("Enable Blackstone Quartz Geode", true);
@@ -81,7 +86,6 @@ public class GeodeModCommonConfigs implements ModConfig {
         SHOULD_GENERATE_NETHER_GOLD_GEODE = registerConfigOption("Enable Nether Gold Nugget Geode", true);
         SHOULD_GENERATE_BASALT_GOLD_GEODE = registerConfigOption("Enable Basalt Gold Nugget Geode", true);
         SHOULD_GENERATE_BLACKSTONE_GOLD_GEODE = registerConfigOption("Enable Blackstone Gold Nugget Geode", true);
-        SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE = registerConfigOption("Enable Nether Ancient Debris Geode", true);
         SHOULD_GENERATE_END_WRAPPIST_GEODE = registerConfigOption("Enable End Wrappist Geode", true);
         SHOULD_GENERATE_ECHO_LARGE_CRYSTAL = registerConfigOption("Enable Echo Large Crystal", true);
         SHOULD_GENERATE_NETHER_QUARTZ_LARGE_CRYSTAL = registerConfigOption("Enable Nether Quartz Large Crystal", true);

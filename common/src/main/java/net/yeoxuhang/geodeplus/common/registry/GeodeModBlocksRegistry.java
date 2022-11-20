@@ -214,6 +214,16 @@ public class GeodeModBlocksRegistry {
             () -> new BuddingAncientDebrisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(10F).sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops().lightLevel((p_152632_) -> {
                 return 10;
             })), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> BUDDING_BASALT_ANCIENT_DEBRIS = registerBlock("budding_basalt_ancient_debris",
+            () -> new BuddingAncientDebrisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(10F).sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops().lightLevel((p_152632_) -> {
+                return 10;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
+
+    public static final Supplier<Block> BUDDING_BLACKSTONE_ANCIENT_DEBRIS = registerBlock("budding_blackstone_ancient_debris",
+            () -> new BuddingAncientDebrisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(10F).sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops().lightLevel((p_152632_) -> {
+                return 10;
+            })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> ANCIENT_DEBRIS_CLUSTER = registerBlock("ancient_debris_cluster",
             () -> new WrappistClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.ANCIENT_DEBRIS).strength(10F).lightLevel((p_60929_) ->{
                 return 8;

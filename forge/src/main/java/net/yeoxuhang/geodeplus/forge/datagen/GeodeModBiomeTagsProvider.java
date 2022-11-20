@@ -30,6 +30,7 @@ public class GeodeModBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(GeodeModTagsRegistry.Biomes.HAS_BASALT_QUARTZ_GEODE).add(Biomes.BASALT_DELTAS);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_BASALT_GLOWSTONE_GEODE).add(Biomes.BASALT_DELTAS);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_BASALT_GOLD_NUGGET_GEODE).add(Biomes.BASALT_DELTAS);
+        this.tag(GeodeModTagsRegistry.Biomes.HAS_BASALT_ANCIENT_DEBRIS_GEODE).add(Biomes.BASALT_DELTAS);
         this.tag(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_GEODE).add(Biomes.END_HIGHLANDS, Biomes.END_MIDLANDS);
 
         //Crystals

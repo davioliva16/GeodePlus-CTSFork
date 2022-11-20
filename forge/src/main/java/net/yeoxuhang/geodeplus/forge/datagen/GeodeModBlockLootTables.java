@@ -189,6 +189,8 @@ public class GeodeModBlockLootTables extends BlockLoot {
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_SCULK_EMERALD.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get());
+        this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get());
 
         this.add(GeodeModBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), BlockLoot::createSlabItemTable);

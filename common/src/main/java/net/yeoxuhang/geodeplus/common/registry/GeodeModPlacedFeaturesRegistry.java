@@ -24,6 +24,10 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
+    public static final Supplier<PlacedFeature> BASALT_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("basalt_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+
+    public static final Supplier<PlacedFeature> BLACKSTONE_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("blackstone_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+
     public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> BLACKSTONE_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("blackstone_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GLOWSTONE_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));

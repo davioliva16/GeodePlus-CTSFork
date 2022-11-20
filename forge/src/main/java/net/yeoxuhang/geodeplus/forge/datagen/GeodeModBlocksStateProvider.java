@@ -36,6 +36,8 @@ public class GeodeModBlocksStateProvider extends BlockStateProvider {
         simpleBlock(GeodeModBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
+        simpleBlock(GeodeModBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get());
+        simpleBlock(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_LAPIS.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_REDSTONE.get());
         simpleBlock(GeodeModBlocksRegistry.BUDDING_EMERALD.get());
