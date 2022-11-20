@@ -211,6 +211,10 @@ New Update of Geode+
 Changelog for 1.0.7
 ---------------------------------------------------------
 Added Blocks
+∎Smooth End Stone Slab
+∎Smooth End Stone Stairs
+∎Smooth End Stone Wall
+
 ∎Budding Basalt Ancient Debris
 ∎Budding Blackstone Ancient Debris
 ---------------------------------------------------------
