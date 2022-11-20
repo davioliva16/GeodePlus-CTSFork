@@ -204,3 +204,24 @@ Added Translation
 Change
 ∎Geodes and crystals generation now more rare
 ---------------------------------------------------------
+
+
+New Update of Geode+
+
+Changelog for 1.0.7
+---------------------------------------------------------
+Added Blocks
+∎Budding Basalt Ancient Debris
+∎Budding Blackstone Ancient Debris
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Basalt Ancient Debris Geode
+∎Blackstone Ancient Debris Geode
+---------------------------------------------------------
+Change
+∎Textures for ores have been updated
+---------------------------------------------------------
+Fix
+∎Large Echo Crystal generate on surfaces
+---------------------------------------------------------
