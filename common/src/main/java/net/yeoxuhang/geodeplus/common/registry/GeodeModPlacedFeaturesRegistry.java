@@ -72,9 +72,9 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> GLOWSTONE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("glowstone_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.GLOWSTONE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> ECHO_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("echo_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_CRYSTAL_SPIKE, List.of(inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> ECHO_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("echo_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_CRYSTAL_SPIKE, List.of(inSquarePlacement(), placementEchoCrystalModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> ECHO_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("echo_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> ECHO_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("echo_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementEchoCrystalModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> WRAPPIST_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("wrappist_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE, List.of(inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
 
@@ -124,6 +124,10 @@ public class GeodeModPlacedFeaturesRegistry {
     }
     private static PlacementModifier placementNetherCrystalModifier() {
         return PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT;
+    }
+
+    private static PlacementModifier placementEchoCrystalModifier() {
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(30));
     }
 
     private static PlacementModifier placementNetherBasaltModifier() {
