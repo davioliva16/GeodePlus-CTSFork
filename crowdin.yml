@@ -1,0 +1,4 @@
+
+files:
+  - source: forge/src/generated/resources/assets/geode/lang/en_us.json
+    translation: common/src/main/resources/assets/geode/lang/%locale_with_underscore%
