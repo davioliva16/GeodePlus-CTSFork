@@ -17,9 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayersRegistry;
-import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
-
-import java.util.Random;
+import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
     private final ItemRenderer itemRenderer;

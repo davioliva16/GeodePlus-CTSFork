@@ -20,6 +20,5 @@ public class GeodeModDefaultFeatures {
     }
     public static void addWrappistCrystalSpike(BiomeGenerationSettings.Builder builder) {
         builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
-        builder.addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE_FLOOR.get()));
     }
 }

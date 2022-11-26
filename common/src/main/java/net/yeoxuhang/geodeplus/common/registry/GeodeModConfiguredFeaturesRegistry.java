@@ -38,11 +38,8 @@ public class GeodeModConfiguredFeaturesRegistry {
             registerConfiguredFeature("echo_crystal_spike", GeodeModFeaturesRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodeModBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> ECHO_CRYSTAL_SPIKE_FLOOR =
             registerConfiguredFeature("echo_crystal_spike_floor", GeodeModFeaturesRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodeModBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
-
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> WRAPPIST_CRYSTAL_SPIKE =
-            registerConfiguredFeature("wrappist_crystal_spike", GeodeModFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
-    public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> WRAPPIST_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("wrappist_crystal_spike_floor", GeodeModFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("wrappist_crystal_spike", GeodeModFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> PRISMARINE_CRYSTAL_SPIKE_FLOOR =
             registerConfiguredFeature("prismarine_crystal_spike_floor", GeodeModFeaturesRegistry.OCEAN_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.PRISMARINE).defaultBlockState(), ((Block)GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));

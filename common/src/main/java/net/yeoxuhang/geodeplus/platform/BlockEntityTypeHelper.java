@@ -2,7 +2,7 @@ package net.yeoxuhang.geodeplus.platform;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
 import java.util.function.Supplier;
 

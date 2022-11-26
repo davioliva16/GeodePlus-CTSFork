@@ -109,7 +109,6 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
         }
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_LARGE_CRYSTAL.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
-            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, Holder.direct(GeodeModPlacedFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE_FLOOR.get()));
         }
 
         if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodeModCommonConfigs.SHOULD_GENERATE_PRISMARINE_LARGE_CRYSTAL.get()) {

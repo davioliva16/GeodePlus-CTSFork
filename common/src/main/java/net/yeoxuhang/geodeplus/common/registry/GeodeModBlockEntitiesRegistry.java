@@ -1,6 +1,6 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
-import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.platform.BlockEntityTypeHelper;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 

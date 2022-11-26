@@ -1,4 +1,4 @@
-package net.yeoxuhang.geodeplus.common.block.blockentity;
+package net.yeoxuhang.geodeplus.common.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

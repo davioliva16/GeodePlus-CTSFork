@@ -229,3 +229,16 @@ Change
 Fix
 ∎Large Echo Crystal generate on surfaces
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.8
+---------------------------------------------------------
+Fix
+∎Large Wrappist Crystal generate in End dimension cuz Minecraft crash
+---------------------------------------------------------
+Added Translation
+∎Chinese (Simplified and Traditional)
+∎Spanish
+∎Korean
+---------------------------------------------------------

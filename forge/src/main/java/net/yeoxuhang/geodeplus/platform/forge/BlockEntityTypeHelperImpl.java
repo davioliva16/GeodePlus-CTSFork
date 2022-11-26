@@ -1,7 +1,7 @@
 package net.yeoxuhang.geodeplus.platform.forge;
 
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;

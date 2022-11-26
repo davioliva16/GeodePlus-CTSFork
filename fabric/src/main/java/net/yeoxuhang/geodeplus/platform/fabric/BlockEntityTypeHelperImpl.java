@@ -1,7 +1,7 @@
 package net.yeoxuhang.geodeplus.platform.fabric;
 
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.yeoxuhang.geodeplus.common.block.blockentity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;

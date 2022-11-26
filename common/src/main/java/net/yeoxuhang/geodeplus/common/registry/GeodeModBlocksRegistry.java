@@ -40,19 +40,19 @@ public class GeodeModBlocksRegistry {
             () -> new BuddingLapisBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> LAPIS_CLUSTER = registerBlock("lapis_cluster",
-            () -> new RedstoneOresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+            () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
             } )), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> LARGE_LAPIS_BUD = registerBlock("large_lapis_bud",
-            () -> new RedstoneOresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 2;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> MEDIUM_LAPIS_BUD = registerBlock("medium_lapis_bud",
-            () -> new RedstoneOresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 1;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> SMALL_LAPIS_BUD = registerBlock("small_lapis_bud",
-            () -> new RedstoneOresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
+            () -> new OresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> BUDDING_REDSTONE = registerBlock("budding_redstone",
             () -> new BuddingRedstoneBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
@@ -88,19 +88,19 @@ public class GeodeModBlocksRegistry {
             () -> new BuddingEmeraldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> EMERALD_CLUSTER = registerBlock("emerald_cluster",
-            () -> new RedstoneOresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+            () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
             } )), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> LARGE_EMERALD_BUD = registerBlock("large_emerald_bud",
-            () -> new RedstoneOresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 2;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> MEDIUM_EMERALD_BUD = registerBlock("medium_emerald_bud",
-            () -> new RedstoneOresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 1;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> SMALL_EMERALD_BUD = registerBlock("small_emerald_bud",
-            () -> new RedstoneOresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
+            () -> new OresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> BUDDING_DIAMOND = registerBlock("budding_diamond",
             () -> new BuddingDiamondBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
@@ -112,19 +112,19 @@ public class GeodeModBlocksRegistry {
             () -> new BuddingDiamondBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.SCULK).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> DIAMOND_CRYSTAL = registerBlock("diamond_crystal",
-            () -> new RedstoneOresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+            () -> new OresClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
             } )), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> LARGE_DIAMOND_BUD = registerBlock("large_diamond_bud",
-            () -> new RedstoneOresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 2;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> MEDIUM_DIAMOND_BUD = registerBlock("medium_diamond_bud",
-            () -> new RedstoneOresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+            () -> new OresClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
                 return 1;
             })), GeodeModCreativeModeTabsRegistry.TAB);
     public static final Supplier<Block> SMALL_DIAMOND_BUD = registerBlock("small_diamond_bud",
-            () -> new RedstoneOresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
+            () -> new OresClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodeModCreativeModeTabsRegistry.TAB);
 
     public static final Supplier<Block> BUDDING_NETHER_QUARTZ = registerBlock("budding_nether_quartz",
             () -> new BuddingNetherQuartzBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()), GeodeModCreativeModeTabsRegistry.TAB);

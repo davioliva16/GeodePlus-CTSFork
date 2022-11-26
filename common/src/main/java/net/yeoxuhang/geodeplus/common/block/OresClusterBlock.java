@@ -70,11 +70,11 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(0);
+            int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1 + serverLevel.random.nextInt(2);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get())) {
@@ -86,11 +86,11 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(0);
+            int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1 + serverLevel.random.nextInt(2);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get())) {
@@ -102,11 +102,11 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(0);
+            int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1 + serverLevel.random.nextInt(2);
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get())) {
