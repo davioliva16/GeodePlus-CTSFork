@@ -56,7 +56,9 @@ public class BuddingDiamondBlock extends AmethystBlock {
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
+
         }
+
     }
 
     public static boolean canClusterGrowAtState(BlockState p_152735_) {

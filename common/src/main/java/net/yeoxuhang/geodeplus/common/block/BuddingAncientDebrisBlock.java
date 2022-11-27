@@ -3,14 +3,22 @@ package net.yeoxuhang.geodeplus.common.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+
+import java.util.Collections;
+import java.util.List;
 
 public class BuddingAncientDebrisBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -46,6 +54,7 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
 
         }
     }
+
 
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;

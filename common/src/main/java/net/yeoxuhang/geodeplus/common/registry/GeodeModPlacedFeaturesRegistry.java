@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -11,10 +12,13 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class GeodeModPlacedFeaturesRegistry {
-    public static final Supplier<PlacedFeature> PRISMARINE_GEODE = RegistryHelper.registerPlacedFeature("prismarine_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_GEODE, List.of(rarityOceanGeode(), inSquarePlacement(), placementOceanModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BASALT_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("basalt_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_ANCIENT_DEBRIS_GEODE, List.of(rarityBasaltAncientDebrisGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGlowstoneGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BASALT_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("basalt_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GOLD_NUGGET_GEODE, List.of(rarityBasaltGoldNuggetGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> BASALT_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("basalt_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_QUARTZ_GEODE, List.of(rarityBasaltQuartzGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
 
+    public static final Supplier<PlacedFeature> PRISMARINE_GEODE = RegistryHelper.registerPlacedFeature("prismarine_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_GEODE, List.of(rarityPrismarineGeode(), inSquarePlacement(), placementPrismarineModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
-    public static final Supplier<PlacedFeature> BASALT_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("basalt_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_QUARTZ_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BLACKSTONE_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("blackstone_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_QUARTZ_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> WRAPPIST_GEODE = RegistryHelper.registerPlacedFeature("wrappist_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.WRAPPIST_GEODE, List.of(rarityEndGeode(), inSquarePlacement(), placementEndModifier(), biomeFilter())));
@@ -24,17 +28,14 @@ public class GeodeModPlacedFeaturesRegistry {
 
     public static final Supplier<PlacedFeature> ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> BASALT_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("basalt_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> BLACKSTONE_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("blackstone_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_ANCIENT_DEBRIS_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> BLACKSTONE_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("blackstone_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GLOWSTONE_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> BASALT_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("basalt_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BASALT_GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> BLACKSTONE_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("blackstone_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.BLACKSTONE_GOLD_NUGGET_GEODE, List.of(rarityNetherGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
@@ -77,15 +78,23 @@ public class GeodeModPlacedFeaturesRegistry {
     public static final Supplier<PlacedFeature> ECHO_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("echo_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.ECHO_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementEchoCrystalModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> WRAPPIST_CRYSTAL_SPIKE = RegistryHelper.registerPlacedFeature("wrappist_crystal_spike", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE, List.of(placementCrystal(), inSquarePlacement(), placementNetherCrystalModifier(), biomeFilter())));
-    public static final Supplier<PlacedFeature> PRISMARINE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("prismarine_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementOceanModifier(), biomeFilter())));
+    public static final Supplier<PlacedFeature> PRISMARINE_CRYSTAL_SPIKE_FLOOR = RegistryHelper.registerPlacedFeature("prismarine_crystal_spike_floor", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodeModConfiguredFeaturesRegistry.PRISMARINE_CRYSTAL_SPIKE_FLOOR, List.of(placementCrystal() ,inSquarePlacement(), placementPrismarineModifier(), biomeFilter())));
 
-    private static RarityFilter rarityOceanGeode() {
+    //private static RarityFilter rarityOceanGeode() {
+    //        return RarityFilter.onAverageOnceEvery(TEST.get());
+    //    }
+    private static RarityFilter rarityPrismarineGeode() {
         return RarityFilter.onAverageOnceEvery(32);
     }
+    private static RarityFilter rarityBasaltAncientDebrisGeode(){return RarityFilter.onAverageOnceEvery(32);}
+    private static RarityFilter rarityBasaltGlowstoneGeode(){return RarityFilter.onAverageOnceEvery(32);}
+
+    private static RarityFilter rarityBasaltGoldNuggetGeode(){return RarityFilter.onAverageOnceEvery(32);}
+
+    private static RarityFilter rarityBasaltQuartzGeode(){return RarityFilter.onAverageOnceEvery(32);}
     private static RarityFilter rarityNetherGeode() {
         return RarityFilter.onAverageOnceEvery(32);
     }
-
     private static CountPlacement placementCrystal() {
         return CountPlacement.of(20);
     }
@@ -113,7 +122,7 @@ public class GeodeModPlacedFeaturesRegistry {
         return InSquarePlacement.spread();
     }
 
-    private static PlacementModifier placementOceanModifier() {
+    private static PlacementModifier placementPrismarineModifier() {
         return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(30), VerticalAnchor.absolute(60));
     }
     private static PlacementModifier placementNetherModifier() {

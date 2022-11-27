@@ -34,7 +34,6 @@ public class GeodePlusForge {
         RegistryHelperImpl.ITEMS.register(eventBus);
         RegistryHelperImpl.BLOCKS.register(eventBus);
         BlockEntityTypeHelperImpl.BLOCK_ENTITIES.register(eventBus);
-        //RegistryHelperImpl.BLOCK_ENTITIES.register(eventBus);
         RegistryHelperImpl.FEATURES.register(eventBus);
         RegistryHelperImpl.PLACED_FEATURES.register(eventBus);
 

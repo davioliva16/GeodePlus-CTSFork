@@ -3,7 +3,6 @@ package net.yeoxuhang.geodeplus.forge.registry;
 import com.mojang.serialization.Codec;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.forge.biome_modifiers.GeodeModGeodeBiomeModifier;
-import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

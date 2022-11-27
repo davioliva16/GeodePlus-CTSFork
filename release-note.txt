@@ -242,3 +242,14 @@ Added Translation
 ∎Spanish
 ∎Korean
 ---------------------------------------------------------
+
+New Update of Geode+
+
+Changelog for 1.0.9
+---------------------------------------------------------
+Fix
+∎Ores Budding blocks crash during server
+---------------------------------------------------------
+Change
+∎Textures for ores have been updated
+---------------------------------------------------------
