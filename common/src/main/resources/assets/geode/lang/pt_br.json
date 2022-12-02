@@ -52,7 +52,7 @@
   "block.geode.medium_glowstone_bud": "Broto de Pedra Luminosa Médio",
   "block.geode.medium_gold_nugget_bud": "Broto de Pepitas de Ouro Médio",
   "block.geode.medium_lapis_bud": "Broto de Lápis Lazúli Médio",
-  "block.geode.medium_prismarine_bud": "Broto Médio De Prismarino",
+  "block.geode.medium_prismarine_bud": "Broto de Prismarino Médio",
   "block.geode.medium_quartz_bud": "Broto de Quartzo Médio",
   "block.geode.medium_redstone_bud": "Broto de Redstone Médio",
   "block.geode.medium_wrappist_bud": "Broto de Cristal Azul Médio",
@@ -79,7 +79,7 @@
   "block.geode.wrappist_cluster": "Agregado de Cristal Azul",
   "block.geode.wrappist_pedestal": "Pedestal de Cristal Azul",
   "item.geode.wrappist_goat_horn": "Chifre de Cabra de Cristal Azul",
-  "item.geode.wrappist_shard": "Fragmento De Cristal Azul",
+  "item.geode.wrappist_shard": "Fragmento de Cristal Azul",
   "itemGroup.geode": "Geode+",
   "itemGroup.geode.geode": "Geode+"
 }
