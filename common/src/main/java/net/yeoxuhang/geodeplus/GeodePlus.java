@@ -1,7 +1,6 @@
 package net.yeoxuhang.geodeplus;
 
 import com.kyanite.paragon.api.ConfigRegistry;
-import com.kyanite.paragon.example.TestModConfig;
 import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.*;
 
