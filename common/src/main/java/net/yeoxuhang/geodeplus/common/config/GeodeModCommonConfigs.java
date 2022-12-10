@@ -1,13 +1,14 @@
 package net.yeoxuhang.geodeplus.common.config;
 
 import com.kyanite.paragon.api.ConfigOption;
-import com.kyanite.paragon.api.interfaces.ModConfig;
+import com.kyanite.paragon.api.interfaces.BaseModConfig;
+import net.yeoxuhang.geodeplus.GeodePlus;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GeodeModCommonConfigs implements ModConfig {
-    private static ArrayList<ConfigOption> CONFIG_OPTIONS = new ArrayList<>();
+public class GeodeModCommonConfigs implements BaseModConfig {
+    private static final ArrayList<ConfigOption> CONFIG_OPTIONS = new ArrayList<>();
 
     private static <T> ConfigOption<T> registerConfigOption(String title, T defaultValue) {
         ConfigOption<T> option = new ConfigOption<>(title, defaultValue);
@@ -120,5 +121,30 @@ public class GeodeModCommonConfigs implements ModConfig {
     @Override
     public List<ConfigOption> configOptions() {
         return CONFIG_OPTIONS;
+    }
+
+    @Override
+    public String getModId() {
+        return GeodePlus.MOD_ID;
+    }
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
+    public String getSuffix() {
+        return null;
+    }
+
+    @Override
+    public void load() {
+
+    }
+
+    @Override
+    public void save() {
+
     }
 }

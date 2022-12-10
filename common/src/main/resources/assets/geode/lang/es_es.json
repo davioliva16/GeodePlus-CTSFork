@@ -80,6 +80,6 @@
   "block.geode.wrappist_pedestal": "Pedestal de wrappist",
   "item.geode.wrappist_goat_horn": "Cuerno de cabra de wrappist",
   "item.geode.wrappist_shard": "Fragmento de wrappist",
-  "itemGroup.geode": "Geode+",
-  "itemGroup.geode.geode": "Geode+"
+  "itemGroup.geode": "geode+",
+  "itemGroup.geode.geode": "geode+"
 }

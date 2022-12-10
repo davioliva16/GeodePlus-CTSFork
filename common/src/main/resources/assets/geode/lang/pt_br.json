@@ -80,6 +80,6 @@
   "block.geode.wrappist_pedestal": "Pedestal De Cristal Azul",
   "item.geode.wrappist_goat_horn": "Chifre De Cabra De Cristal Azul",
   "item.geode.wrappist_shard": "Fragmento De Cristal Azul",
-  "itemGroup.geode": "Geode+",
-  "itemGroup.geode.geode": "Geode+"
+  "itemGroup.geode": "geode+",
+  "itemGroup.geode.geode": "geode+"
 }

@@ -13,7 +13,7 @@ public class GeodeModBiomeModifiersRegistry {
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIERS =
             DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, GeodePlus.MOD_ID);
 
-    public static RegistryObject<Codec<GeodeModGeodeBiomeModifier>> GEODE_MODIFIER = BIOME_MODIFIERS.register("geode", () -> {
+    public static RegistryObject<Codec<GeodeModGeodeBiomeModifier>> GEODE_MODIFIER = BIOME_MODIFIERS.register("geode_plus", () -> {
         return Codec.unit(GeodeModGeodeBiomeModifier::new);
     });
 

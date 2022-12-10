@@ -27,10 +27,6 @@ public class GeodeModGeodeBiomeModifier {
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE) && GeodeModCommonConfigs.SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.PRISMARINE_GEODE.get()));
             }
-
-            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_PRISMARINE_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE.get()) {
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.PRISMARINE_GEODE.get()));
-            }
             //Stone
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_DIAMOND_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_STONE_DIAMOND_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.DIAMOND_GEODE.get()));
@@ -58,17 +54,20 @@ public class GeodeModGeodeBiomeModifier {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.DEEPSLATE_REDSTONE_GEODE.get()));
             }
             //Sculk
-            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_DIAMOND_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_DIAMOND_GEODE.get()) {
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_ECHO_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_DIAMOND_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.SCULK_DIAMOND_GEODE.get()));
             }
-            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_EMERALD_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_EMERALD_GEODE.get()) {
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_ECHO_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_EMERALD_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.SCULK_EMERALD_GEODE.get()));
             }
-            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_LAPIS_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_LAPIS_GEODE.get()) {
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_ECHO_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_LAPIS_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.SCULK_LAPIS_GEODE.get()));
             }
-            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_REDSTONE_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_REDSTONE_GEODE.get()) {
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_ECHO_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_SCULK_REDSTONE_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.SCULK_REDSTONE_GEODE.get()));
+            }
+            if (biome.is(GeodeModTagsRegistry.Biomes.HAS_ECHO_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_ECHO_GEODE.get()) {
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodeModPlacedFeaturesRegistry.ECHO_GEODE.get()));
             }
             //Netherrack
             if (biome.is(GeodeModTagsRegistry.Biomes.HAS_NETHER_ANCIENT_DEBRIS_GEODE )&& GeodeModCommonConfigs.SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE.get()) {

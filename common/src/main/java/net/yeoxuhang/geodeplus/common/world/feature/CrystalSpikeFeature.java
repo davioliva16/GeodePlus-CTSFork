@@ -3,6 +3,8 @@ package net.yeoxuhang.geodeplus.common.world.feature;
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
 import net.yeoxuhang.geodeplus.common.block.QuartzCrystalBlock;
+import net.yeoxuhang.geodeplus.common.block.WrappistClusterBlock;
+import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
 import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.material.Fluids;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -26,7 +29,7 @@ public class CrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
         super(codec);
     }
 
-    public boolean place(FeaturePlaceContext<GeodeCrystalSpikeConfig> context) {
+    public boolean place(@NotNull FeaturePlaceContext<GeodeCrystalSpikeConfig> context) {
         WorldGenLevel world = context.level();
         BlockPos blockPos = context.origin();
         RandomSource random = context.random();
@@ -75,7 +78,7 @@ public class CrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
                 Direction direction = var9[var11];
                 BlockPos relative = pos.relative(direction);
                 if (random.nextBoolean() && world.isStateAtPosition(relative, DripstoneUtils::isEmptyOrWater) && world.getBlockState(pos).equals(config.crystal_state)) {
-                    this.setBlock(world, relative, config.cluster_state.setValue(QuartzCrystalBlock.FACING, direction).setValue(QuartzCrystalBlock.WATERLOGGED, world.getFluidState(relative).getType() == Fluids.WATER));
+                    this.setBlock(world, relative, config.cluster_state.setValue(WrappistClusterBlock.FACING, direction).setValue(WrappistClusterBlock.WATERLOGGED, world.getFluidState(relative).getType() == Fluids.WATER));
                 }
             }
         }
@@ -92,9 +95,7 @@ public class CrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
                     BlockPos pos = new BlockPos(blockPos.getX() + x, blockPos.getY(), blockPos.getZ() + z);
                     if (x * x + z * z <= radius * radius) {
                         if (direction == Direction.DOWN) {
-                            if (world.isStateAtPosition(pos.below(), DripstoneUtils::isEmptyOrWaterOrLava)) {
-                                return this.placeSpike(world, blockPos.below(), startRadius / 2, height, randomChance, crystalPos, direction, random);
-                            }
+                            //return this.placeSpike(world, blockPos.below(), startRadius / 2, height, randomChance, crystalPos, direction, random);
                         } else if (direction == Direction.UP) {
                             BlockPos.MutableBlockPos mut = pos.mutable();
 
@@ -164,7 +165,7 @@ public class CrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
                     for(int var14 = 0; var14 < var13; ++var14) {
                         Direction direction = var12[var14];
                         if (world.getBlockState(pos).is(BlockTags.BASE_STONE_NETHER) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
-                            world.setBlock(pos, Blocks.CALCITE.defaultBlockState(), 2);
+                            world.setBlock(pos, Blocks.BLACKSTONE.defaultBlockState(), 2);
                             flag = true;
                         }
                     }

@@ -80,6 +80,6 @@
   "block.geode.wrappist_pedestal": "蓝水晶台座",
   "item.geode.wrappist_goat_horn": "蓝水晶山羊角",
   "item.geode.wrappist_shard": "蓝水晶碎片",
-  "itemGroup.geode": "Geode+",
-  "itemGroup.geode.geode": "Geode+"
+  "itemGroup.geode": "geode+",
+  "itemGroup.geode.geode": "geode+"
 }
