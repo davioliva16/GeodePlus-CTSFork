@@ -274,3 +274,15 @@ Fix
 Update
 ∎Paragon version now 3.0.1
 ---------------------------------------------------------
+
+Changelog for 1.1.3
+---------------------------------------------------------
+Fix
+∎Crash between Deeper and Darker mod
+---------------------------------------------------------
+Update
+∎Wrappist Pedestal retextured
+∎Wrappist Pedestal recipe
+
+∎Paragon version now 3.0.2
+---------------------------------------------------------
