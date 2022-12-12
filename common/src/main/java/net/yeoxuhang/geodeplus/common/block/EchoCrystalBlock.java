@@ -3,7 +3,6 @@ package net.yeoxuhang.geodeplus.common.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -22,7 +21,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 import javax.annotation.Nullable;
 
@@ -69,19 +68,19 @@ public class EchoCrystalBlock extends AmethystBlock implements SimpleWaterlogged
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(0);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.ECHO_CRYSTAL.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get())) {
             int i = 1 + serverLevel.random.nextInt(10);
             this.popExperience(serverLevel, blockPos, i);
         }

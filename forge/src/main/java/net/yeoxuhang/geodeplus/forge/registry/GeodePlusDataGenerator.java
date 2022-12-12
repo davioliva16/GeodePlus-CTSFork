@@ -9,18 +9,18 @@ import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.forge.datagen.*;
 
 @Mod.EventBusSubscriber(modid = GeodePlus.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class GeodeModDataGenerators {
+public class GeodePlusDataGenerator {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(true, new GeodeModRecipeProvider(generator));
-        generator.addProvider(true, new GeodeModLootTableProvider(generator));
-        generator.addProvider(true, new GeodeModLangProvider(generator, "en_us", false));
-        generator.addProvider(true, new GeodeModItemModelProvider(generator, existingFileHelper));
-        generator.addProvider(true ,new GeodeModBlocksStateProvider(generator, existingFileHelper));
-        generator.addProvider(true ,new GeodeModBlockTagsProvider(generator, existingFileHelper));
-        generator.addProvider(true ,new GeodeModBiomeTagsProvider(generator, existingFileHelper));
+        generator.addProvider(true, new GeodePlusRecipeProvider(generator));
+        generator.addProvider(true, new GeodePlusLootTableProvider(generator));
+        generator.addProvider(true, new GeodePlusLangProvider(generator, "en_us", false));
+        generator.addProvider(true, new GeodePlusItemModelProvider(generator, existingFileHelper));
+        generator.addProvider(true ,new GeodePlusBlockStateProvider(generator, existingFileHelper));
+        generator.addProvider(true ,new GeodePlusBlockTagProvider(generator, existingFileHelper));
+        generator.addProvider(true ,new GeodePlusBiomeTagProvider(generator, existingFileHelper));
     }
 }

@@ -7,17 +7,14 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModItemsRegistry;
-import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 
-public class GeodeModLangProvider extends LanguageProvider {
+public class GeodePlusLangProvider extends LanguageProvider {
     private static final String NORMAL_CHARS = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_,;.?!/\\'";
     private static final String UPSIDE_DOWN_CHARS = " ɐqɔpǝɟbɥıظʞןɯuodbɹsʇnʌʍxʎzⱯᗺƆᗡƎℲ⅁HIſʞꞀWNOԀὉᴚS⟘∩ΛMXʎZ0ƖᄅƐㄣϛ9ㄥ86‾'؛˙¿¡/\\,";
     private final boolean upsideDown;
 
-    public GeodeModLangProvider(DataGenerator pGenerator, String locale, boolean upsideDown) {
+    public GeodePlusLangProvider(DataGenerator pGenerator, String locale, boolean upsideDown) {
         super(pGenerator, GeodePlus.MOD_ID, locale);
         this.upsideDown = upsideDown;
     }

@@ -1,18 +1,23 @@
 package net.yeoxuhang.geodeplus;
 
-import com.kyanite.paragon.api.ConfigRegistry;
-import net.yeoxuhang.geodeplus.common.config.GeodeModCommonConfigs;
+import com.kyanite.paragon.api.ConfigManager;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.*;
+import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 
 public class GeodePlus {
+    public static final CreativeModeTab TAB = RegistryHelper.registerCreativeModeTab(() -> new ItemStack(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get()));
+
     public static final String MOD_ID = "geode";
 
     public static void init() {
-        GeodeModItemsRegistry.initialize();
-        GeodeModBlocksRegistry.initialize();
-        GeodeModBlockEntitiesRegistry.initialize();
-        GeodeModFeaturesRegistry.initialize();
-        GeodeModPlacedFeaturesRegistry.initialize();
-        ConfigRegistry.register(new GeodeModCommonConfigs());
+        GeodePlusItemsRegistry.initialize();
+        GeodePlusBlocksRegistry.initialize();
+        GeodePlusBlockEntityRegistry.initialize();
+        GeodePlusFeatureRegistry.initialize();
+        GeodePlusPlacedFeatureRegistry.initialize();
+        ConfigManager.register(GeodePlus.MOD_ID ,new GeodePlusCommonConfigs());
     }
 }

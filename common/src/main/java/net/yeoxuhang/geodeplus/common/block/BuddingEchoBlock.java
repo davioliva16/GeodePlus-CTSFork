@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -16,7 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.Vec3;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingEchoBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -37,16 +36,16 @@ public class BuddingEchoBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_ECHO_BUD.get();
+                block = GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get();
                 Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 5);
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get();
                 Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 10);
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_ECHO_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get();
                 Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 15);
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.ECHO_CRYSTAL.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get()) && blockstate.getValue(EchoCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.ECHO_CRYSTAL.get();
                 Warden.applyDarknessAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 20);
             }
             if (block != null) {

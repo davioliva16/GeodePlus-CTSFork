@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingDiamondBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -34,13 +34,13 @@ public class BuddingDiamondBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get();
+                block = GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(OresClusterBlock.FACING, direction).setValue(OresClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));

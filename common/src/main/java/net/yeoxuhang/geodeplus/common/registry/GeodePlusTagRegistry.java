@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
-public class GeodeModTagsRegistry {
+public class GeodePlusTagRegistry {
     public static class Biomes {
         //Geodes
         public static final TagKey<Biome> HAS_PRISMARINE_GEODE

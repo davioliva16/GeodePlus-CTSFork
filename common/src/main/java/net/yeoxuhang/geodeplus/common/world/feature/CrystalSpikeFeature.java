@@ -2,9 +2,7 @@ package net.yeoxuhang.geodeplus.common.world.feature;
 
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
-import net.yeoxuhang.geodeplus.common.block.QuartzCrystalBlock;
 import net.yeoxuhang.geodeplus.common.block.WrappistClusterBlock;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
 import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

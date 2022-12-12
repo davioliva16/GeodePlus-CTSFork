@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingLapisBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -34,13 +34,13 @@ public class BuddingLapisBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LAPIS_CLUSTER.get();
+                block = GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get()) && blockstate.getValue(RedstoneOresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LAPIS_CLUSTER.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(RedstoneOresClusterBlock.FACING, direction).setValue(RedstoneOresClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));

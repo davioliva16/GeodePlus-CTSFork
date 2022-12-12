@@ -8,7 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlockEntitiesRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,7 +16,7 @@ public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyC
     ItemStack item;
     public int age;
     public WrappistPedestalBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(GeodeModBlockEntitiesRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), pWorldPosition, pBlockState);
+        super(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), pWorldPosition, pBlockState);
         this.item = ItemStack.EMPTY;
     }
 

@@ -1,10 +1,10 @@
 {
-  "type": "geode_plus:add_item",
+  "type": "geode:add_item",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "minecraft:chests/end_city_treasure"
     }
   ],
-  "item": "geode_plus:wrappist_goat_horn"
+  "item": "geode:wrappist_goat_horn"
 }

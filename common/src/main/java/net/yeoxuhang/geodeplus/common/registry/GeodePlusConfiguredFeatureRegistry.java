@@ -22,41 +22,41 @@ import net.minecraft.world.level.levelgen.placement.CaveSurface;
 
 import java.util.List;
 
-public class GeodeModConfiguredFeaturesRegistry {
+public class GeodePlusConfiguredFeatureRegistry {
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE =
-            registerConfiguredFeature("crystal_spike", GeodeModFeaturesRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("crystal_spike_floor", GeodeModFeaturesRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodeModBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> GLOWSTONE_CRYSTAL_SPIKE =
-            registerConfiguredFeature("glowstone_crystal_spike", GeodeModFeaturesRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("glowstone_crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> GLOWSTONE_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("glowstone_crystal_spike_floor", GeodeModFeaturesRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("glowstone_crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> ECHO_CRYSTAL_SPIKE =
-            registerConfiguredFeature("echo_crystal_spike", GeodeModFeaturesRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodeModBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("echo_crystal_spike", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> ECHO_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("echo_crystal_spike_floor", GeodeModFeaturesRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodeModBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("echo_crystal_spike_floor", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> WRAPPIST_CRYSTAL_SPIKE =
-            registerConfiguredFeature("wrappist_crystal_spike", GeodeModFeaturesRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("wrappist_crystal_spike", GeodePlusFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> PRISMARINE_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("prismarine_crystal_spike_floor", GeodeModFeaturesRegistry.OCEAN_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.PRISMARINE).defaultBlockState(), ((Block)GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("prismarine_crystal_spike_floor", GeodePlusFeatureRegistry.OCEAN_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.PRISMARINE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> GLOWSTONE_GEODE =
             FeatureUtils.register("glowstone_geode", Feature.GEODE,
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
-                            BlockStateProvider.simple(Blocks.NETHERRACK),
-                            BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_GLOWSTONE.get()),
-                            BlockStateProvider.simple(Blocks.NETHERRACK),
-                            BlockStateProvider.simple(Blocks.NETHERRACK),
-                            List.of(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
-                                    GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
-                                    GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
-                                    GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
-                            BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_GLOWSTONE.get()),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    BlockStateProvider.simple(Blocks.NETHERRACK),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
+                                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> ANCIENT_DEBRIS_GEODE =
@@ -64,13 +64,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -79,13 +79,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -94,13 +94,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -109,13 +109,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_GOLD_NUGGET.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -124,13 +124,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                             new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
@@ -140,13 +140,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                             new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
@@ -155,14 +155,14 @@ public class GeodeModConfiguredFeaturesRegistry {
             FeatureUtils.register("wrappist_geode", Feature.GEODE,
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.WRAPPIST_BLOCK.get()),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_WRAPPIST.get()),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.GALCITE.get()),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.SMOOTH_END_STONE.get()),
-                                    List.of(GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_WRAPPIST_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get().defaultBlockState()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_WRAPPIST.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.GALCITE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.SMOOTH_END_STONE.get()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                             new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
@@ -172,13 +172,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                             new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
@@ -189,13 +189,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_GLOWSTONE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GLOWSTONE.get()),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                             new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
@@ -205,13 +205,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_NETHER_QUARTZ.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_NETHER_QUARTZ.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_QUARTZ_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_QUARTZ_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE ,
                                     BlockTags.GEODE_INVALID_BLOCKS) ,
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
@@ -222,13 +222,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     Feature.GEODE , new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BASALT_QUARTZ.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BASALT_QUARTZ.get()),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
                                     BlockStateProvider.simple(Blocks.NETHERRACK),
-                                    List.of(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE ,
                                     BlockTags.GEODE_INVALID_BLOCKS) ,
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
@@ -239,13 +239,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     Feature.GEODE , new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_BLACKSTONE_QUARTZ.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_QUARTZ.get()),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
                                     BlockStateProvider.simple(Blocks.BLACKSTONE),
-                                    List.of(GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE ,
                                     BlockTags.GEODE_INVALID_BLOCKS) ,
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
@@ -256,13 +256,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_ECHO.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_ECHO.get()),
                                     BlockStateProvider.simple(Blocks.SCULK),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_ECHO_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_ECHO_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_ECHO_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.ECHO_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.ECHO_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE ,
                                     BlockTags.GEODE_INVALID_BLOCKS) ,
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
@@ -273,13 +273,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_LAPIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_LAPIS.get()),
                                     BlockStateProvider.simple(Blocks.STONE),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -288,13 +288,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_REDSTONE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_REDSTONE.get()),
                                     BlockStateProvider.simple(Blocks.STONE),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -303,13 +303,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_EMERALD.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_EMERALD.get()),
                                     BlockStateProvider.simple(Blocks.STONE),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -318,13 +318,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_DIAMOND.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_DIAMOND.get()),
                                     BlockStateProvider.simple(Blocks.STONE),
                                     BlockStateProvider.simple(Blocks.STONE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -333,13 +333,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_DEEPSLATE_LAPIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_LAPIS.get()),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -348,13 +348,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_DEEPSLATE_REDSTONE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_REDSTONE.get()),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -363,13 +363,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_DEEPSLATE_EMERALD.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_EMERALD.get()),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -378,13 +378,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_DEEPSLATE_DIAMOND.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_DIAMOND.get()),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
                                     BlockStateProvider.simple(Blocks.DEEPSLATE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -393,13 +393,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_SCULK_LAPIS.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_SCULK_LAPIS.get()),
                                     BlockStateProvider.simple(Blocks.SCULK),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LAPIS_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -408,13 +408,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_SCULK_REDSTONE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_SCULK_REDSTONE.get()),
                                     BlockStateProvider.simple(Blocks.SCULK),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -423,13 +423,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_SCULK_EMERALD.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_SCULK_EMERALD.get()),
                                     BlockStateProvider.simple(Blocks.SCULK),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.EMERALD_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -438,13 +438,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_SCULK_DIAMOND.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND.get()),
                                     BlockStateProvider.simple(Blocks.SCULK),
                                     BlockStateProvider.simple(Blocks.SCULK),
-                                    List.of(GeodeModBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
@@ -453,13 +453,13 @@ public class GeodeModConfiguredFeaturesRegistry {
                     new GeodeConfiguration(
                             new GeodeBlockSettings(BlockStateProvider.simple(Blocks.WATER),
                                     BlockStateProvider.simple(Blocks.PRISMARINE),
-                                    BlockStateProvider.simple(GeodeModBlocksRegistry.BUDDING_PRISMARINE.get()),
+                                    BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get()),
                                     BlockStateProvider.simple(Blocks.PRISMARINE),
                                     BlockStateProvider.simple(Blocks.PRISMARINE),
-                                    List.of(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get().defaultBlockState(),
-                                            GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get().defaultBlockState()),
+                                    List.of(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get().defaultBlockState(),
+                                            GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 

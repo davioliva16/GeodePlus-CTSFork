@@ -30,7 +30,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 import javax.annotation.Nullable;
 
@@ -119,10 +119,9 @@ public class RedstoneOresClusterBlock extends RedStoneOreBlock implements Simple
     }
 
     public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
-        if ((Boolean)blockState.getValue(LIT)) {
+        if (blockState.getValue(LIT)) {
             spawnParticles(level, blockPos);
         }
-
     }
 
     private static void spawnParticles(Level level, BlockPos blockPos) {
@@ -152,19 +151,19 @@ public class RedstoneOresClusterBlock extends RedStoneOreBlock implements Simple
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(0);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(1);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get())) {
+        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get())) {
             int i = 1 + serverLevel.random.nextInt(10);
             this.popExperience(serverLevel, blockPos, i);
         }

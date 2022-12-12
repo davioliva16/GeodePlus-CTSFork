@@ -17,11 +17,11 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class GeodeModLootTableProvider extends LootTableProvider {
+public class GeodePlusLootTableProvider extends LootTableProvider {
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>>
-            loot_tables = ImmutableList.of(Pair.of(GeodeModBlockLootTables::new, LootContextParamSets.BLOCK));
+            loot_tables = ImmutableList.of(Pair.of(GeodePlusBlockLootTableProvider::new, LootContextParamSets.BLOCK));
 
-    public GeodeModLootTableProvider(DataGenerator pGenerator) {
+    public GeodePlusLootTableProvider(DataGenerator pGenerator) {
         super(pGenerator);
     }
     @Override

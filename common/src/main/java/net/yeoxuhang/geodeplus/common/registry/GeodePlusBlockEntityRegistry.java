@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import java.util.function.Supplier;
 
-public class GeodeModBlockEntitiesRegistry {
+public class GeodePlusBlockEntityRegistry {
     public static final Supplier<BlockEntityType<WrappistPedestalBlockEntity>> WRAPPIST_PEDESTAL_ENTITY = BlockEntityTypeHelper.createWrappistPedastle();
     public static void initialize() {
     }

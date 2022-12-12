@@ -1,14 +1,13 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
 import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
-import net.yeoxuhang.geodeplus.common.block.PrismarineClusterBlock;
 import net.yeoxuhang.geodeplus.common.world.feature.*;
 import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 
 import java.util.function.Supplier;
 
-public class GeodeModFeaturesRegistry {
+public class GeodePlusFeatureRegistry {
     public static final Supplier<CrystalSpikeFeature> CRYSTAL_SPIKE = RegistryHelper.registerFeature("crystal_spike",
             () -> new CrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
 

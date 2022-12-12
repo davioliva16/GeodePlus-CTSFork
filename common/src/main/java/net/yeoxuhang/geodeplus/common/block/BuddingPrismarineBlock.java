@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.Vec3;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 import javax.annotation.Nullable;
 
@@ -37,16 +37,16 @@ public class BuddingPrismarineBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get();
+                block = GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get();
                 applyConduitPowerAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 5);
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get();
                 applyConduitPowerAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 10);
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get();
                 applyConduitPowerAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 15);
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.PRISMARINE_CLUSTER.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get()) && blockstate.getValue(PrismarineClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get();
                 applyConduitPowerAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 20);
             }
             if (block != null) {

@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingNetherGoldBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -34,13 +34,13 @@ public class BuddingNetherGoldBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.GOLD_NUGGET_CLUSTER.get();
+                block = GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get()) && blockstate.getValue(NetherGoldClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(NetherGoldClusterBlock.FACING, direction).setValue(NetherGoldClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
