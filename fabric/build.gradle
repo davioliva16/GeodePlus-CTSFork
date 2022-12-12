@@ -18,11 +18,10 @@ configurations {
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
-
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
-
-    include modImplementation("maven.modrinth:paragon:fabric-2.1.0-1.19x")
+    runtimeOnly 'blue.endless:jankson:1.1.2'
+    include modImplementation("maven.modrinth:paragon:fabric-3.0.2-1.19x")
 }
 
 sourceSets {

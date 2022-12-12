@@ -2,10 +2,9 @@ package net.yeoxuhang.geodeplus.common.config;
 
 import com.kyanite.paragon.api.ConfigGroup;
 import com.kyanite.paragon.api.ConfigOption;
-import com.kyanite.paragon.api.interfaces.configtypes.TOMLModConfig;
-import net.yeoxuhang.geodeplus.GeodePlus;
+import com.kyanite.paragon.api.interfaces.Config;
 
-public class GeodeModCommonConfigs implements TOMLModConfig {
+public class GeodePlusCommonConfigs implements Config {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE = new ConfigOption<>("Enable Prismarine Geode", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_STONE_DIAMOND_GEODE = new ConfigOption<>("Enable Diamond Geode", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_STONE_EMERALD_GEODE = new ConfigOption<>("Enable Emerald Geode", true);
@@ -128,8 +127,4 @@ public class GeodeModCommonConfigs implements TOMLModConfig {
             RARITY_BLACKSTONE_QUARTZ_GEODE,
             RARITY_END_WRAPPIST_GEODE
     );
-    @Override
-    public String getModId() {
-        return GeodePlus.MOD_ID;
-    }
 }
