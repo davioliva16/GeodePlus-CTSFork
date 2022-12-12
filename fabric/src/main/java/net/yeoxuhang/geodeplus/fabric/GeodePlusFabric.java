@@ -7,6 +7,6 @@ public class GeodePlusFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         GeodePlus.init();
-        //new GeodeModGeodeBiomeModifier().biomeModificationHelper();
+        new GeodePlusGeodeBiomeModifier().biomeModificationHelper();
     }
 }

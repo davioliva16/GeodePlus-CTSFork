@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusPlacedFeatureRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
@@ -19,7 +20,7 @@ public class GeodePlusGeodeBiomeModifier {
         return BuiltinRegistries.PLACED_FEATURE.getResourceKey(feature).get();
     }
     public void biomeModificationHelper() {
-        var modifications = BiomeModifications.create(new ResourceLocation("geode", "biome_modifications"));
+        var modifications = BiomeModifications.create(new ResourceLocation(GeodePlus.MOD_ID, "biome_modifications"));
         modifications.add(ModificationPhase.ADDITIONS, biomeSelectionContext -> true, (biomeSelectionContext, builder) -> {
             Holder<Biome> biome = biomeSelectionContext.getBiomeRegistryEntry();
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_GEODE) && GeodePlusCommonConfigs.SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE.get()) {
