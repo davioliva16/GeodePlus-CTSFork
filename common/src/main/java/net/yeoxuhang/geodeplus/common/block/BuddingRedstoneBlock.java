@@ -7,14 +7,13 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingRedstoneBlock extends RedStoneOreBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -35,13 +34,13 @@ public class BuddingRedstoneBlock extends RedStoneOreBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.REDSTONE_CRYSTAL.get();
+                block = GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get()) && blockstate.getValue(OresClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(OresClusterBlock.FACING, direction).setValue(OresClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));

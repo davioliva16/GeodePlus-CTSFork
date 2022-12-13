@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingGlowstoneBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -31,13 +31,13 @@ public class BuddingGlowstoneBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.GLOWSTONE_CLUSTER.get();
+                block = GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get()) && blockstate.getValue(GlowstoneClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get();
             }
 
             if (block != null) {

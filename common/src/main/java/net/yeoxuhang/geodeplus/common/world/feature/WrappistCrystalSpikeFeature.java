@@ -2,9 +2,9 @@ package net.yeoxuhang.geodeplus.common.world.feature;
 
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
-import net.minecraft.world.level.block.Blocks;
 import net.yeoxuhang.geodeplus.common.block.WrappistClusterBlock;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModTagsRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -38,7 +38,7 @@ public class WrappistCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig
         int radiusCheck = config.xzRadius.sample(random) + 1;
         int randomChance = random.nextInt(4);
         int stepHeight = radiusCheck + 14 + Mth.nextInt(random, 10, 14);
-        if (world.isStateAtPosition(blockPos.relative(config.crystal_direction.getDirection().getOpposite()), DripstoneUtils::isEmptyOrWaterOrLava) && world.getBlockState(blockPos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE) && this.placeSpike(world, blockPos, radiusCheck, stepHeight, randomChance, trigList, config.crystal_direction.getDirection(), random)) {
+        if (world.isStateAtPosition(blockPos.relative(config.crystal_direction.getDirection().getOpposite()), DripstoneUtils::isEmptyOrWaterOrLava) && world.getBlockState(blockPos).is(GeodePlusTagRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE) && this.placeSpike(world, blockPos, radiusCheck, stepHeight, randomChance, trigList, config.crystal_direction.getDirection(), random)) {
             flag = this.placeCrystals(world, random, config, trigList, clusterPos, flag);
         }
 
@@ -162,8 +162,8 @@ public class WrappistCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig
 
                     for(int var14 = 0; var14 < var13; ++var14) {
                         Direction direction = var12[var14];
-                        if (world.getBlockState(pos).is(GeodeModTagsRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
-                            world.setBlock(pos, Blocks.CALCITE.defaultBlockState(), 2);
+                        if (world.getBlockState(pos).is(GeodePlusTagRegistry.Blocks.CAN_LARGE_WRAPPIST_CRYSTAL_PLACE) && world.isStateAtPosition(pos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
+                            world.setBlock(pos, GeodePlusBlocksRegistry.SMOOTH_END_STONE.get().defaultBlockState(), 2);
                             flag = true;
                         }
                     }

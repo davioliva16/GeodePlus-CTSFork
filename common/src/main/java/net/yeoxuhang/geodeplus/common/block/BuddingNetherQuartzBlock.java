@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingNetherQuartzBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -34,13 +34,13 @@ public class BuddingNetherQuartzBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_QUARTZ_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_QUARTZ_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.QUARTZ_CRYSTAL.get();
+                block = GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get()) && blockstate.getValue(QuartzCrystalBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(QuartzCrystalBlock.FACING, direction).setValue(QuartzCrystalBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));

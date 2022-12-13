@@ -3,22 +3,14 @@ package net.yeoxuhang.geodeplus.common.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
-
-import java.util.Collections;
-import java.util.List;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingAncientDebrisBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -39,13 +31,13 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get();
+                block = GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get()) && blockstate.getValue(AncientDebrisClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get();
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(AncientDebrisClusterBlock.FACING, direction).setValue(AncientDebrisClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));

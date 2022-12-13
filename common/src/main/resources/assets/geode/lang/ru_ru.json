@@ -80,6 +80,6 @@
   "block.geode.wrappist_pedestal": "Слоистовый пьедестал",
   "item.geode.wrappist_goat_horn": "Слоистовый козий рог",
   "item.geode.wrappist_shard": "Осколок слоиста",
-  "itemGroup.geode": "Geode+",
-  "itemGroup.geode.geode": "Geode+"
+  "itemGroup.geode": "geode+",
+  "itemGroup.geode.geode": "geode+"
 }

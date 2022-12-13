@@ -80,6 +80,6 @@
   "block.geode.wrappist_pedestal": "랩피스트 제단",
   "item.geode.wrappist_goat_horn": "랩피스트 염소 뿔",
   "item.geode.wrappist_shard": "랩피스트 조각",
-  "itemGroup.geode": "Geode+",
-  "itemGroup.geode.geode": "Geode+"
+  "itemGroup.geode": "geode+",
+  "itemGroup.geode.geode": "geode+"
 }

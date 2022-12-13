@@ -16,7 +16,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.yeoxuhang.geodeplus.client.model.layer.GeodeModModelLayersRegistry;
+import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
@@ -30,7 +30,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
     private final ModelPart crystal4;
 
     public WrappistPedestalBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
-        ModelPart modelpart = context.bakeLayer(GeodeModModelLayersRegistry.WRAPPIST_PEDESTAL);
+        ModelPart modelpart = context.bakeLayer(GeodePlusModelLayersRegistry.WRAPPIST_PEDESTAL);
         wrappist_pedestal = modelpart.getChild("wrappist_pedestal");
         this.crystals = wrappist_pedestal.getChild("crystals");
         this.crystal1 = this.crystals.getChild("crystal1");

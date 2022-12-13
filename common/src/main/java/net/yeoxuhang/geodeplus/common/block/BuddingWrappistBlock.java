@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
-import net.yeoxuhang.geodeplus.common.registry.GeodeModBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 public class BuddingWrappistBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 10;
@@ -31,13 +31,13 @@ public class BuddingWrappistBlock extends AmethystBlock {
             BlockState blockstate = p_220899_.getBlockState(blockpos);
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
-                block = GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.SMALL_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.MEDIUM_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.LARGE_WRAPPIST_BUD.get();
-            } else if (blockstate.is(GeodeModBlocksRegistry.LARGE_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
-                block = GeodeModBlocksRegistry.WRAPPIST_CLUSTER.get();
+                block = GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get();
+            } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get()) && blockstate.getValue(WrappistClusterBlock.FACING) == direction) {
+                block = GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get();
             }
 
             if (block != null) {
