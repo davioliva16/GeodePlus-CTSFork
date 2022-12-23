@@ -26,7 +26,9 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> save) {
 
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()).define('S', GeodePlusItemsRegistry.WRAPPIST_SHARD.get()).pattern("SS").pattern("SS").unlockedBy("has_wrappist_shard", has(GeodePlusItemsRegistry.WRAPPIST_SHARD.get())).save(save);
-
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_glowstone_cluster", has(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_prismarine_cluster", has(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get())).save(save);
+        ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get()).define('S', GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get()).pattern("SS").pattern("SS").unlockedBy("has_gold_nugget_cluster", has(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get())).save(save);
         ShapedRecipeBuilder.shaped(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).define('F', GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).pattern("FF").pattern("FF").unlockedBy("has_quartz_crystal", has(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get())).save(save);
         wall(save, GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get(), GeodePlusBlocksRegistry.SMOOTH_END_STONE.get());
         slabBuilder(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), Ingredient.of(GeodePlusBlocksRegistry.SMOOTH_END_STONE.get())).unlockedBy("has_smooth_end_stone", has(ItemTags.STONE_BRICKS)).save(save);

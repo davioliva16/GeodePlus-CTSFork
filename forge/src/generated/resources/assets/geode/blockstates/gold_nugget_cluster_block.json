@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "geode:block/gold_nugget_cluster_block"
+    }
+  }
+}

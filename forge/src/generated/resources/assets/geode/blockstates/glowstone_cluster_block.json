@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "geode:block/glowstone_cluster_block"
+    }
+  }
+}

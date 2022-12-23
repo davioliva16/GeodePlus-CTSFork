@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-02T13:37:47.1249926	LootTables
+// 1.19.2	2022-12-22T17:20:55.5275667	LootTables
 446f01c8f3ad95fdfe37a5eb071d335805f4a100 data/geode/loot_tables/blocks/ancient_debris_cluster.json
 cbcdfe06672ab517426c0413b13b6d04e73e90bc data/geode/loot_tables/blocks/budding_ancient_debris.json
 aa9c72eec161e83d3fe3a84df7241118a31f6926 data/geode/loot_tables/blocks/budding_basalt_ancient_debris.json
@@ -32,7 +32,9 @@ c738407ae99ec6e625619d5ebfdb7c20896e7ee3 data/geode/loot_tables/blocks/budding_w
 9caf7f74d4bdd7150fe36794fcde80ff78658f6c data/geode/loot_tables/blocks/emerald_cluster.json
 56ce81e09c1e5e438051486f8523d6f1721ccf3d data/geode/loot_tables/blocks/galcite.json
 d5d0cf4e7ae7c2dddc7cdeaa38811a4b9634d516 data/geode/loot_tables/blocks/glowstone_cluster.json
+832fc82fa69bb3001c1d73ab7d8a566b056fbac3 data/geode/loot_tables/blocks/glowstone_cluster_block.json
 a875046cc7f8a98ac625ade008cdf9d754f5551e data/geode/loot_tables/blocks/gold_nugget_cluster.json
+e84ca17d7b1927cc4ad388cebbfdd273b24266f1 data/geode/loot_tables/blocks/gold_nugget_cluster_block.json
 14ffa0b26a1dfe3380fce6ddad3be2a19020d0a9 data/geode/loot_tables/blocks/lapis_cluster.json
 7af76606ff3b663e5a5a6f598904f1d45cb3c008 data/geode/loot_tables/blocks/large_ancient_debris_bud.json
 46da788223dc62124f59951abc5e312118ab0eec data/geode/loot_tables/blocks/large_diamond_bud.json
@@ -57,6 +59,7 @@ dfbd5b4c0174704a22d4fd32621f613680e7b66f data/geode/loot_tables/blocks/medium_pr
 3d9a2cfe1c48d3480fc228436382ce7d1e55605b data/geode/loot_tables/blocks/medium_redstone_bud.json
 7ea2f08b89ad43e2bdd0e5fc2a712d96079baa70 data/geode/loot_tables/blocks/medium_wrappist_bud.json
 2731f9cf480707c9e9ac4ae0d2c864128f2bd883 data/geode/loot_tables/blocks/prismarine_cluster.json
+8bbae6d66679f3a66983fe4afab2b15c6771f303 data/geode/loot_tables/blocks/prismarine_cluster_block.json
 5db6e76d61b5a6c2adc6e85aa04b62c0e58c7865 data/geode/loot_tables/blocks/quartz_crystal.json
 4f2680a4adf3fc65c8f32c6c189a5283cf590758 data/geode/loot_tables/blocks/quartz_crystal_block.json
 f8a0b1543e732b4b236afb82d97d4eef9206cec1 data/geode/loot_tables/blocks/redstone_crystal.json

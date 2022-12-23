@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-02T13:37:47.1324709	Block States: geode
+// 1.19.2	2022-12-22T17:20:55.5215494	Block States: geode
 d03415d23fdb9b90f107323b304412b9503ce6eb assets/geode/blockstates/ancient_debris_cluster.json
 c1928cc62d50979cceab135c95866fbc99b79812 assets/geode/blockstates/budding_ancient_debris.json
 5aed2f228c5012245fa50b49648db3196c8d3db0 assets/geode/blockstates/budding_basalt_ancient_debris.json
@@ -32,7 +32,9 @@ e16373d874bd248497275b16bc6d1fccfbf63132 assets/geode/blockstates/diamond_crysta
 9fc5d82a7776c4e8106a612de89dfea879954a37 assets/geode/blockstates/emerald_cluster.json
 80cd2cb15838c6b3dc88c692051acb10ddbd27bd assets/geode/blockstates/galcite.json
 653fc57ff70f57bd17359575cf4c037b62763c07 assets/geode/blockstates/glowstone_cluster.json
+5e7139839cfc1df1863d46a2fdbf779f16c80053 assets/geode/blockstates/glowstone_cluster_block.json
 c077a798ebbe0cbb187807c02f84b09fb950a767 assets/geode/blockstates/gold_nugget_cluster.json
+718fb474250a1b0a23db7a191eccbe7d2e77c1b5 assets/geode/blockstates/gold_nugget_cluster_block.json
 f9b0d0b0012b7c680768e3683eed6f2498e2012b assets/geode/blockstates/lapis_cluster.json
 37d73e3b36db1deaaf41d701dfedfcde16c01240 assets/geode/blockstates/large_ancient_debris_bud.json
 eea0f6511df755b1c274aeed9d6f48b56d8944fd assets/geode/blockstates/large_diamond_bud.json
@@ -57,6 +59,7 @@ b1bf0ff5eb139499bdacf1cf9b5ab059e5f30446 assets/geode/blockstates/medium_quartz_
 f09b79d0c3cc281120a94e2e088e78f151b61eb1 assets/geode/blockstates/medium_redstone_bud.json
 b8344aa79c5732941e7562ef836087f3b19cbf46 assets/geode/blockstates/medium_wrappist_bud.json
 40d86d99bdbcb08fe8a9f639a412c84395800e2a assets/geode/blockstates/prismarine_cluster.json
+48b6bfad703f855f7cb9637eaf47e73e3c8e1397 assets/geode/blockstates/prismarine_cluster_block.json
 e188e727391a8f39e5c5d08dce173381e207f04c assets/geode/blockstates/quartz_crystal.json
 1c364df8f1707ad1f659d69f301b2c2e2846ab80 assets/geode/blockstates/quartz_crystal_block.json
 030d93ab47471fe16c9bdf83a91a9e671d9c910e assets/geode/blockstates/redstone_crystal.json
@@ -149,6 +152,9 @@ a2b1f5767199059bae5806c2a2075735c4f8e5af assets/geode/models/block/budding_sculk
 5d30392cc27d4e4309401a4f8223040e8d443c1c assets/geode/models/block/budding_sculk_redstone.json
 50ad09112b959b89c210664a68c3715089a81060 assets/geode/models/block/budding_wrappist.json
 3ebe4f232e384f1c0074937447ee1ca8738ce973 assets/geode/models/block/galcite.json
+2c950e731537ad779eaa36bb78845bf3fd291021 assets/geode/models/block/glowstone_cluster_block.json
+2adfc794a6c24aadc9c9c4b25b92aef36c826280 assets/geode/models/block/gold_nugget_cluster_block.json
+32c99fb4d01595bebed8794529afe971e794e3c7 assets/geode/models/block/prismarine_cluster_block.json
 b34e382248f587fc3b8d60e89adbfe72430d7146 assets/geode/models/block/quartz_crystal_block.json
 33884157cb807200d5440af45a8621a5c68800df assets/geode/models/block/smooth_end_stone.json
 71ea6228556acb0b5ea7b86ba5fb2b0b6a296784 assets/geode/models/block/smooth_end_stone_slab.json

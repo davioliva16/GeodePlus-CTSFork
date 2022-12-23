@@ -30,6 +30,9 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_BASALT_QUARTZ.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get());
         simpleBlock(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get());

@@ -24,25 +24,25 @@ import java.util.List;
 
 public class GeodePlusConfiguredFeatureRegistry {
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE =
-            registerConfiguredFeature("crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> GLOWSTONE_CRYSTAL_SPIKE =
-            registerConfiguredFeature("glowstone_crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("glowstone_crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get().defaultBlockState(), (GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> GLOWSTONE_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("glowstone_crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.GLOWSTONE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("glowstone_crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get().defaultBlockState(), (GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> ECHO_CRYSTAL_SPIKE =
-            registerConfiguredFeature("echo_crystal_spike", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+            registerConfiguredFeature("echo_crystal_spike", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((Blocks.SCULK).defaultBlockState(), (GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> ECHO_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("echo_crystal_spike_floor", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.SCULK).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("echo_crystal_spike_floor", GeodePlusFeatureRegistry.ECHO_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((Blocks.SCULK).defaultBlockState(), (GeodePlusBlocksRegistry.ECHO_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> WRAPPIST_CRYSTAL_SPIKE =
-            registerConfiguredFeature("wrappist_crystal_spike", GeodePlusFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("wrappist_crystal_spike", GeodePlusFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> PRISMARINE_CRYSTAL_SPIKE_FLOOR =
-            registerConfiguredFeature("prismarine_crystal_spike_floor", GeodePlusFeatureRegistry.OCEAN_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(((Block)Blocks.PRISMARINE).defaultBlockState(), ((Block)GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
+            registerConfiguredFeature("prismarine_crystal_spike_floor", GeodePlusFeatureRegistry.OCEAN_CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get().defaultBlockState(), (GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> GLOWSTONE_GEODE =
             FeatureUtils.register("glowstone_geode", Feature.GEODE,

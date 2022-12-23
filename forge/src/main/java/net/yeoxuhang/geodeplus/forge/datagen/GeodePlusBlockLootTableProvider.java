@@ -23,6 +23,9 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get());
         this.dropSelf(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get());
+        this.dropSelf(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get());
         this.add(GeodePlusBlocksRegistry.SMOOTH_END_STONE.get(), (arg) -> createSingleItemTableWithSilkTouch(arg, Blocks.END_STONE));
         this.dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get());
         this.dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get());

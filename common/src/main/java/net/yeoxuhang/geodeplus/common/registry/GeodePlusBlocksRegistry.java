@@ -16,6 +16,10 @@ public class GeodePlusBlocksRegistry {
 
     public static final Supplier<Block> BUDDING_PRISMARINE = registerBlock("budding_prismarine",
             () -> new BuddingPrismarineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
+
+    public static final Supplier<Block> PRISMARINE_CLUSTER_BLOCK = registerBlock("prismarine_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> PRISMARINE_CLUSTER = registerBlock("prismarine_cluster",
             () -> new PrismarineClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -163,6 +167,9 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<Block> BUDDING_BLACKSTONE_GOLD_NUGGET = registerBlock("budding_blackstone_gold_nugget",
             () -> new BuddingNetherGoldBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
+    public static final Supplier<Block> GOLD_NUGGET_CLUSTER_BLOCK = registerBlock("gold_nugget_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
     public static final Supplier<Block> GOLD_NUGGET_CLUSTER = registerBlock("gold_nugget_cluster",
             () -> new NetherGoldClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.NETHER_GOLD_ORE).strength(3F).lightLevel( (p_60929_) ->{
                 return 8;
@@ -193,6 +200,9 @@ public class GeodePlusBlocksRegistry {
                 return 10;
             })), GeodePlus.TAB);
 
+    public static final Supplier<Block> GLOWSTONE_CLUSTER_BLOCK = registerBlock("glowstone_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.GLASS)), GeodePlus.TAB);
     public static final Supplier<Block> GLOWSTONE_CLUSTER = registerBlock("glowstone_cluster",
             () -> new GlowstoneClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.GLASS).strength(3F).lightLevel( (p_60929_) ->{
                 return 15;
