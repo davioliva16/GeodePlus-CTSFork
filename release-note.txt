@@ -286,3 +286,18 @@ Update
 
 ∎Paragon version now 3.0.2
 ---------------------------------------------------------
+
+Changelog for 1.1.4
+---------------------------------------------------------
+
+Added Blocks
+∎Gold Nugget Cluster Block
+∎Glowstone Cluster Block
+∎Prismarine Cluster Block
+---------------------------------------------------------
+Fix
+∎Crash when Quartz Crystal and Echo Cluster drop xp
+---------------------------------------------------------
+Update
+∎Smooth End Stone retexture
+---------------------------------------------------------
