@@ -19,15 +19,22 @@ import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
+import java.util.Calendar;
+
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
     private final ItemRenderer itemRenderer;
     private static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
+
+    private static final ResourceLocation XMAS = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/christmas.png");
+
     private static ModelPart wrappist_pedestal;
     private final ModelPart crystals;
     private final ModelPart crystal1;
     private final ModelPart crystal2;
     private final ModelPart crystal3;
     private final ModelPart crystal4;
+
+    private boolean xmasTextures;
 
     public WrappistPedestalBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
         ModelPart modelpart = context.bakeLayer(GeodePlusModelLayersRegistry.WRAPPIST_PEDESTAL);
@@ -38,6 +45,10 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         this.crystal3 = this.crystals.getChild("crystal3");
         this.crystal4 = this.crystals.getChild("crystal4");
         this.itemRenderer = context.getItemRenderer();
+        Calendar calendar = Calendar.getInstance();
+        if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 26) {
+            this.xmasTextures = true;
+        }
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -68,7 +79,10 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         float crystalTick = wrappistBlockEntity / 35.0F;
         float tick = wrappistBlockEntity / 10.0F;
         poseStack.mulPose(Vector3f.XP.rotationDegrees(-180.0F));
-        wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(TEXTURE)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+        if (xmasTextures) {
+            wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(XMAS)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+        } else wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(TEXTURE)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+
         this.crystals.setRotation(0.0F, -crystalTick % 360.0F, 0.0F);
         wrappist_pedestal.setPos(8.0F, -2.0F, -8.0F);
         if (entity.hasLevel() && !entity.isEmpty()) {
