@@ -301,3 +301,12 @@ Fix
 Update
 ∎Smooth End Stone retexture
 ---------------------------------------------------------
+
+Changelog for 1.1.5
+---------------------------------------------------------
+Update
+∎Ancient Debris Blocks rename to Nether Ancient Debris Blocks
+∎Gold Nugget Blocks rename to Nether Gold Nugget Blocks
+∎Glowstone Blocks rename to Nether Glowstone Blocks
+∎Quartz Blocks rename to Nether Quartz Blocks
+---------------------------------------------------------
