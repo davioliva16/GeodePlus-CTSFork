@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "geode:block/nether_quartz_crystal_block"
+    }
+  }
+}

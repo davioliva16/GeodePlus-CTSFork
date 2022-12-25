@@ -1,13 +1,15 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+
+import java.util.function.Supplier;
 
 import static net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry.SMOOTH_END_STONE;
 
@@ -53,110 +55,83 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
 
-        stairsBlock((StairBlock) GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockTexture(SMOOTH_END_STONE.get()));
-        wallBlock((WallBlock) GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get(), blockTexture(SMOOTH_END_STONE.get()));
-        slabBlock((SlabBlock) GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), blockTexture(SMOOTH_END_STONE.get()),
-                blockTexture(SMOOTH_END_STONE.get()));
+        stairsBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockLoc(SMOOTH_END_STONE));
+        wallBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL, blockLoc(SMOOTH_END_STONE));
+        slabBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), blockLoc(SMOOTH_END_STONE),
+                blockLoc(SMOOTH_END_STONE));
 
-        directionalBlock(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(), models().cross(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(), models().cross(getName(GeodePlusBlocksRegistry.ECHO_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.ECHO_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_ECHO_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_ECHO_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get(), models().cross(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get(), models().cross(getName(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER), blockLoc(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER), blockLoc(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER), blockLoc(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_GLOWSTONE_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER), blockLoc(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.LAPIS_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.LAPIS_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LAPIS_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.LAPIS_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.LAPIS_CLUSTER), blockLoc(GeodePlusBlocksRegistry.LAPIS_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_LAPIS_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get(), models().cross(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get(), models().cross(getName(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.EMERALD_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.EMERALD_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.EMERALD_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.EMERALD_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.EMERALD_CLUSTER), blockLoc(GeodePlusBlocksRegistry.EMERALD_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_EMERALD_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get(), models().cross(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get())));
+        directionalBlock(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get(), models().cross(getName(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get(), models().cross(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get())));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get(), models().cross(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), models().cross(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get())));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), models().cross(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get().getLootTable().getPath(),
-                blockTexture(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get())));
-
+        directionalBlock(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER), blockLoc(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD)));
     }
 
+
+    public void wallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
+        super.wallBlock(block.get(), texture);
+        models().wallInventory(getName(block) + "_inventory", texture);
+    }
+
+    public String getName(Supplier<? extends Block> block) {
+        return block.get().builtInRegistryHolder().key().location().getPath();
+    }
+
+    public ResourceLocation blockLoc(Supplier<? extends Block> block) {
+        return new ResourceLocation(GeodePlus.MOD_ID, "block/" + getName(block));
+    }
+
+
+    public ResourceLocation blockLoc(Supplier<? extends Block> block, String suffix) {
+        return new ResourceLocation(GeodePlus.MOD_ID, "block/" + getName(block) + "_" + suffix);
+    }
 }

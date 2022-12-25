@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "geode:block/smooth_end_stone"
-  }
+  "parent": "geode:block/smooth_end_stone_wall_inventory"
 }

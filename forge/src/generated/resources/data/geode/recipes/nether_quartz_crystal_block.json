@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": {
+      "item": "geode:nether_quartz_crystal"
+    }
+  },
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "result": {
+    "item": "geode:nether_quartz_crystal_block"
+  }
+}
