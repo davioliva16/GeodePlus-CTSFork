@@ -69,7 +69,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_LAPIS_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1;
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD.get())) {
@@ -85,7 +85,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_EMERALD_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1;
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_EMERALD_BUD.get())) {
@@ -101,7 +101,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get())) {
-            int i = 1 + serverLevel.random.nextInt(1);
+            int i = 1;
             this.popExperience(serverLevel, blockPos, i);
         }
         if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get())) {

@@ -310,3 +310,9 @@ Update
 ∎Glowstone Blocks rename to Nether Glowstone Blocks
 ∎Quartz Blocks rename to Nether Quartz Blocks
 ---------------------------------------------------------
+
+Changelog for 1.1.6
+---------------------------------------------------------
+Fix
+∎Crash when Redstone Cluster and Gold Nugget Cluster drop xp
+---------------------------------------------------------
