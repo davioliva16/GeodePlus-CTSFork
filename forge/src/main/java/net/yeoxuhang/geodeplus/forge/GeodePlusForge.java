@@ -42,7 +42,7 @@ public class GeodePlusForge {
     }
 
     @Mod.EventBusSubscriber(modid = GeodePlus.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class GeodeModModelLayers {
+    public static class GeodeModClient {
 
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent e) {

@@ -8,7 +8,7 @@ version = "${version}"
 displayName = "Geode+"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/geode-plus"
 logoFile = "icon.png"
-authors = "yeoxuhang, mineblock11, SquizzleDizzle"
+authors = "yeoxuhang, SquizzleDizzle"
 description = '''
 A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The End!
 '''
