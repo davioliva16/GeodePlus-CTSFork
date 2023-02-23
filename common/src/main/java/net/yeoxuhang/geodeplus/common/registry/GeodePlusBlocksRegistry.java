@@ -14,6 +14,28 @@ import java.util.function.Supplier;
 
 public class GeodePlusBlocksRegistry {
 
+
+    public static final Supplier<Block> BUDDING_CELESTINE = registerBlock("budding_celestine",
+            () -> new BuddingCelestineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
+
+    public static final Supplier<Block> CELESTINE_CLUSTER_BLOCK = registerBlock("celestine_cluster_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)), GeodePlus.TAB);
+    public static final Supplier<CelestineClusterBlock> CELESTINE_CLUSTER = registerBlock("celestine_cluster",
+            () -> new CelestineClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+                return 8;
+            } )), GeodePlus.TAB);
+    public static final Supplier<CelestineClusterBlock> LARGE_CELESTINE_BUD = registerBlock("large_celestine_bud",
+            () -> new CelestineClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 2;
+            })), GeodePlus.TAB);
+    public static final Supplier<CelestineClusterBlock> MEDIUM_CELESTINE_BUD = registerBlock("medium_celestine_bud",
+            () -> new CelestineClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 1;
+            })), GeodePlus.TAB);
+    public static final Supplier<CelestineClusterBlock> SMALL_CELESTINE_BUD = registerBlock("small_celestine_bud",
+            () -> new CelestineClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)), GeodePlus.TAB);
+
     public static final Supplier<Block> BUDDING_PRISMARINE = registerBlock("budding_prismarine",
             () -> new BuddingPrismarineBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()), GeodePlus.TAB);
 
@@ -202,7 +224,9 @@ public class GeodePlusBlocksRegistry {
 
     public static final Supplier<Block> GLOWSTONE_CLUSTER_BLOCK = registerBlock("nether_glowstone_cluster_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(4f).sound(SoundType.GLASS)), GeodePlus.TAB);
+                    .strength(4f).sound(SoundType.GLASS).lightLevel( (p_60929_) ->{
+                        return 15;})
+            ), GeodePlus.TAB);
     public static final Supplier<Block> GLOWSTONE_CLUSTER = registerBlock("nether_glowstone_cluster",
             () -> new GlowstoneClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.GLASS).strength(3F).lightLevel( (p_60929_) ->{
                 return 15;
