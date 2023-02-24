@@ -27,7 +27,7 @@ loom {
 
     forge {
         dataGen {
-            mod "geode"
+            mod "geode_plus"
         }
     }
 

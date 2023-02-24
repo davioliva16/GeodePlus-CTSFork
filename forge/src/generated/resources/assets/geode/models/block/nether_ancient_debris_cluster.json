@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "geode:block/nether_ancient_debris_cluster"
-  }
-}

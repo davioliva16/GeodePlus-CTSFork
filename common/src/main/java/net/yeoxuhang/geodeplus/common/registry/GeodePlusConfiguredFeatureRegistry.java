@@ -1,9 +1,21 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.world.feature.config.GeodeCrystalSpikeConfig;
 import net.minecraft.core.Holder;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -23,8 +35,29 @@ import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import java.util.List;
 
 public class GeodePlusConfiguredFeatureRegistry {
-    public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE =
-            registerConfiguredFeature("crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_BLACK_OPAL_ORE_KEY = registerKey("black_opal_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ECHO_GEODE = registerKey("echo_geode");
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        register(context, ECHO_GEODE, Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                BlockStateProvider.simple(Blocks.SCULK),
+                BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_ECHO.get()),
+                BlockStateProvider.simple(Blocks.SCULK),
+                BlockStateProvider.simple(Blocks.SCULK),
+                List.of(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get().defaultBlockState(),
+                        GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get().defaultBlockState(),
+                        GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get().defaultBlockState(),
+                        GeodePlusBlocksRegistry.ECHO_CRYSTAL.get().defaultBlockState()),
+                BlockTags.FEATURES_CANNOT_REPLACE ,
+                BlockTags.GEODE_INVALID_BLOCKS) ,
+                new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+                new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+    }
+
+    /*public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE =
+            register("crystal_spike", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
     public static final Holder<ConfiguredFeature<GeodeCrystalSpikeConfig, ?>> CRYSTAL_SPIKE_FLOOR =
             registerConfiguredFeature("crystal_spike_floor", GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.FLOOR));
 
@@ -462,15 +495,13 @@ public class GeodePlusConfiguredFeatureRegistry {
                                             GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get().defaultBlockState()),
                                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                             new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
-
-
-    public static <FC extends FeatureConfiguration, F extends Feature<FC>> Holder<ConfiguredFeature<FC, ?>> registerConfiguredFeature(String name, F feature, FC featureConfiguration) {
-        ResourceLocation resourceLocation = new ResourceLocation(GeodePlus.MOD_ID, name);
-        if (BuiltinRegistries.CONFIGURED_FEATURE.keySet().contains(resourceLocation)) {
-            throw new IllegalStateException("Placed Feature ID: \"" + resourceLocation + "\" already exists in the Placed Features registry!");
-        } else {
-            return BuiltinRegistries.registerExact(BuiltinRegistries.CONFIGURED_FEATURE, resourceLocation.toString(), new ConfiguredFeature(feature, featureConfiguration));
-        }
+*/
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(GeodePlus.MOD_ID, name));
+    }
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
     public static void initialize() {};

@@ -3,7 +3,8 @@ package net.yeoxuhang.geodeplus.fabric;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.minecraft.core.Holder;
-import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.core.registries.Registries;
+
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
@@ -16,10 +17,10 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
 public class GeodePlusGeodeBiomeModifier {
 
-    public ResourceKey<PlacedFeature> getKey(PlacedFeature feature) {
-        return BuiltinRegistries.PLACED_FEATURE.getResourceKey(feature).get();
-    }
-    public void biomeModificationHelper() {
+    /*public ResourceKey<PlacedFeature> getKey(PlacedFeature feature) {
+        return ResourceKey.create(Registries.PLACED_FEATURE).getResourceKey(feature).get();
+    }*/
+    /*public void biomeModificationHelper() {
         var modifications = BiomeModifications.create(new ResourceLocation(GeodePlus.MOD_ID, "biome_modifications"));
         modifications.add(ModificationPhase.ADDITIONS, biomeSelectionContext -> true, (biomeSelectionContext, builder) -> {
             Holder<Biome> biome = biomeSelectionContext.getBiomeRegistryEntry();
@@ -131,6 +132,6 @@ public class GeodePlusGeodeBiomeModifier {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getKey(GeodePlusPlacedFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
             }
         });
-    }
+    }*/
 }
 

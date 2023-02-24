@@ -9,10 +9,10 @@ import java.util.function.Supplier;
 
 public class GeodePlusItemsRegistry {
     public static final Supplier<Item> WRAPPIST_SHARD = RegistryHelper.registerItem("wrappist_shard",
-            () -> new Item(new Item.Properties().tab(GeodePlus.TAB)));
+            () -> new Item(new Item.Properties()));
 
     public static final Supplier<WrappistGoatHornItem> WRAPPIST_GOAT_HORN = RegistryHelper.registerItem("wrappist_goat_horn",
-            () -> new WrappistGoatHornItem(new Item.Properties().tab(GeodePlus.TAB).stacksTo(1)));
+            () -> new WrappistGoatHornItem(new Item.Properties().stacksTo(1)));
 
     public static void initialize() {};
 }

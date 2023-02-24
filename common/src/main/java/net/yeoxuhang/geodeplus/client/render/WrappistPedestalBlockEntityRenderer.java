@@ -2,7 +2,7 @@ package net.yeoxuhang.geodeplus.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -18,7 +18,6 @@ import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
-
 import java.util.Calendar;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
@@ -78,7 +77,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         float wrappistBlockEntity = (float)entity.tick();
         float crystalTick = wrappistBlockEntity / 35.0F;
         float tick = wrappistBlockEntity / 10.0F;
-        poseStack.mulPose(Vector3f.XP.rotationDegrees(-180.0F));
+        poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
         if (xmasTextures) {
             wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(XMAS)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
         } else wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(TEXTURE)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
@@ -89,8 +88,8 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
             poseStack.pushPose();
             poseStack.translate(0.5, (double)offsetY - 1.0, -0.5);
             poseStack.scale(0.35F, 0.35F, 0.35F);
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(tick % 360.0F));
-            poseStack.mulPose(Vector3f.XP.rotationDegrees(-180.0F));
+            poseStack.mulPose(Axis.YP.rotationDegrees(tick % 360.0F));
+            poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
             this.itemRenderer.renderStatic(entity.getItem(0), ItemTransforms.TransformType.NONE, combinedLightIn, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, 0);
             poseStack.popPose();
         }

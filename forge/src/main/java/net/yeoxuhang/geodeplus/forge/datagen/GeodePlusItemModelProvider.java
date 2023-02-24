@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -18,8 +19,8 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
 
     private final ModelFile GOAT_HORN = getExistingFile(mcLoc("item/goat_horn"));
 
-    public GeodePlusItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, GeodePlus.MOD_ID, existingFileHelper);
+    public GeodePlusItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, GeodePlus.MOD_ID, existingFileHelper);
     }
 
     @Override

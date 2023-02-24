@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.platform.fabric;
 
+import net.minecraft.core.registries.Registries;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -11,8 +12,8 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import java.util.function.Supplier;
 
 public class BlockEntityTypeHelperImpl {
-    public static Supplier<BlockEntityType<WrappistPedestalBlockEntity>> createWrappistPedastle() {
-        BlockEntityType<?> type = Registry.register(Registry.BLOCK_ENTITY_TYPE, new ResourceLocation(GeodePlus.MOD_ID, "wrappist_pedestal"), FabricBlockEntityTypeBuilder.create(WrappistPedestalBlockEntity::new).addBlock(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()).build());
+    /*public static Supplier<BlockEntityType<WrappistPedestalBlockEntity>> createWrappistPedastle() {
+        BlockEntityType<?> type = Registry.register(Registries.BLOCK_ENTITY_TYPE, new ResourceLocation(GeodePlus.MOD_ID, "wrappist_pedestal"), FabricBlockEntityTypeBuilder.create(WrappistPedestalBlockEntity::new).addBlock(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get()).build());
         return () -> (BlockEntityType<WrappistPedestalBlockEntity>) type;
-    }
+    }*/
 }

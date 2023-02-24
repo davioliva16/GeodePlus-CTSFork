@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "geode:block/small_nether_gold_nugget_bud"
-  }
-}

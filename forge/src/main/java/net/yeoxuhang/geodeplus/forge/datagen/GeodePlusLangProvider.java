@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,8 +15,8 @@ public class GeodePlusLangProvider extends LanguageProvider {
     private static final String UPSIDE_DOWN_CHARS = " ɐqɔpǝɟbɥıظʞןɯuodbɹsʇnʌʍxʎzⱯᗺƆᗡƎℲ⅁HIſʞꞀWNOԀὉᴚS⟘∩ΛMXʎZ0ƖᄅƐㄣϛ9ㄥ86‾'؛˙¿¡/\\,";
     private final boolean upsideDown;
 
-    public GeodePlusLangProvider(DataGenerator pGenerator, String locale, boolean upsideDown) {
-        super(pGenerator, GeodePlus.MOD_ID, locale);
+    public GeodePlusLangProvider(PackOutput packOutput, String locale, boolean upsideDown) {
+        super(packOutput, GeodePlus.MOD_ID, locale);
         this.upsideDown = upsideDown;
     }
 

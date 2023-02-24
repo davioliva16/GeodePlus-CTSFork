@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
@@ -14,8 +15,8 @@ import java.util.function.Supplier;
 import static net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry.SMOOTH_END_STONE;
 
 public class GeodePlusBlockStateProvider extends BlockStateProvider {
-    public GeodePlusBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, GeodePlus.MOD_ID, exFileHelper);
+    public GeodePlusBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, GeodePlus.MOD_ID, exFileHelper);
     }
 
     @Override

@@ -1,5 +1,12 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.features.CaveFeatures;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraft.core.Holder;
@@ -12,7 +19,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class GeodePlusPlacedFeatureRegistry {
-    public static final Supplier<PlacedFeature> BASALT_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("basalt_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BASALT_ANCIENT_DEBRIS_GEODE, List.of(rarityBasaltAncientDebrisGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
+    /*public static final Supplier<PlacedFeature> BASALT_ANCIENT_DEBRIS_GEODE = RegistryHelper.registerPlacedFeature("basalt_ancient_debris_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BASALT_ANCIENT_DEBRIS_GEODE, List.of(rarityBasaltAncientDebrisGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BASALT_GLOWSTONE_GEODE = RegistryHelper.registerPlacedFeature("basalt_glowstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BASALT_GLOWSTONE_GEODE, List.of(rarityBasaltGlowstoneGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BASALT_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("basalt_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BASALT_GOLD_NUGGET_GEODE, List.of(rarityBasaltGoldNuggetGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
     public static final Supplier<PlacedFeature> BASALT_QUARTZ_GEODE = RegistryHelper.registerPlacedFeature("basalt_quartz_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BASALT_QUARTZ_GEODE, List.of(rarityBasaltQuartzGeode(), inSquarePlacement(), placementNetherBasaltModifier(), biomeFilter())));
@@ -39,9 +46,10 @@ public class GeodePlusPlacedFeatureRegistry {
 
     public static final Supplier<PlacedFeature> BLACKSTONE_GOLD_NUGGET_GEODE = RegistryHelper.registerPlacedFeature("blackstone_gold_nugget_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.BLACKSTONE_GOLD_NUGGET_GEODE, List.of(rarityBlackstoneGoldNuggetGeode(), inSquarePlacement(), placementNetherModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> ECHO_GEODE = RegistryHelper.registerPlacedFeature("echo_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.ECHO_GEODE, List.of(rarityEchoGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter())));
+    */
+    //public static final Supplier<PlacedFeature> ECHO_GEODE = RegistryHelper.registerPlacedFeature("echo_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.ECHO_GEODE, List.of(rarityEchoGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter())));
 
-    public static final Supplier<PlacedFeature> LAPIS_GEODE = RegistryHelper.registerPlacedFeature("lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
+    /*public static final Supplier<PlacedFeature> LAPIS_GEODE = RegistryHelper.registerPlacedFeature("lapis_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.LAPIS_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
 
     public static final Supplier<PlacedFeature> REDSTONE_GEODE = RegistryHelper.registerPlacedFeature("redstone_geode", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) GeodePlusConfiguredFeatureRegistry.REDSTONE_GEODE, List.of(rarityOreGeode(), inSquarePlacement(), placementOreModifier(), biomeFilter())));
 
@@ -101,8 +109,15 @@ public class GeodePlusPlacedFeatureRegistry {
     private static RarityFilter rarityBlackstoneGlowstoneGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_BLACKSTONE_GLOWSTONE_GEODE.get());}
     private static RarityFilter rarityBlackstoneGoldNuggetGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_BLACKSTONE_GOLD_NUGGET_GEODE.get());}
     private static RarityFilter rarityBlackstoneQuartzGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_BLACKSTONE_QUARTZ_GEODE.get());}
+*/
+    public static final ResourceKey<PlacedFeature> ECHO_GEODE = createKey("echo_geode");
 
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        Holder<ConfiguredFeature<?, ?>> holder16 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.ECHO_GEODE);
+        register(context, ECHO_GEODE, holder16, new PlacementModifier[]{rarityEchoGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter()});
+    }
     private static CountPlacement placementCrystal() {
         return CountPlacement.of(20);
     }
@@ -168,6 +183,20 @@ public class GeodePlusPlacedFeatureRegistry {
 
     private static BiomeFilter biomeFilter() {
         return BiomeFilter.biome();
+    }
+
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(GeodePlus.MOD_ID, name));
+    }
+
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+    }
+
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
     }
 
     public static void initialize() {};

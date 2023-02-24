@@ -1,7 +1,10 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
-import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -16,9 +19,16 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 
-public class GeodePlusBlockLootTableProvider extends BlockLoot {
+import java.util.Set;
+
+public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
+
+    public GeodePlusBlockLootTableProvider() {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    }
+
     @Override
-    protected void addTables() {
+    protected void generate() {
         this.dropSelf(GeodePlusBlocksRegistry.GALCITE.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
         this.dropSelf(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get());
@@ -195,9 +205,16 @@ public class GeodePlusBlockLootTableProvider extends BlockLoot {
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
         this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
-
-        this.add(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get());
+        //this.createSlabItemTable(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_CELESTINE.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD.get());
+        this.dropWhenSilkTouch(GeodePlusBlocksRegistry.CELESTINE_CLUSTER.get());
     }
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return RegistryHelperImpl.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;

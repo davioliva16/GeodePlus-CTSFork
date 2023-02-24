@@ -1,5 +1,9 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.PackOutput;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 import net.minecraft.data.DataGenerator;
@@ -8,9 +12,12 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import java.util.concurrent.CompletableFuture;
+
 public class GeodePlusBiomeTagProvider extends BiomeTagsProvider {
-    public GeodePlusBiomeTagProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, GeodePlus.MOD_ID, exFileHelper);
+    public GeodePlusBiomeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper)
+    {
+        super(output, lookupProvider, GeodePlus.MOD_ID, existingFileHelper);
     }
 
     protected void addTags() {

@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
 import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
@@ -20,7 +21,7 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
     }
 
     private static void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE.get()) {
+        /*if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodePlusPlacedFeatureRegistry.PRISMARINE_GEODE.get()));
         }
         //Stone
@@ -62,10 +63,10 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
         if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_SCULK_REDSTONE_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodePlusPlacedFeatureRegistry.SCULK_REDSTONE_GEODE.get()));
         }
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_ECHO_GEODE.get()) {
-            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodePlusPlacedFeatureRegistry.ECHO_GEODE.get()));
+        */if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_ECHO_GEODE.get()) {
+            builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, (Holder<PlacedFeature>) GeodePlusPlacedFeatureRegistry.ECHO_GEODE);
         }
-        //Netherrack
+        /*//Netherrack
         if (biome.is(GeodePlusTagRegistry.Biomes.HAS_NETHER_ANCIENT_DEBRIS_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_NETHER_ANCIENT_DEBRIS_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodePlusPlacedFeatureRegistry.ANCIENT_DEBRIS_GEODE.get()));
         }
@@ -126,7 +127,7 @@ public class GeodeModGeodeBiomeModifier implements BiomeModifier {
         }
         if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_END_WRAPPIST_CRYSTAL.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, Holder.direct(GeodePlusPlacedFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE.get()));
-        }
+        }*/
     }
 
 

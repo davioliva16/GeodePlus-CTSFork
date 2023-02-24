@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "geode_plus:block/small_wrappist_bud"
+  }
+}

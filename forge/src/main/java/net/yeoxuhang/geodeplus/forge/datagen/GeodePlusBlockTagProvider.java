@@ -1,20 +1,27 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
 
 public class GeodePlusBlockTagProvider extends BlockTagsProvider {
-    public GeodePlusBlockTagProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, GeodePlus.MOD_ID, exFileHelper);
+
+    public GeodePlusBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, GeodePlus.MOD_ID, existingFileHelper);
     }
 
-    protected void addTags() {
+    @Override
+    protected void addTags(HolderLookup.Provider arg) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET.get(),
                 GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get(),

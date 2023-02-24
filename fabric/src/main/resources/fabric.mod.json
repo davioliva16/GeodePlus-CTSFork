@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "geode",
+  "id": "geode_plus",
   "version": "${version}",
   "name": "Geode+",
   "description": "A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The End! ",

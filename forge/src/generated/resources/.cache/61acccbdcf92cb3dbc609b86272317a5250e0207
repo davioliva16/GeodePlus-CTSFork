@@ -1,0 +1,9 @@
+// 1.19.3	2023-02-24T00:27:20.5077355	Tags for minecraft:block mod id geode_plus
+bdc1945bad1d7896abfcd4a77ab43e5edf8aea4f data/geode_plus/tags/blocks/can_large_echo_crystal_place.json
+c810320bb4788378c975caf758177e7f4a257c3f data/geode_plus/tags/blocks/can_large_prismarine_crystal_place.json
+9994f212884e8264af96eaba34aa7e89696d8994 data/geode_plus/tags/blocks/can_large_wrappist_crystal_place.json
+fadeb0d2eef6a573b6769f913014f6e46b1f7935 data/geode_plus/tags/blocks/wrappist_pedestal_cannot_place_on.json
+56f973e3489d1257ecf90222c0b6adbf5eee3717 data/minecraft/tags/blocks/mineable/pickaxe.json
+7edeea6cf16cd172894792768c680c0edb893e5c data/minecraft/tags/blocks/needs_diamond_tool.json
+05eed7b21c10381acb550e5d58fafc2befbdfb4f data/minecraft/tags/blocks/needs_stone_tool.json
+bdbf8f99fc679d8ceae7fe218730e924bda5c794 data/minecraft/tags/blocks/walls.json

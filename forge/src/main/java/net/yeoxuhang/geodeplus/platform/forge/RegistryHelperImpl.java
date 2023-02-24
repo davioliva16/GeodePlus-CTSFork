@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.platform.forge;
 
+import net.minecraft.core.registries.Registries;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -36,10 +37,10 @@ public class RegistryHelperImpl {
     public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, GeodePlus.MOD_ID);
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, GeodePlus.MOD_ID);
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, GeodePlus.MOD_ID);
-    public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(Registry.BIOME_REGISTRY, GeodePlus.MOD_ID);
-    public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, GeodePlus.MOD_ID);
+    public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(Registries.BIOME, GeodePlus.MOD_ID);
+    public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registries.CONFIGURED_FEATURE, GeodePlus.MOD_ID);
     public static final DeferredRegister<PoiType> POI = DeferredRegister.create(ForgeRegistries.POI_TYPES, GeodePlus.MOD_ID);
-    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, GeodePlus.MOD_ID);
+    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registries.PLACED_FEATURE, GeodePlus.MOD_ID);
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, GeodePlus.MOD_ID);
 
@@ -52,7 +53,7 @@ public class RegistryHelperImpl {
     }
 
     public static <T extends Biome> Supplier<T> registerBiome(ResourceLocation biomeLocation, Supplier<T> biomeConsumer) {
-        ResourceKey<Biome> biome = ResourceKey.create(Registry.BIOME_REGISTRY, biomeLocation);
+        ResourceKey<Biome> biome = ResourceKey.create(Registries.BIOME, biomeLocation);
         return BIOMES.register(biome.location().getPath(), biomeConsumer);
     }
 
@@ -80,14 +81,10 @@ public class RegistryHelperImpl {
         return PLACED_FEATURES.register(name, placedFeature);
     }
 
-    public static <T extends CreativeModeTab> T registerCreativeModeTab(Supplier<ItemStack> icon) {
-        return (T) new CreativeModeTab(GeodePlus.MOD_ID) {
-            @Override
-            public ItemStack makeIcon() {
-                return icon.get();
-            }
+    /*public static <T extends CreativeModeTab> T registerCreativeModeTab(Supplier<ItemStack> icon) {
+        return (T) new CreativeModeTab.Builder(GeodePlus.MOD_ID,) {
         };
-    }
+    }*/
 
     public static <T extends Enchantment> Supplier<T> registerEnchant(String name, Supplier<T> enchantment) {
         return ENCHANTMENTS.register(name, enchantment);

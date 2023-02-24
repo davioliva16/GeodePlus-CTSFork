@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
+import net.minecraft.core.registries.Registries;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -67,7 +68,7 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Biome> HAS_PRISMARINE_CRYSTAL
                 = biomeTag("has_prismarine_crystal");
         private static TagKey<Biome> biomeTag(String name) {
-            return TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));
+            return TagKey.create(Registries.BIOME, new ResourceLocation(GeodePlus.MOD_ID, name));
         }
 
     }
@@ -87,7 +88,7 @@ public class GeodePlusTagRegistry {
 
 
         private static TagKey<Block> blockTag(String name) {
-            return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(GeodePlus.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(GeodePlus.MOD_ID, name));
         }
     }
 }
