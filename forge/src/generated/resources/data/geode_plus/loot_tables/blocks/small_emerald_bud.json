@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "geode_plus:small_emerald_bud"
         }
       ],
       "rolls": 1.0

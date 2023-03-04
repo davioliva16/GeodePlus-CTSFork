@@ -1,6 +1,5 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -86,6 +85,11 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
         singleLayerBlockModel(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD, GENERATED);
         singleLayerBlockModel(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD, GENERATED);
         singleLayerBlockModel(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD, GENERATED);
+
+        singleLayerBlockModel(GeodePlusBlocksRegistry.CELESTITE_CLUSTER, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD, GENERATED);
+        singleLayerBlockModel(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD, GENERATED);
     }
     public void blockModel(Supplier<? extends Block> block) {
         getExistingFile(modLoc("block/" + getName(block.get())));

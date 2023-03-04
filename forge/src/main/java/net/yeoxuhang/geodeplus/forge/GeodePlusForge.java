@@ -5,9 +5,12 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
@@ -17,6 +20,7 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusBiomeModifierRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusLootModifierRegistry;
+import net.yeoxuhang.geodeplus.forge.util.BrewingRecipe;
 import net.yeoxuhang.geodeplus.platform.forge.BlockEntityTypeHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.ClientHelperImpl;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
@@ -48,6 +52,14 @@ public class GeodePlusForge {
         GeodePlusBiomeModifierRegistry.register(eventBus);
         GeodePlusLootModifierRegistry.register(eventBus);
         eventBus.addListener(this::registerCreativeTab);
+        eventBus.addListener(this::setup);
+    }
+
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Potions.WATER,
+                    GeodePlusItemsRegistry.CELESTITE_SHARD.get(), Potions.STRONG_HEALING));
+        });
     }
 
     @Mod.EventBusSubscriber(modid = GeodePlus.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -71,13 +83,13 @@ public class GeodePlusForge {
                 builder -> builder.icon(() -> GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().asItem().getDefaultInstance())
                         .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".tab"))
                         .displayItems((features, output, hasPermissions) -> output.acceptAll(Stream.of(
-                                GeodePlusBlocksRegistry.BUDDING_CELESTINE,
-                                GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK,
-                                GeodePlusBlocksRegistry.CELESTINE_CLUSTER,
-                                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD,
-                                GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD,
-                                GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD,
-                                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD,
+                                GeodePlusBlocksRegistry.BUDDING_CELESTITE,
+                                GeodePlusBlocksRegistry.CELESTITE_BLOCK,
+                                GeodePlusBlocksRegistry.CELESTITE_CLUSTER,
+                                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
+                                GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD,
+                                GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD,
+                                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
 
                                 GeodePlusBlocksRegistry.BUDDING_PRISMARINE,
                                 GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK,
@@ -89,6 +101,7 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.BUDDING_LAPIS,
                                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_LAPIS,
                                 GeodePlusBlocksRegistry.BUDDING_SCULK_LAPIS,
+                                GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK,
                                 GeodePlusBlocksRegistry.LAPIS_CLUSTER,
                                 GeodePlusBlocksRegistry.LARGE_LAPIS_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD,
@@ -97,12 +110,14 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.BUDDING_REDSTONE,
                                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_REDSTONE,
                                 GeodePlusBlocksRegistry.BUDDING_SCULK_REDSTONE,
+                                GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK,
                                 GeodePlusBlocksRegistry.REDSTONE_CRYSTAL,
                                 GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD,
                                 GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD,
 
                                 GeodePlusBlocksRegistry.BUDDING_EMERALD,
+                                GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK,
                                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_EMERALD,
                                 GeodePlusBlocksRegistry.BUDDING_SCULK_EMERALD,
                                 GeodePlusBlocksRegistry.EMERALD_CLUSTER,
@@ -113,6 +128,7 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.BUDDING_DIAMOND,
                                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_DIAMOND,
                                 GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND,
+                                GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK,
                                 GeodePlusBlocksRegistry.DIAMOND_CRYSTAL,
                                 GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD,
@@ -148,6 +164,7 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS,
                                 GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS,
                                 GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS,
+                                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK,
                                 GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER,
                                 GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD,
@@ -174,7 +191,7 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
 
                                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
-
+                                GeodePlusItemsRegistry.CELESTITE_SHARD,
                                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                                 GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN
                         ).map(block -> block.get().asItem().getDefaultInstance()).toList()))

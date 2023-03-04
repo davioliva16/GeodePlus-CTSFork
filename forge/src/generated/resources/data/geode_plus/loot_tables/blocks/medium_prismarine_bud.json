@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "geode_plus:medium_prismarine_bud"
         }
       ],
       "rolls": 1.0

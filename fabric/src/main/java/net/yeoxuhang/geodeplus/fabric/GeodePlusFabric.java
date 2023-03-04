@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.fabricmc.api.ModInitializer;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
@@ -19,17 +21,22 @@ public class GeodePlusFabric implements ModInitializer {
     public void onInitialize() {
         GeodePlus.init();
         registerCreativeTab();
-        //new GeodePlusGeodeBiomeModifier().biomeModificationHelper();
+        registerBrewingRecipes();
+        new GeodePlusGeodeBiomeModifier().biomeModificationHelper();
+    }
+
+    public static void registerBrewingRecipes(){
+        PotionBrewing.addMix(Potions.WATER, GeodePlusItemsRegistry.CELESTITE_SHARD.get(), Potions.STRONG_HEALING);
     }
     private void registerCreativeTab() {
         ItemGroupEvents.modifyEntriesEvent(TAB).register(content -> content.acceptAll(Stream.of(
-                GeodePlusBlocksRegistry.BUDDING_CELESTINE,
-                GeodePlusBlocksRegistry.CELESTINE_CLUSTER_BLOCK,
-                GeodePlusBlocksRegistry.CELESTINE_CLUSTER,
-                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD,
-                GeodePlusBlocksRegistry.MEDIUM_CELESTINE_BUD,
-                GeodePlusBlocksRegistry.SMALL_CELESTINE_BUD,
-                GeodePlusBlocksRegistry.LARGE_CELESTINE_BUD,
+                GeodePlusBlocksRegistry.BUDDING_CELESTITE,
+                GeodePlusBlocksRegistry.CELESTITE_BLOCK,
+                GeodePlusBlocksRegistry.CELESTITE_CLUSTER,
+                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
+                GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD,
+                GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD,
+                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
 
                 GeodePlusBlocksRegistry.BUDDING_PRISMARINE,
                 GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK,
@@ -126,7 +133,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
 
                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
-
+                GeodePlusItemsRegistry.CELESTITE_SHARD,
                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                 GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN
         ).map(item -> item.get().asItem().getDefaultInstance()).toList()));

@@ -63,6 +63,7 @@ public class GeodePlusConfiguredFeatureRegistry {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_REDSTONE_GEODE = registerKey("deepslate_redstone_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SCULK_REDSTONE_GEODE = registerKey("sculk_redstone_geode");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CELESTITE_GEODE = registerKey("celestite_geode");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, CRYSTAL_SPIKE, GeodePlusFeatureRegistry.CRYSTAL_SPIKE.get(), new GeodeCrystalSpikeConfig((GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK.get()).defaultBlockState(), (GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get()).defaultBlockState(), UniformInt.of(1, 3), CaveSurface.CEILING));
@@ -243,7 +244,7 @@ public class GeodePlusConfiguredFeatureRegistry {
                                 GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().defaultBlockState()),
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                 new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
-                new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));;
+                new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
         register(context, PRISMARINE_GEODE, Feature.GEODE, new GeodeConfiguration(
                 new GeodeBlockSettings(BlockStateProvider.simple(Blocks.WATER),
                         BlockStateProvider.simple(Blocks.PRISMARINE),
@@ -399,6 +400,18 @@ public class GeodePlusConfiguredFeatureRegistry {
                                 GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD.get().defaultBlockState(),
                                 GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get().defaultBlockState()),
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+        register(context, CELESTITE_GEODE, Feature.GEODE, new GeodeConfiguration(
+                new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(GeodePlusBlocksRegistry.CELESTITE_BLOCK.get()),
+                        BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get()),
+                        BlockStateProvider.simple(Blocks.CALCITE),
+                        BlockStateProvider.simple(Blocks.MUD),
+                        List.of(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get().defaultBlockState(),
+                                GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get().defaultBlockState(),
+                                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get().defaultBlockState(),
+                                GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE, GeodePlusTagRegistry.Blocks.GEODE_INVALID_BLOCKS),
                 new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D), new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6), UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
     }

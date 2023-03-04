@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "geode_plus:budding_basalt_glowstone"
         }
       ],
       "rolls": 1.0

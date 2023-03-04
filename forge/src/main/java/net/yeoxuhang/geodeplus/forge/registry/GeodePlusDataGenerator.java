@@ -25,7 +25,7 @@ public class GeodePlusDataGenerator {
         event.getGenerator().addProvider(event.includeServer(), blocktags);
         event.getGenerator().addProvider(event.includeServer(), new GeodePlusItemTagProvider(event.getGenerator().getPackOutput(), event.getLookupProvider(), blocktags, event.getExistingFileHelper()));
 
-        //generator.addProvider(true, new GeodePlusRecipeProvider(packOutput));
+        generator.addProvider(true, new GeodePlusRecipeProvider(packOutput));
         generator.addProvider(true, GeodePlusLootTableProvider.create(packOutput));
         generator.addProvider(true, new GeodePlusBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new GeodePlusItemModelProvider(packOutput, existingFileHelper));

@@ -1,13 +1,10 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
@@ -22,6 +19,14 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> save) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GUNPOWDER, 4).requires(GeodePlusItemsRegistry.CELESTITE_SHARD.get()).unlockedBy("has_celestite", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.CELESTITE_BLOCK.get(), GeodePlusItemsRegistry.CELESTITE_SHARD.get());
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get());
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get(), GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get());
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.EMERALD_CLUSTER.get());
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.LAPIS_CLUSTER.get());
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get(), GeodePlusBlocksRegistry.REDSTONE_CRYSTAL.get());
+
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get(), GeodePlusItemsRegistry.WRAPPIST_SHARD.get());
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get());
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get());

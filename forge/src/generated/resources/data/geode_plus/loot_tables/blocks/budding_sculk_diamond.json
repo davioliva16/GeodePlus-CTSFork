@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "geode_plus:budding_sculk_diamond"
         }
       ],
       "rolls": 1.0

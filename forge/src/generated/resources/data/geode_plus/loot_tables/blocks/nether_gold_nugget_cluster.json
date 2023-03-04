@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:air"
+              "name": "geode_plus:nether_gold_nugget_cluster"
             },
             {
               "type": "minecraft:alternatives",

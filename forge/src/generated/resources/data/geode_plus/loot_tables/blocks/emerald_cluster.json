@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:air"
+              "name": "geode_plus:emerald_cluster"
             },
             {
               "type": "minecraft:alternatives",

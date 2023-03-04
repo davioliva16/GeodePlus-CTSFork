@@ -1,6 +1,5 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +20,11 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlock(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get());
         simpleBlock(SMOOTH_END_STONE.get());
         simpleBlock(GeodePlusBlocksRegistry.GALCITE.get());
         simpleBlock(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
@@ -55,6 +59,8 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_SCULK_EMERALD.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
+        simpleBlock(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get());
+        simpleBlock(GeodePlusBlocksRegistry.CELESTITE_BLOCK.get());
 
         stairsBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockLoc(SMOOTH_END_STONE));
         wallBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL, blockLoc(SMOOTH_END_STONE));
@@ -115,6 +121,12 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         directionalBlock(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD)));
         directionalBlock(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD)));
         directionalBlock(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD)));
+
+        directionalBlock(GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.ECHO_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.ECHO_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_ECHO_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_ECHO_BUD)));
+
     }
 
 

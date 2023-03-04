@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:air"
+              "name": "geode_plus:nether_ancient_debris_cluster"
             },
             {
               "type": "minecraft:alternatives",

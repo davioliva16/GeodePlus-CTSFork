@@ -24,8 +24,8 @@ public class GeodePlusLangProvider extends LanguageProvider {
     protected void addTranslations() {
         RegistryHelperImpl.BLOCKS.getEntries().forEach(this::addBlock);
         RegistryHelperImpl.ITEMS.getEntries().stream().filter(item -> !(item.get() instanceof BlockItem)).forEach(this::addItem);
-        add("itemGroup.geode", "Geode+");
-        add("itemGroup.geode.geode", "Geode+");
+        add("itemGroup.geode_plus", "Geode+");
+        add("itemGroup.geode_plus.tab", "Geode+");
     }
 
     @Override
@@ -36,12 +36,12 @@ public class GeodePlusLangProvider extends LanguageProvider {
 
     private void addBlock(RegistryObject<Block> block) {
         String key = block.getId().getPath();
-        super.add("block.geode." + key, convertToName(key));
+        super.add("block.geode_plus." + key, convertToName(key));
     }
 
     private void addItem(RegistryObject<Item> item) {
         String key = item.getId().getPath();
-        super.add("item.geode." + key, convertToName(key));
+        super.add("item.geode_plus." + key, convertToName(key));
     }
 
     private String convertToName(String key) {

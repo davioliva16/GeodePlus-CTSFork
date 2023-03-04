@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.Item;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -54,6 +55,8 @@ public class GeodePlusTagRegistry {
                 = biomeTag("has_basalt_ancient_debris_geode");
         public static final TagKey<Biome> HAS_BLACKSTONE_ANCIENT_DEBRIS_GEODE
                 = biomeTag("has_blackstone_ancient_debris_geode");
+        public static final TagKey<Biome> HAS_CELESTITE_GEODE
+                = biomeTag("has_celestite_geode");
 
         //Crystals
         public static final TagKey<Biome> HAS_ECHO_CRYSTAL
@@ -86,9 +89,19 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Block> CAN_LARGE_PRISMARINE_CRYSTAL_PLACE
                 = blockTag("can_large_prismarine_crystal_place");
 
-
+        public static final TagKey<Block> GEODE_INVALID_BLOCKS
+                = blockTag("geode_invalid_blocks");
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(GeodePlus.MOD_ID, name));
+        }
+    }
+    public static class Items {
+        public static final TagKey<Item> CELESTITE
+                = itemTag("celestite");
+
+
+        private static TagKey<Item> itemTag(String name) {
+            return TagKey.create(Registries.ITEM, new ResourceLocation(GeodePlus.MOD_ID, name));
         }
     }
 }
