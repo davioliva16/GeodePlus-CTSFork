@@ -1,5 +1,6 @@
-// 1.19.3	2023-03-04T12:02:01.9396618	Item Models: geode_plus
+// 1.19.3	2023-03-04T12:11:34.8207119	Item Models: geode_plus
 a17cdfa73785dd20046b5914c1271712b51c897a assets/geode_plus/models/item/celestite_cluster.json
+f6e29cdf55a5b40c97a549f32c017d64bb8cedde assets/geode_plus/models/item/celestite_shard.json
 1faca63e49b77d2d199c98eca41a8b14321a87f3 assets/geode_plus/models/item/diamond_crystal.json
 2588488f6ecdf011bb648e318e0855f4b7e8b624 assets/geode_plus/models/item/echo_crystal.json
 763de564e2fafd1600024ad413a6035e7761623a assets/geode_plus/models/item/emerald_cluster.json

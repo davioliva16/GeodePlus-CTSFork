@@ -130,10 +130,10 @@ public class GeodePlusGeodeBiomeModifier {
             }
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_GLOWSTONE_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_NETHER_GLOWSTONE_CRYSTAL.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("glowstone_crystal_spike"));
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("quartz_crystal_spike_floor"));
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("glowstone_crystal_spike_floor"));
             }
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_END_WRAPPIST_CRYSTAL.get()) {
-                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("wrappist_crystal_spike"));
+                builder.getGenerationSettings().addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, getPlacedFeatureKey("wrappist_crystal_spike"));
             }
         });
     }

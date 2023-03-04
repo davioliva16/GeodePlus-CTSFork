@@ -122,10 +122,10 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         directionalBlock(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD)));
         directionalBlock(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD)));
 
-        directionalBlock(GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.ECHO_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.ECHO_CRYSTAL)));
-        directionalBlock(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_ECHO_BUD)));
-        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD)));
-        directionalBlock(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_ECHO_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_ECHO_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get(), models().cross(getName(GeodePlusBlocksRegistry.CELESTITE_CLUSTER), blockLoc(GeodePlusBlocksRegistry.CELESTITE_CLUSTER)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD)));
 
     }
 

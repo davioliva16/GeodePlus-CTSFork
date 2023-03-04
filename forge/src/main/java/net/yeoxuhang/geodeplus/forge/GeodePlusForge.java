@@ -83,6 +83,10 @@ public class GeodePlusForge {
                 builder -> builder.icon(() -> GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().asItem().getDefaultInstance())
                         .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".tab"))
                         .displayItems((features, output, hasPermissions) -> output.acceptAll(Stream.of(
+                                GeodePlusItemsRegistry.WRAPPIST_SHARD,
+                                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
+                                GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
+                                GeodePlusItemsRegistry.CELESTITE_SHARD,
                                 GeodePlusBlocksRegistry.BUDDING_CELESTITE,
                                 GeodePlusBlocksRegistry.CELESTITE_BLOCK,
                                 GeodePlusBlocksRegistry.CELESTITE_CLUSTER,
@@ -188,12 +192,7 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.ECHO_CRYSTAL,
                                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD,
-                                GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
-
-                                GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
-                                GeodePlusItemsRegistry.CELESTITE_SHARD,
-                                GeodePlusItemsRegistry.WRAPPIST_SHARD,
-                                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN
+                                GeodePlusBlocksRegistry.SMALL_ECHO_BUD
                         ).map(block -> block.get().asItem().getDefaultInstance()).toList()))
         );
     }

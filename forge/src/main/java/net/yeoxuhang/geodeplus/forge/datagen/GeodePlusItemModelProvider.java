@@ -24,6 +24,7 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        itemModel(GeodePlusItemsRegistry.CELESTITE_SHARD, GENERATED);
         itemModel(GeodePlusItemsRegistry.WRAPPIST_SHARD, GENERATED);
         itemModel(GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN, GOAT_HORN);
         singleLayerBlockModel(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL, GENERATED);

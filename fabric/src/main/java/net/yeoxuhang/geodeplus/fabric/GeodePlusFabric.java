@@ -30,6 +30,10 @@ public class GeodePlusFabric implements ModInitializer {
     }
     private void registerCreativeTab() {
         ItemGroupEvents.modifyEntriesEvent(TAB).register(content -> content.acceptAll(Stream.of(
+                GeodePlusItemsRegistry.WRAPPIST_SHARD,
+                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
+                GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
+                GeodePlusItemsRegistry.CELESTITE_SHARD,
                 GeodePlusBlocksRegistry.BUDDING_CELESTITE,
                 GeodePlusBlocksRegistry.CELESTITE_BLOCK,
                 GeodePlusBlocksRegistry.CELESTITE_CLUSTER,
@@ -48,6 +52,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.BUDDING_LAPIS,
                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_LAPIS,
                 GeodePlusBlocksRegistry.BUDDING_SCULK_LAPIS,
+                GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK,
                 GeodePlusBlocksRegistry.LAPIS_CLUSTER,
                 GeodePlusBlocksRegistry.LARGE_LAPIS_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_LAPIS_BUD,
@@ -56,12 +61,14 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.BUDDING_REDSTONE,
                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_REDSTONE,
                 GeodePlusBlocksRegistry.BUDDING_SCULK_REDSTONE,
+                GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK,
                 GeodePlusBlocksRegistry.REDSTONE_CRYSTAL,
                 GeodePlusBlocksRegistry.LARGE_REDSTONE_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_REDSTONE_BUD,
                 GeodePlusBlocksRegistry.SMALL_REDSTONE_BUD,
 
                 GeodePlusBlocksRegistry.BUDDING_EMERALD,
+                GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK,
                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_EMERALD,
                 GeodePlusBlocksRegistry.BUDDING_SCULK_EMERALD,
                 GeodePlusBlocksRegistry.EMERALD_CLUSTER,
@@ -72,6 +79,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.BUDDING_DIAMOND,
                 GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_DIAMOND,
                 GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND,
+                GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK,
                 GeodePlusBlocksRegistry.DIAMOND_CRYSTAL,
                 GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD,
@@ -107,6 +115,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS,
                 GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS,
                 GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS,
+                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK,
                 GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER,
                 GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD,
@@ -130,12 +139,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.ECHO_CRYSTAL,
                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD,
-                GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
-
-                GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
-                GeodePlusItemsRegistry.CELESTITE_SHARD,
-                GeodePlusItemsRegistry.WRAPPIST_SHARD,
-                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN
+                GeodePlusBlocksRegistry.SMALL_ECHO_BUD
         ).map(item -> item.get().asItem().getDefaultInstance()).toList()));
     }
 }
