@@ -1,68 +1,4 @@
 accessWidener	v2	named
-transitive-accessible	method	net/minecraft/client/renderer/item/ItemProperties	registerGeneric	(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/item/ClampedItemPropertyFunction;)Lnet/minecraft/client/renderer/item/ClampedItemPropertyFunction;
-transitive-accessible	method	net/minecraft/client/renderer/item/ItemProperties	register	(Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/item/ClampedItemPropertyFunction;)V
-transitive-accessible	method	net/minecraft/advancements/CriteriaTriggers	register	(Lnet/minecraft/advancements/CriterionTrigger;)Lnet/minecraft/advancements/CriterionTrigger;
-transitive-accessible	class	net/minecraft/world/inventory/MenuType$MenuSupplier
-transitive-accessible	method	net/minecraft/world/inventory/MenuType	<init>	(Lnet/minecraft/world/inventory/MenuType$MenuSupplier;)V
-transitive-accessible	class	net/minecraft/client/gui/screens/MenuScreens$ScreenConstructor
-transitive-accessible	method	net/minecraft/client/gui/screens/MenuScreens	register	(Lnet/minecraft/world/inventory/MenuType;Lnet/minecraft/client/gui/screens/MenuScreens$ScreenConstructor;)V
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootPool	entries	[Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootPool	conditions	[Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootPool	functions	[Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootPool	rolls	Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootPool	bonusRolls	Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootTable	pools	[Lnet/minecraft/world/level/storage/loot/LootPool;
-transitive-accessible	field	net/minecraft/world/level/storage/loot/LootTable	functions	[Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	<init>	(Ljava/lang/String;)V
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	bypassArmor	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	damageHelmet	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	bypassInvul	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	bypassMagic	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	bypassEnchantments	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	method	net/minecraft/world/damagesource/DamageSource	setIsFire	()Lnet/minecraft/world/damagesource/DamageSource;
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$EmeraldForItems
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$ItemsForEmeralds
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$SuspiciousStewForEmerald
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$ItemsAndEmeraldsToItems
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$EnchantedItemForEmeralds
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$EmeraldsForVillagerTypeItem
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$TippedArrowForItemsAndEmeralds
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$TreasureMapForEmeralds
-transitive-accessible	class	net/minecraft/world/entity/npc/VillagerTrades$DyedArmorForEmeralds
-transitive-accessible	method	net/minecraft/world/entity/SpawnPlacements	register	(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/SpawnPlacements$Type;Lnet/minecraft/world/level/levelgen/Heightmap$Types;Lnet/minecraft/world/entity/SpawnPlacements$SpawnPredicate;)V
-transitive-accessible	method	net/minecraft/world/level/material/Material$Builder	flammable	()Lnet/minecraft/world/level/material/Material$Builder;
-transitive-accessible	method	net/minecraft/world/level/material/Material$Builder	destroyOnPush	()Lnet/minecraft/world/level/material/Material$Builder;
-transitive-accessible	method	net/minecraft/world/level/material/Material$Builder	notPushable	()Lnet/minecraft/world/level/material/Material$Builder;
-transitive-accessible	method	net/minecraft/world/item/AxeItem	<init>	(Lnet/minecraft/world/item/Tier;FFLnet/minecraft/world/item/Item$Properties;)V
-transitive-accessible	method	net/minecraft/world/item/RecordItem	<init>	(ILnet/minecraft/sounds/SoundEvent;Lnet/minecraft/world/item/Item$Properties;I)V
-transitive-accessible	method	net/minecraft/world/item/PickaxeItem	<init>	(Lnet/minecraft/world/item/Tier;IFLnet/minecraft/world/item/Item$Properties;)V
-transitive-accessible	method	net/minecraft/world/item/context/UseOnContext	<init>	(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
-transitive-accessible	method	net/minecraft/world/item/context/BlockPlaceContext	<init>	(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V
-transitive-accessible	class	net/minecraft/world/item/crafting/SimpleCookingSerializer$CookieBaker
-transitive-accessible	class	net/minecraft/world/item/crafting/SingleItemRecipe$Serializer$SingleItemMaker
-transitive-accessible	method	net/minecraft/world/item/alchemy/PotionBrewing	addContainerRecipe	(Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
-transitive-accessible	method	net/minecraft/world/item/alchemy/PotionBrewing	addContainer	(Lnet/minecraft/world/item/Item;)V
-transitive-accessible	method	net/minecraft/world/item/alchemy/PotionBrewing	addMix	(Lnet/minecraft/world/item/alchemy/Potion;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/alchemy/Potion;)V
-transitive-accessible	method	net/minecraft/world/scores/criteria/ObjectiveCriteria	registerCustom	(Ljava/lang/String;ZLnet/minecraft/world/scores/criteria/ObjectiveCriteria$RenderType;)Lnet/minecraft/world/scores/criteria/ObjectiveCriteria;
-transitive-accessible	method	net/minecraft/world/scores/criteria/ObjectiveCriteria	registerCustom	(Ljava/lang/String;)Lnet/minecraft/world/scores/criteria/ObjectiveCriteria;
-transitive-accessible	class	net/minecraft/client/model/geom/ModelPart$Vertex
-transitive-accessible	class	net/minecraft/client/model/geom/ModelPart$Polygon
-transitive-accessible	method	net/minecraft/client/renderer/RenderType	translucentState	(Lnet/minecraft/client/renderer/RenderStateShard$ShaderStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState;
-transitive-accessible	method	net/minecraft/world/entity/ai/sensing/SensorType	<init>	(Ljava/util/function/Supplier;)V
-transitive-accessible	method	net/minecraft/world/entity/schedule/Activity	<init>	(Ljava/lang/String;)V
-transitive-accessible	method	net/minecraft/world/entity/LivingEntity	hurtArmor	(Lnet/minecraft/world/damagesource/DamageSource;F)V
-transitive-accessible	method	net/minecraft/world/entity/LivingEntity	hurtHelmet	(Lnet/minecraft/world/damagesource/DamageSource;F)V
-transitive-accessible	method	net/minecraft/world/entity/LivingEntity	hurtCurrentlyUsedShield	(F)V
-transitive-accessible	method	net/minecraft/world/entity/projectile/Projectile	<init>	(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)V
-transitive-accessible	method	net/minecraft/world/entity/projectile/FishingHook	<init>	(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;II)V
-transitive-accessible	method	net/minecraft/server/level/ServerLevel	sendParticles	(Lnet/minecraft/server/level/ServerPlayer;ZDDDLnet/minecraft/network/protocol/Packet;)Z
-transitive-accessible	method	net/minecraft/network/chat/TextColor	formatValue	()Ljava/lang/String;
-transitive-accessible	method	net/minecraft/network/chat/contents/TranslatableContents	getArgument	(I)Lnet/minecraft/network/chat/FormattedText;
-transitive-extendable	class	net/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier
-transitive-accessible	field	net/minecraft/world/entity/npc/VillagerType	BY_BIOME	Ljava/util/Map;
-transitive-accessible	method	net/minecraft/world/entity/npc/VillagerType	<init>	(Ljava/lang/String;)V
-transitive-accessible	field	net/minecraft/world/SimpleContainer	items	Lnet/minecraft/core/NonNullList;
 transitive-accessible	method	net/minecraft/world/level/block/AirBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/AttachedStemBlock	<init>	(Lnet/minecraft/world/level/block/StemGrownBlock;Ljava/util/function/Supplier;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/AzaleaBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
@@ -91,7 +27,6 @@ transitive-accessible	method	net/minecraft/world/level/block/BaseCoralFanBlock	<
 transitive-accessible	method	net/minecraft/world/level/block/BaseCoralWallFanBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/DirtPathBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/DispenserBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/DoorBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/WoolCarpetBlock	<init>	(Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/EnchantmentTableBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/EndGatewayBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
@@ -102,7 +37,6 @@ transitive-accessible	method	net/minecraft/world/level/block/FarmBlock	<init>	(L
 transitive-accessible	method	net/minecraft/world/level/block/TallGrassBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/FletchingTableBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/LiquidBlock	<init>	(Lnet/minecraft/world/level/material/FlowingFluid;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/FungusBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Ljava/util/function/Supplier;)V
 transitive-accessible	method	net/minecraft/world/level/block/FurnaceBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/GrindstoneBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/HangingRootsBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
@@ -124,40 +58,4 @@ transitive-accessible	method	net/minecraft/world/level/block/IronBarsBlock	<init
 transitive-accessible	method	net/minecraft/world/level/block/BushBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/PlayerHeadBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/PoweredRailBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/PressurePlateBlock	<init>	(Lnet/minecraft/world/level/block/PressurePlateBlock$Sensitivity;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/PumpkinBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RailBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RedstoneTorchBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RepeaterBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RodBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RootsBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SaplingBlock	<init>	(Lnet/minecraft/world/level/block/grower/AbstractTreeGrower;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/ScaffoldingBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SeaPickleBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SeagrassBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SkullBlock	<init>	(Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SmithingTableBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SmokerBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SnowLayerBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SnowyDirtBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SpawnerBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SpongeBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 transitive-accessible	method	net/minecraft/world/level/block/StairBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/StemBlock	<init>	(Lnet/minecraft/world/level/block/StemGrownBlock;Ljava/util/function/Supplier;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/StoneButtonBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/StructureBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/StructureVoidBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/SugarCaneBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/TorchBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lnet/minecraft/core/particles/ParticleOptions;)V
-transitive-accessible	method	net/minecraft/world/level/block/HalfTransparentBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/TrapDoorBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/FaceAttachedHorizontalDirectionalBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/PlayerWallHeadBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/RedstoneWallTorchBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WallSkullBlock	<init>	(Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WallTorchBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;Lnet/minecraft/core/particles/ParticleOptions;)V
-transitive-accessible	method	net/minecraft/world/level/block/WitherWallSkullBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WeightedPressurePlateBlock	<init>	(ILnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WetSpongeBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WitherSkullBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-transitive-accessible	method	net/minecraft/world/level/block/WoodButtonBlock	<init>	(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
