@@ -1,5 +1,5 @@
 {
-  "feature": "geode_plus:celestite_geode",
+  "feature": "geode_plus:pink_topaz_geode",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -16,7 +16,7 @@
           "absolute": 110
         },
         "min_inclusive": {
-          "above_bottom": 50
+          "above_bottom": 10
         }
       }
     },

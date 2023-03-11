@@ -72,6 +72,7 @@ public class GeodePlusBiomeModifierRegistry {
     public static RegistryObject<Codec<LargeGlowstoneCrystalModifier>> glowstoneCrystalSpike = BIOME_MODIFIERS.register("glowstone_crystal_spike", LargeGlowstoneCrystalModifier::makeCodec);
     public static RegistryObject<Codec<LargeWrappistCrystalGeodeModifier>> wrppistCrystalSpike = BIOME_MODIFIERS.register("wrappist_crystal_spike", LargeWrappistCrystalGeodeModifier::makeCodec);
     public static RegistryObject<Codec<CelestiteGeodeModifier>> celestiteGeode = BIOME_MODIFIERS.register("celestite_geode", CelestiteGeodeModifier::makeCodec);
+    public static RegistryObject<Codec<PinkTopazGeodeModifier>> pinkTopazGeode = BIOME_MODIFIERS.register("pink_topaz_geode", PinkTopazGeodeModifier::makeCodec);
 
     public static void register(IEventBus eventBus) {
         BIOME_MODIFIERS.register(eventBus);

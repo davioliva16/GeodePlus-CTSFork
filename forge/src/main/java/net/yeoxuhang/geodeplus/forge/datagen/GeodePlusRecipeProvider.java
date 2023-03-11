@@ -20,6 +20,8 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> save) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GUNPOWDER, 4).requires(GeodePlusItemsRegistry.CELESTITE_SHARD.get()).unlockedBy("has_celestite", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
+        twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get(), GeodePlusItemsRegistry.PINK_TOPAZ.get());
+
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.CELESTITE_BLOCK.get(), GeodePlusItemsRegistry.CELESTITE_SHARD.get());
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get(), GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER.get());
         twoByTwoPacker(save, RecipeCategory.BUILDING_BLOCKS, GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK.get(), GeodePlusBlocksRegistry.DIAMOND_CRYSTAL.get());

@@ -13,6 +13,11 @@ import net.yeoxuhang.geodeplus.platform.ClientHelper;
 public class GeodePlusClient {
 
 	public static void initClient() {
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get(), RenderType.cutout());
+
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(), RenderType.cutout());

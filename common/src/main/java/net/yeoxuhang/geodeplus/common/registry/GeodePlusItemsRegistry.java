@@ -7,6 +7,8 @@ import net.minecraft.world.item.Item;
 import java.util.function.Supplier;
 
 public class GeodePlusItemsRegistry {
+    public static final Supplier<Item> PINK_TOPAZ = RegistryHelper.registerItem("pink_topaz",
+            () -> new Item(new Item.Properties()));
     public static final Supplier<Item> CELESTITE_SHARD = RegistryHelper.registerItem("celestite_shard",
             () -> new Item(new Item.Properties()));
     public static final Supplier<Item> WRAPPIST_SHARD = RegistryHelper.registerItem("wrappist_shard",

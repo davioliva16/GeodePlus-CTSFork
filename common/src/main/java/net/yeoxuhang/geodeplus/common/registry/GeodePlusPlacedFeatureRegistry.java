@@ -58,6 +58,7 @@ public class GeodePlusPlacedFeatureRegistry {
     public static final ResourceKey<PlacedFeature> SCULK_REDSTONE_GEODE = createKey("sculk_redstone_geode");
 
     public static final ResourceKey<PlacedFeature> CELESTITE_GEODE = createKey("celestite_geode");
+    public static final ResourceKey<PlacedFeature> PINK_TOPAZ_GEODE = createKey("pink_topaz_geode");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -108,7 +109,8 @@ public class GeodePlusPlacedFeatureRegistry {
         Holder.Reference<ConfiguredFeature<?, ?>> holder34 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.WRAPPIST_CRYSTAL_SPIKE);
         Holder.Reference<ConfiguredFeature<?, ?>> holder35 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.PRISMARINE_CRYSTAL_SPIKE);
 
-        Holder.Reference<ConfiguredFeature<?, ?>> holder36 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.SCULK_LAPIS_GEODE);
+        Holder.Reference<ConfiguredFeature<?, ?>> holder36 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.CELESTITE_GEODE);
+        Holder.Reference<ConfiguredFeature<?, ?>> holder37 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.PINK_TOPAZ_GEODE);
 
         register(context, PRISMARINE_GEODE, holder, rarityPrismarineGeode(), inSquarePlacement(), placementPrismarineModifier(), biomeFilter());
         register(context, WRAPPIST_GEODE, holder2, rarityEndWrappistGeode(), inSquarePlacement(), placementEndModifier(), biomeFilter());
@@ -156,6 +158,7 @@ public class GeodePlusPlacedFeatureRegistry {
         register(context, PRISMARINE_CRYSTAL_SPIKE, holder35, rarityBlackstoneQuartzGeode(), inSquarePlacement(), placementPrismarineModifier(), biomeFilter());
 
         register(context, CELESTITE_GEODE, holder36, raritySwampGeode(), inSquarePlacement(), placementSwampModifier(), biomeFilter());
+        register(context, PINK_TOPAZ_GEODE, holder37, rarityCherryBlossomGeode(), inSquarePlacement(), placementCherryBlossomModifier(), biomeFilter());
     }
     //Netherrack
     private static RarityFilter rarityNetherAncientDebrisGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_NETHER_DEBRIS_GEODE.get());}
@@ -200,6 +203,9 @@ public class GeodePlusPlacedFeatureRegistry {
     private static RarityFilter raritySwampGeode() {
         return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_SWAMP_GEODE.get());
     }
+    private static RarityFilter rarityCherryBlossomGeode() {
+        return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_PINK_TOPAZ_GEODE.get());
+    }
     private static InSquarePlacement inSquarePlacement() {
         return InSquarePlacement.spread();
     }
@@ -243,6 +249,10 @@ public class GeodePlusPlacedFeatureRegistry {
 
     private static PlacementModifier placementSwampModifier() {
         return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(50), VerticalAnchor.absolute(110));
+    }
+
+    private static PlacementModifier placementCherryBlossomModifier() {
+        return HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(110));
     }
 
     private static BiomeFilter biomeFilter() {

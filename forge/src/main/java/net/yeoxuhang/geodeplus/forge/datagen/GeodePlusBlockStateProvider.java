@@ -61,6 +61,8 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get());
         simpleBlock(GeodePlusBlocksRegistry.CELESTITE_BLOCK.get());
+        simpleBlock(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get());
+        simpleBlock(GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get());
 
         stairsBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockLoc(SMOOTH_END_STONE));
         wallBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL, blockLoc(SMOOTH_END_STONE));
@@ -126,6 +128,11 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         directionalBlock(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD)));
         directionalBlock(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD)));
         directionalBlock(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD)));
+
+        directionalBlock(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(), models().cross(getName(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL), blockLoc(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL)));
+        directionalBlock(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD), blockLoc(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD), blockLoc(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD)));
+        directionalBlock(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD)));
 
     }
 

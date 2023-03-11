@@ -1,4 +1,4 @@
-// 1.19.3	2023-03-04T11:23:09.9494529	Tags for minecraft:worldgen/biome mod id geode_plus
+// 1.19.3	2023-03-10T07:54:24.9055011	Tags for minecraft:worldgen/biome mod id geode_plus
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode_plus/tags/worldgen/biome/has_basalt_ancient_debris_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode_plus/tags/worldgen/biome/has_basalt_glowstone_geode.json
 04ac0a28392a7ff31602fa82ebe378e64220b060 data/geode_plus/tags/worldgen/biome/has_basalt_gold_nugget_geode.json
@@ -14,6 +14,7 @@ f4b9a635e85a94906a0f7e256399816049a4af89 data/geode_plus/tags/worldgen/biome/has
 f4b9a635e85a94906a0f7e256399816049a4af89 data/geode_plus/tags/worldgen/biome/has_nether_glowstone_geode.json
 f4b9a635e85a94906a0f7e256399816049a4af89 data/geode_plus/tags/worldgen/biome/has_nether_gold_nugget_geode.json
 f4b9a635e85a94906a0f7e256399816049a4af89 data/geode_plus/tags/worldgen/biome/has_nether_quartz_geode.json
+2ea2f6b4e52c4ebdcb58dd12967cff289aefa815 data/geode_plus/tags/worldgen/biome/has_pink_topaz_geode.json
 ec7bbb0c9b5fc5378f8716f54862806404f04360 data/geode_plus/tags/worldgen/biome/has_prismarine_crystal.json
 ec7bbb0c9b5fc5378f8716f54862806404f04360 data/geode_plus/tags/worldgen/biome/has_prismarine_geode.json
 f4b9a635e85a94906a0f7e256399816049a4af89 data/geode_plus/tags/worldgen/biome/has_quartz_crystal.json

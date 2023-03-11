@@ -33,6 +33,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.CELESTITE_BLOCK.get());
+        dropSelf(GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.GALCITE.get());
         dropSelf(GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get());
@@ -154,6 +155,15 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
                                         .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
                                 .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(GeodePlusItemsRegistry.CELESTITE_SHARD.get())
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
+        add(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(),
+                (arg) -> createSilkTouchDispatchTable(arg,
+                        LootItem.lootTableItem(GeodePlusItemsRegistry.PINK_TOPAZ.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
+                                        .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
+                                .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(GeodePlusItemsRegistry.PINK_TOPAZ.get())
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
 
 
         dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get());
@@ -168,6 +178,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_ANCIENT_DEBRIS_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_PRISMARINE_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get());
 
         dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD.get());
@@ -181,6 +192,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_ANCIENT_DEBRIS_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get());
 
         dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_ECHO_BUD.get());
@@ -194,6 +206,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_ANCIENT_DEBRIS_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get());
 
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_GLOWSTONE.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BASALT_QUARTZ.get());
@@ -223,6 +236,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get());
         registerSlab(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get());
     }
 

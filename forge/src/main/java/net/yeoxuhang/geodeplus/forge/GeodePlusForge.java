@@ -59,6 +59,8 @@ public class GeodePlusForge {
         event.enqueueWork(() -> {
             BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Potions.WATER,
                     GeodePlusItemsRegistry.CELESTITE_SHARD.get(), Potions.STRONG_HEALING));
+            BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Potions.WATER,
+                    GeodePlusItemsRegistry.PINK_TOPAZ.get(), Potions.LUCK));
         });
     }
 
@@ -86,14 +88,20 @@ public class GeodePlusForge {
                                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                                 GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
+                                GeodePlusItemsRegistry.PINK_TOPAZ,
                                 GeodePlusItemsRegistry.CELESTITE_SHARD,
+                                GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ,
+                                GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK,
+                                GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL,
+                                GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD,
+                                GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD,
+                                GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD,
                                 GeodePlusBlocksRegistry.BUDDING_CELESTITE,
                                 GeodePlusBlocksRegistry.CELESTITE_BLOCK,
                                 GeodePlusBlocksRegistry.CELESTITE_CLUSTER,
                                 GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD,
                                 GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD,
-                                GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD,
 
                                 GeodePlusBlocksRegistry.BUDDING_PRISMARINE,
                                 GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK,

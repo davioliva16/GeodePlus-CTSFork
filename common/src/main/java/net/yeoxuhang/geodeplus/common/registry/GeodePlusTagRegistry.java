@@ -58,6 +58,9 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Biome> HAS_CELESTITE_GEODE
                 = biomeTag("has_celestite_geode");
 
+        public static final TagKey<Biome> HAS_PINK_TOPAZ_GEODE
+                = biomeTag("has_pink_topaz_geode");
+
         //Crystals
         public static final TagKey<Biome> HAS_ECHO_CRYSTAL
                 = biomeTag("has_echo_crystal");

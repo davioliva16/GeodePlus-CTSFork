@@ -40,6 +40,8 @@ public class GeodePlusCommonConfigs implements Config {
     public static final ConfigOption<Boolean> SHOULD_GENERATE_END_WRAPPIST_GEODE = new ConfigOption<>("Enable Wrappist Geode", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_CELESTITE_GEODE = new ConfigOption<>("Enable Celestite Geode", true);
 
+    public static final ConfigOption<Boolean> SHOULD_GENERATE_PINK_TOPAZ_GEODE = new ConfigOption<>("Enable Pink Topaz Geode", true);
+
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL = new ConfigOption<>("Enable Large Prismarine Crystal", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LARGE_ECHO_CRYSTAL = new ConfigOption<>("Enable Large Echo Crystal", true);
     public static final ConfigOption<Boolean> SHOULD_GENERATE_LARGE_NETHER_QUARTZ_CRYSTAL = new ConfigOption<>("Enable Large Nether Quartz Crystal", true);
@@ -56,6 +58,8 @@ public class GeodePlusCommonConfigs implements Config {
 
     public static final ConfigOption<Integer> RARITY_RARE_ORES_GEODE = new ConfigOption<>("Rarity of Rare Ores Geode", 72);
     public static final ConfigOption<Integer> RARITY_SWAMP_GEODE = new ConfigOption<>("Rarity of Swamp Geode", 48);
+
+    public static final ConfigOption<Integer> RARITY_PINK_TOPAZ_GEODE = new ConfigOption<>("Rarity of Pink Topaz Geode", 48);
 
     public static final ConfigOption<Integer> RARITY_NETHER_DEBRIS_GEODE = new ConfigOption<>("Rarity of Nether Ancient Debris Geode", 32);
 
@@ -117,6 +121,7 @@ public class GeodePlusCommonConfigs implements Config {
             RARITY_ORES_GEODE,
             RARITY_RARE_ORES_GEODE,
             RARITY_SWAMP_GEODE,
+            RARITY_PINK_TOPAZ_GEODE,
             RARITY_NETHER_DEBRIS_GEODE,
             RARITY_NETHER_GLOWSTONE_GEODE,
             RARITY_NETHER_GOLD_NUGGET_GEODE,

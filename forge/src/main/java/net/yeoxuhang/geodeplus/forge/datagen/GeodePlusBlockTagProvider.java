@@ -116,7 +116,13 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(),
                 GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(),
-                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get()
+                GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK.get(),
+                GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get(),
+                GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get(),
+                GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(),
+                GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get(),
+                GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get(),
+                GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get()
         );
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 GeodePlusBlocksRegistry.LAPIS_CLUSTER.get(),
@@ -214,7 +220,13 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.CELESTITE_CLUSTER.get(),
                 GeodePlusBlocksRegistry.LARGE_CELESTITE_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_CELESTITE_BUD.get(),
-                GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get()
+                GeodePlusBlocksRegistry.SMALL_CELESTITE_BUD.get(),
+                GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get(),
+                GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get(),
+                GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(),
+                GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get(),
+                GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get(),
+                GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get()
         );
         this.tag(GeodePlusTagRegistry.Blocks.CAN_LARGE_ECHO_CRYSTAL_PLACE).add(Blocks.SCULK,
                 Blocks.STONE,

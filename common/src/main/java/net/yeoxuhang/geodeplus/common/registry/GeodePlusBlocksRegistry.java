@@ -13,6 +13,26 @@ import java.util.function.Supplier;
 
 public class GeodePlusBlocksRegistry {
 
+    public static final Supplier<Block> BUDDING_PINK_TOPAZ = registerBlock("budding_pink_topaz",
+            () -> new BuddingPinkTopazBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final Supplier<Block> PINK_TOPAZ_BLOCK = registerBlock("pink_topaz_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).sound(SoundType.STONE)));
+    public static final Supplier<PinkTopazCrystalBlock> PINK_TOPAZ_CRYSTAL = registerBlock("pink_topaz_crystal",
+            () -> new PinkTopazCrystalBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).noOcclusion().randomTicks().sound(SoundType.STONE).strength(3F).lightLevel( (p_60929_) ->{
+                return 8;
+            } )));
+    public static final Supplier<PinkTopazCrystalBlock> LARGE_PINK_TOPAZ_BUD = registerBlock("large_pink_topaz_bud",
+            () -> new PinkTopazCrystalBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 2;
+            })));
+    public static final Supplier<PinkTopazCrystalBlock> MEDIUM_PINK_TOPAZ_BUD = registerBlock("medium_pink_topaz_bud",
+            () -> new PinkTopazCrystalBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).sound(SoundType.STONE).lightLevel((p_60929_) -> {
+                return 1;
+            })));
+    public static final Supplier<PinkTopazCrystalBlock> SMALL_PINK_TOPAZ_BUD = registerBlock("small_pink_topaz_bud",
+            () -> new PinkTopazCrystalBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).sound(SoundType.STONE)));
 
     public static final Supplier<Block> BUDDING_CELESTITE = registerBlock("budding_celestite",
             () -> new BuddingCelestiteBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(3F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
