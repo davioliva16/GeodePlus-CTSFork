@@ -116,9 +116,9 @@ public class GeodePlusGeodeBiomeModifier {
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_CELESTITE_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("celestite_geode"));
             }
-            if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PINK_TOPAZ_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_PINK_TOPAZ_GEODE.get()) {
+            /*if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PINK_TOPAZ_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_PINK_TOPAZ_GEODE.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, getPlacedFeatureKey("pink_topaz_geode"));
-            }
+            }*/
             //Crystals
             if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_STRUCTURES, getPlacedFeatureKey("prismarine_crystal_spike"));
