@@ -86,7 +86,7 @@ public class GeodePlusForge {
                         .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".tab"))
                         .displayItems((features, output, hasPermissions) -> output.acceptAll(Stream.of(
                                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
-                                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
+                                //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
                                 GeodePlusItemsRegistry.PINK_TOPAZ,
                                 GeodePlusItemsRegistry.CELESTITE_SHARD,

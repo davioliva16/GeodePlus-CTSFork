@@ -32,7 +32,7 @@ public class GeodePlusFabric implements ModInitializer {
     private void registerCreativeTab() {
         ItemGroupEvents.modifyEntriesEvent(TAB).register(content -> content.acceptAll(Stream.of(
                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
-                GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
+                //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
                 GeodePlusItemsRegistry.PINK_TOPAZ,
                 GeodePlusItemsRegistry.CELESTITE_SHARD,

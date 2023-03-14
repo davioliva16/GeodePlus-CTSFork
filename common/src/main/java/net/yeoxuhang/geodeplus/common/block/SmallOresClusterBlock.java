@@ -25,7 +25,7 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 import javax.annotation.Nullable;
 
-public class OresClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
+public class SmallOresClusterBlock extends AmethystBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     protected final VoxelShape northAabb;
@@ -35,7 +35,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public OresClusterBlock(int box, int i, Properties properties) {
+    public SmallOresClusterBlock(int box, int i, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
@@ -64,16 +64,6 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
                 return this.upAabb;
         }
     }
-
-    public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
-        super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0) {
-            int i = 10;
-            this.popExperience(serverLevel, blockPos, i);
-        }
-
-    }
-
     public boolean canSurvive(BlockState p_152026_, LevelReader p_152027_, BlockPos p_152028_) {
         Direction direction = p_152026_.getValue(FACING);
         BlockPos blockpos = p_152028_.relative(direction.getOpposite());

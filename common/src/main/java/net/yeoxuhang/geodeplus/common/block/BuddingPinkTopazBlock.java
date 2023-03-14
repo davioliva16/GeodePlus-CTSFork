@@ -4,13 +4,20 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectUtil;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.Vec3;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+
+import javax.annotation.Nullable;
 
 public class BuddingPinkTopazBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -32,12 +39,20 @@ public class BuddingPinkTopazBlock extends AmethystBlock {
             Block block = null;
             if (canClusterGrowAtState(blockstate)) {
                 block = GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get();
+                applyLuckAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 5);
+
             } else if (blockstate.is(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get()) && blockstate.getValue(PinkTopazCrystalBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get();
+                applyLuckAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 10);
+
             } else if (blockstate.is(GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get()) && blockstate.getValue(PinkTopazCrystalBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get();
+                applyLuckAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 15);
+
             } else if (blockstate.is(GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get()) && blockstate.getValue(PinkTopazCrystalBlock.FACING) == direction) {
                 block = GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get();
+                applyLuckAround(p_220899_, Vec3.atCenterOf(p_220900_), null, 20);
+
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(PinkTopazCrystalBlock.FACING, direction).setValue(PinkTopazCrystalBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
@@ -46,7 +61,10 @@ public class BuddingPinkTopazBlock extends AmethystBlock {
 
         }
     }
-
+    public static void applyLuckAround(ServerLevel serverLevel, Vec3 vec3, @Nullable Entity entity, int i) {
+        MobEffectInstance mobEffectInstance = new MobEffectInstance(MobEffects.LUCK, 260, 0, false, false);
+        MobEffectUtil.addEffectToPlayersAround(serverLevel, entity, vec3, (double)i, mobEffectInstance, 200);
+    }
 
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;

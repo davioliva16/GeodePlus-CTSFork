@@ -419,7 +419,7 @@ public class GeodePlusConfiguredFeatureRegistry {
                         BlockStateProvider.simple(GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get()),
                         BlockStateProvider.simple(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get()),
                         BlockStateProvider.simple(Blocks.CALCITE),
-                        BlockStateProvider.simple(Blocks.MUD),
+                        BlockStateProvider.simple(Blocks.TUFF),
                         List.of(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get().defaultBlockState(),
                                 GeodePlusBlocksRegistry.MEDIUM_PINK_TOPAZ_BUD.get().defaultBlockState(),
                                 GeodePlusBlocksRegistry.LARGE_PINK_TOPAZ_BUD.get().defaultBlockState(),
