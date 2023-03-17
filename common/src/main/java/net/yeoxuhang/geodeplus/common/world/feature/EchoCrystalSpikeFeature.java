@@ -133,7 +133,7 @@ public class EchoCrystalSpikeFeature extends Feature<GeodeCrystalSpikeConfig> {
                         float xx = direction == Direction.UP ? -q : q;
                         float yy = direction == Direction.UP ? -k : k;
                         float zz = direction == Direction.UP ? -l : l;
-                        BlockPos trigPos = pos.offset((double)xx, (double)yy, (double)zz);
+                        BlockPos trigPos = pos.offset((int)xx, (int)yy, (int)zz);
                         if (world.isStateAtPosition(trigPos, DripstoneUtils::isEmptyOrWaterOrLava)) {
                             crystalPos.add(trigPos);
                             flag = true;

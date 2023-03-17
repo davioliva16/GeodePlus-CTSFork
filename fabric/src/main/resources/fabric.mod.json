@@ -6,7 +6,6 @@
   "description": "A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The End! ",
   "authors": [
     "yeoxuhang",
-    "mineblock11",
     "SquizzleDizzle"
   ],
   "contact": {
@@ -23,11 +22,8 @@
       "net.yeoxuhang.geodeplus.fabric.GeodePlusFabricClient"
     ]
   },
-  "mixins": [
-    "geode-plus.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.14.10",
-    "minecraft": ">=1.19.2"
+   "depends": {
+    "fabricloader": ">=0.14.14",
+    "minecraft": ">=1.19.4"
   }
 }

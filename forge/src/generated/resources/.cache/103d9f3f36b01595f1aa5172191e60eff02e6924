@@ -1,4 +1,4 @@
-// 1.19.3	2023-03-10T07:54:24.8935886	Registries
+// 1.19.4	2023-03-15T22:30:29.2550041	Registries
 76ed71017973e4e111847879162baa65a9d2bdf1 data/geode_plus/worldgen/configured_feature/ancient_debris_geode.json
 e2a333f12df5ef0a63cbb90c7c4289e9da536285 data/geode_plus/worldgen/configured_feature/basalt_ancient_debris_geode.json
 c814840a9bafaddbb40935ff8de1aa2fa3877c9a data/geode_plus/worldgen/configured_feature/basalt_glowstone_geode.json
@@ -25,7 +25,7 @@ cc34e084a7e223680995f3654ac7af595eec9148 data/geode_plus/worldgen/configured_fea
 445993fab654ad21555e72178d6f129c00e11088 data/geode_plus/worldgen/configured_feature/glowstone_geode.json
 987b11da99a9f23eef09bf4a5884bd2d8b7ab260 data/geode_plus/worldgen/configured_feature/gold_nugget_geode.json
 2bbff534073bc3dc1563dd29eec253cb1bb37f2e data/geode_plus/worldgen/configured_feature/lapis_geode.json
-8eaa68ddd611bc1a1d6986d547bd9ee93e2c36e2 data/geode_plus/worldgen/configured_feature/pink_topaz_geode.json
+7197ea148d86c18cff92cc665b4b5ddc012c55dd data/geode_plus/worldgen/configured_feature/pink_topaz_geode.json
 3b3213e0fd3b83248d6506cad96a9c2414fa763e data/geode_plus/worldgen/configured_feature/prismarine_crystal_spike.json
 0d8bf306c63fe784c94aeac617ea3c412dea52af data/geode_plus/worldgen/configured_feature/prismarine_geode.json
 d218ff8768d7f98fc775576914647deafccb218e data/geode_plus/worldgen/configured_feature/quartz_geode.json

@@ -7,6 +7,7 @@ import net.yeoxuhang.geodeplus.common.registry.*;
 public class GeodePlus {
     public static final String MOD_ID = "geode_plus";
     public static void init() {
+        //GeodePlusTrimMaterialsRegistry.initialize();
         GeodePlusItemsRegistry.initialize();
         GeodePlusBlocksRegistry.initialize();
         GeodePlusBlockEntityRegistry.initialize();

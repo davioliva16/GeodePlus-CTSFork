@@ -316,3 +316,56 @@ Changelog for 1.1.6
 Fix
 ∎Crash when Redstone Cluster and Gold Nugget Cluster drop xp
 ---------------------------------------------------------
+
+Changelog for 1.1.7
+---------------------------------------------------------
+Added Item
+∎Celestite Shards
+---------------------------------------------------------
+Added Blocks
+∎Budding Celestite
+∎Celestite Block
+∎Celestite Cluster
+∎Large Celestite Bud
+∎Medium Celestite Bud
+∎Small Celestite Bud
+
+∎Nether Ancient Debris Cluster Block
+∎Diamond Crystal Block
+∎Emerald Cluster Block
+∎Lapis Cluster Block
+∎Restone Crystal Block
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Celestite
+---------------------------------------------------------
+Fix
+∎Glowstone Cluster Block didn't glow
+∎Blocks now match block tags correctly
+---------------------------------------------------------
+
+Changelog for 1.1.8
+---------------------------------------------------------
+Added Item
+∎Pink Topaz
+---------------------------------------------------------
+Added Blocks
+∎Budding Pink Topaz
+∎Pink Topaz Block
+∎Pink Topaz Crystal
+∎Large Pink Topaz Bud
+∎Medium Pink Topaz Bud
+∎Small Pink Topaz Bud
+---------------------------------------------------------
+Added Feature
+-Geodes
+∎Pink Topaz (Now can spawn through command)
+---------------------------------------------------------
+Change
+∎Textures for budding ores have been updated, like Diamond,
+ Emerald, Lapis, Redstone
+---------------------------------------------------------
+Fix
+∎Blocks tag,Warppist instead of Wrappist
+---------------------------------------------------------

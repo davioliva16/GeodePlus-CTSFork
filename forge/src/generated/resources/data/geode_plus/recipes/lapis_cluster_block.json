@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:lapis_cluster_block"
-  }
+  },
+  "show_notification": true
 }

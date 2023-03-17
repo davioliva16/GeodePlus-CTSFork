@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.armortrim.TrimPattern;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -91,7 +92,7 @@ public class RegistryHelper {
     }
 
     @ExpectPlatform
-    public static WoodType registerWoodType(String name) {
+    public static <T extends TrimPattern> Supplier<T> registerTrimPattern(String name, Supplier<T> portal) {
         throw new AssertionError();
     }
 }

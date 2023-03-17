@@ -27,7 +27,6 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
         super(properties);
     }
 
-
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 8, 15);
 
     @Override

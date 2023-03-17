@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:diamond_crystal_block"
-  }
+  },
+  "show_notification": true
 }

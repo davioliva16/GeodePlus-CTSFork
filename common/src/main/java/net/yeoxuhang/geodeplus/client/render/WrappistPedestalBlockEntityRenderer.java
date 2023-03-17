@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
@@ -23,7 +24,6 @@ import java.util.Calendar;
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
     private final ItemRenderer itemRenderer;
     private static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
-
     private static final ResourceLocation XMAS = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/christmas.png");
 
     private static ModelPart wrappist_pedestal;
@@ -32,7 +32,6 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
     private final ModelPart crystal2;
     private final ModelPart crystal3;
     private final ModelPart crystal4;
-
     private boolean xmasTextures;
 
     public WrappistPedestalBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
@@ -69,11 +68,9 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
 
     public void render(T entity, float v, PoseStack poseStack, MultiBufferSource multiBufferSource, int combinedLightIn, int combinedOverlayIn) {
         Level world = entity.getLevel();
-
         assert world != null;
-
         long gameTime = world.getGameTime();
-        float offsetY = (float)Math.sin((double)((float)gameTime / 8.0F)) * 0.025F;
+        float offsetY = (float)Math.sin((float)gameTime / 8.0F) * 0.025F;
         float wrappistBlockEntity = (float)entity.tick();
         float crystalTick = wrappistBlockEntity / 35.0F;
         float tick = wrappistBlockEntity / 10.0F;
@@ -81,7 +78,6 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         if (xmasTextures) {
             wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(XMAS)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
         } else wrappist_pedestal.render(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(TEXTURE)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
-
         this.crystals.setRotation(0.0F, -crystalTick % 360.0F, 0.0F);
         wrappist_pedestal.setPos(8.0F, -2.0F, -8.0F);
         if (entity.hasLevel() && !entity.isEmpty()) {
@@ -90,11 +86,8 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
             poseStack.scale(0.35F, 0.35F, 0.35F);
             poseStack.mulPose(Axis.YP.rotationDegrees(tick % 360.0F));
             poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
-            this.itemRenderer.renderStatic(entity.getItem(0), ItemTransforms.TransformType.NONE, combinedLightIn, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, 0);
+            this.itemRenderer.renderStatic(entity.getItem(0), ItemDisplayContext.FIXED, combinedLightIn, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, entity.getLevel(), combinedOverlayIn);
             poseStack.popPose();
         }
-    }
-    public static void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int p_103015_, int p_103016_, float p_103017_, float p_103018_, float p_103019_, float p_103020_) {
-        wrappist_pedestal.render(poseStack, vertexConsumer, p_103015_, p_103016_);
     }
 }

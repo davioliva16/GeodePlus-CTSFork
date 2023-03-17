@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:nether_glowstone_cluster_block"
-  }
+  },
+  "show_notification": true
 }

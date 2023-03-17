@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "geode:block/wrappist_pedestal"
+      "model": "geode_plus:block/wrappist_pedestal"
     }
   }
 }

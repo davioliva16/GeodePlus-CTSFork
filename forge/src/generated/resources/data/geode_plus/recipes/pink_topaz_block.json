@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:pink_topaz_block"
-  }
+  },
+  "show_notification": true
 }

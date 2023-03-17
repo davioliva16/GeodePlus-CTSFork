@@ -1,4 +1,4 @@
-// 1.19.3	2023-03-10T08:11:29.8046603	Item Models: geode_plus
+// 1.19.4	2023-03-15T22:30:29.2306281	Item Models: geode_plus
 a17cdfa73785dd20046b5914c1271712b51c897a assets/geode_plus/models/item/celestite_cluster.json
 f6e29cdf55a5b40c97a549f32c017d64bb8cedde assets/geode_plus/models/item/celestite_shard.json
 1faca63e49b77d2d199c98eca41a8b14321a87f3 assets/geode_plus/models/item/diamond_crystal.json
@@ -53,5 +53,4 @@ da9a309d2cd05db92d4825788d0e1c1d42aaf451 assets/geode_plus/models/item/small_pri
 ad61a0251599b9214d5673283554e9b2559cf999 assets/geode_plus/models/item/small_redstone_bud.json
 e0045df97279344ce8fa4894f0d9a9380b72cd99 assets/geode_plus/models/item/small_wrappist_bud.json
 67621ff7d984ee5ed4cd24ab79f93fc664d787e1 assets/geode_plus/models/item/wrappist_cluster.json
-4dd04a187f9dffd1f8109372bebf5e3b1738dacc assets/geode_plus/models/item/wrappist_goat_horn.json
 c8f10cce8ee20e3b05d7f39114ea11a71d5ee714 assets/geode_plus/models/item/wrappist_shard.json

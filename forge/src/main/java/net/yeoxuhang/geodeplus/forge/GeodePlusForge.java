@@ -84,7 +84,7 @@ public class GeodePlusForge {
         TAB = event.registerCreativeModeTab(new ResourceLocation(GeodePlus.MOD_ID, "tab"),
                 builder -> builder.icon(() -> GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get().asItem().getDefaultInstance())
                         .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".tab"))
-                        .displayItems((features, output, hasPermissions) -> output.acceptAll(Stream.of(
+                        .displayItems((t, s) -> s.acceptAll(Stream.of(
                                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                                 //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,

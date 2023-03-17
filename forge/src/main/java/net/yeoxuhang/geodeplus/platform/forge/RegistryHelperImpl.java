@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.platform.forge;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.armortrim.TrimPattern;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -41,6 +42,7 @@ public class RegistryHelperImpl {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registries.CONFIGURED_FEATURE, GeodePlus.MOD_ID);
     public static final DeferredRegister<PoiType> POI = DeferredRegister.create(ForgeRegistries.POI_TYPES, GeodePlus.MOD_ID);
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registries.PLACED_FEATURE, GeodePlus.MOD_ID);
+    public static final DeferredRegister<TrimPattern> TRIM_MATERIAL = DeferredRegister.create(Registries.TRIM_PATTERN, GeodePlus.MOD_ID);
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, GeodePlus.MOD_ID);
 
@@ -98,7 +100,8 @@ public class RegistryHelperImpl {
         return POI.register(name, portal);
     }
 
-    public static WoodType registerWoodType(String name) {
-        return WoodType.register(WoodType.create(new ResourceLocation(GeodePlus.MOD_ID, name).toString()));
+    public static <T extends TrimPattern> Supplier<T> registerTrimPattern(String name, Supplier<T> portal) {
+        return TRIM_MATERIAL.register(name, portal);
     }
+
 }

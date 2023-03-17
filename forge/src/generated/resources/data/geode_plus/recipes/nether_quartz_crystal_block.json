@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:nether_quartz_crystal_block"
-  }
+  },
+  "show_notification": true
 }

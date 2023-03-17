@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "geode_plus:nether_ancient_debris_cluster_block"
-  }
+  },
+  "show_notification": true
 }
