@@ -1,5 +1,6 @@
-// 1.19.4	2023-03-15T22:30:29.2306281	Item Models: geode_plus
+// 1.19.4	2023-05-31T19:26:01.5409648	Item Models: geode_plus
 a17cdfa73785dd20046b5914c1271712b51c897a assets/geode_plus/models/item/celestite_cluster.json
+dd571691e9c2e3999270f5f7e0a1333f07dc4760 assets/geode_plus/models/item/celestite_glass.json
 f6e29cdf55a5b40c97a549f32c017d64bb8cedde assets/geode_plus/models/item/celestite_shard.json
 1faca63e49b77d2d199c98eca41a8b14321a87f3 assets/geode_plus/models/item/diamond_crystal.json
 2588488f6ecdf011bb648e318e0855f4b7e8b624 assets/geode_plus/models/item/echo_crystal.json
@@ -37,6 +38,7 @@ c5842c3fca6e95d3721c1f9cee486e8b0b91ad9a assets/geode_plus/models/item/medium_wr
 24525face8ff996a6618b45e329f30776a3e6972 assets/geode_plus/models/item/nether_quartz_crystal.json
 d428f82a4412bb21821e6a5525f9ae1affad4b6d assets/geode_plus/models/item/pink_topaz.json
 2a45e946fb0b3eda75a1bd0fc7af96161ae52777 assets/geode_plus/models/item/pink_topaz_crystal.json
+29a71b8fd233e43cb4b3da0ab1e3f38e90d9c35b assets/geode_plus/models/item/pink_topaz_glass.json
 4aa35c9280de9f82174b85692732e8f2dc728ab8 assets/geode_plus/models/item/prismarine_cluster.json
 38089a18cfacfd3c3f40ddfefe1b6dfee853aaef assets/geode_plus/models/item/redstone_crystal.json
 aa44413297dacd7efdb2937f59672744d1f801aa assets/geode_plus/models/item/small_celestite_bud.json
@@ -53,4 +55,5 @@ da9a309d2cd05db92d4825788d0e1c1d42aaf451 assets/geode_plus/models/item/small_pri
 ad61a0251599b9214d5673283554e9b2559cf999 assets/geode_plus/models/item/small_redstone_bud.json
 e0045df97279344ce8fa4894f0d9a9380b72cd99 assets/geode_plus/models/item/small_wrappist_bud.json
 67621ff7d984ee5ed4cd24ab79f93fc664d787e1 assets/geode_plus/models/item/wrappist_cluster.json
+b52557434d6a7b105a570adee6c20b12b123e83a assets/geode_plus/models/item/wrappist_glass.json
 c8f10cce8ee20e3b05d7f39114ea11a71d5ee714 assets/geode_plus/models/item/wrappist_shard.json

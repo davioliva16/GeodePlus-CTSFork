@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[45,)"
+loaderVersion = "[46,)"
 license = "All Rights Reserved"
 issueTrackerURL = "https://github.com/YeoXuHang/Geode-Plus/issues"
 [[mods]]
@@ -15,12 +15,12 @@ A Forge/Fabric mod that add geodes to Minecraft Overworld, Nether and even The E
 [[dependencies.geode_plus]]
 modId = "forge"
 mandatory = true
-versionRange = "[45,)"
+versionRange = "[46,)"
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.geode_plus]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.4,)"
+versionRange = "[1.20,)"
 ordering = "NONE"
 side = "BOTH"

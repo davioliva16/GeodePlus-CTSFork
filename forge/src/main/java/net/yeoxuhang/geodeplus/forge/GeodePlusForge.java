@@ -14,7 +14,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
+import net.yeoxuhang.geodeplus.client.render.DeepslateLampBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
+import net.yeoxuhang.geodeplus.common.block.entity.DeepslateLampBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
@@ -71,6 +73,8 @@ public class GeodePlusForge {
         public static void clientSetup(FMLClientSetupEvent e) {
             GeodePlusClient.initClient();
             BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), WrappistPedestalBlockEntityRenderer::new);
+            BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.DEEPSLATE_LAMP_ENTITY.get(), DeepslateLampBlockEntityRenderer::new);
+
         }
 
         @SubscribeEvent
@@ -88,6 +92,7 @@ public class GeodePlusForge {
                                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                                 //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
+                                GeodePlusBlocksRegistry.DEEPSLATE_LAMP,
                                 GeodePlusItemsRegistry.PINK_TOPAZ,
                                 GeodePlusItemsRegistry.CELESTITE_SHARD,
                                 GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ,
@@ -200,7 +205,11 @@ public class GeodePlusForge {
                                 GeodePlusBlocksRegistry.ECHO_CRYSTAL,
                                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD,
                                 GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD,
-                                GeodePlusBlocksRegistry.SMALL_ECHO_BUD
+                                GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
+
+                                GeodePlusBlocksRegistry.WRAPPIST_GLASS,
+                                GeodePlusBlocksRegistry.CELESTITE_GLASS,
+                                GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS
                         ).map(block -> block.get().asItem().getDefaultInstance()).toList()))
         );
     }

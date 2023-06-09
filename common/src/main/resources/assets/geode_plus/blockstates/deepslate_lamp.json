@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "geode_plus:block/deepslate_lamp"
+    },
+    "lit=true": {
+      "model": "geode_plus:block/deepslate_lamp_on"
+    }
+  }
+}

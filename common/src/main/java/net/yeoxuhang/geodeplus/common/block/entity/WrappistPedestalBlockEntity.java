@@ -14,15 +14,10 @@ import org.jetbrains.annotations.Nullable;
 
 public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyContainer {
     ItemStack item;
-    public int age;
+    public static float tick = 0;
     public WrappistPedestalBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), pWorldPosition, pBlockState);
         this.item = ItemStack.EMPTY;
-    }
-
-    public int tick() {
-        age++;
-        return age;
     }
     @Override
     public int[] getSlotsForFace(Direction p_19238_) {

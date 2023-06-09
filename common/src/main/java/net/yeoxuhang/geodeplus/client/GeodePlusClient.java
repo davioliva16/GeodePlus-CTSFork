@@ -1,9 +1,6 @@
 package net.yeoxuhang.geodeplus.client;
 
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
-import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.platform.ClientHelper;
 
@@ -78,6 +75,11 @@ public class GeodePlusClient {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_PRISMARINE_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_PRISMARINE_BUD.get(), RenderType.cutout());
 
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.WRAPPIST_GLASS.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.CELESTITE_GLASS.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get(), RenderType.cutout());
+
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get(), RenderType.cutout());
+		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.DEEPSLATE_LAMP.get(), RenderType.cutout());
 	}
 }

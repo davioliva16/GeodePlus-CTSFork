@@ -1,9 +1,18 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.blockstates.Condition;
+import net.minecraft.data.models.blockstates.MultiPartGenerator;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.model.ModelLocationUtils;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
@@ -63,6 +72,10 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         simpleBlock(GeodePlusBlocksRegistry.CELESTITE_BLOCK.get());
         simpleBlock(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get());
         simpleBlock(GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get());
+
+        simpleBlock(GeodePlusBlocksRegistry.WRAPPIST_GLASS.get(), models().cubeAll(getName(GeodePlusBlocksRegistry.WRAPPIST_GLASS), blockLoc(GeodePlusBlocksRegistry.WRAPPIST_GLASS)));
+        simpleBlock(GeodePlusBlocksRegistry.CELESTITE_GLASS.get());
+        simpleBlock(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get());
 
         stairsBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(), blockLoc(SMOOTH_END_STONE));
         wallBlock(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL, blockLoc(SMOOTH_END_STONE));
@@ -135,7 +148,6 @@ public class GeodePlusBlockStateProvider extends BlockStateProvider {
         directionalBlock(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD.get(), models().cross(getName(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD), blockLoc(GeodePlusBlocksRegistry.SMALL_PINK_TOPAZ_BUD)));
 
     }
-
 
     public void wallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
         super.wallBlock(block.get(), texture);

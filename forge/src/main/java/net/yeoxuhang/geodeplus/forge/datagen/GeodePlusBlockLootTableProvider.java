@@ -41,6 +41,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get());
+        dropSelf(GeodePlusBlocksRegistry.DEEPSLATE_LAMP.get());
         add(GeodePlusBlocksRegistry.SMOOTH_END_STONE.get(), (arg) -> createSingleItemTableWithSilkTouch(arg, Blocks.END_STONE));
         dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get());
         dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get());
@@ -238,6 +239,10 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get());
         registerSlab(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get());
+
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.WRAPPIST_GLASS.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.CELESTITE_GLASS.get());
+        dropWhenSilkTouch(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get());
     }
 
 

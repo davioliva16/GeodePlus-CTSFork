@@ -34,6 +34,7 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusItemsRegistry.WRAPPIST_SHARD,
                 //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                 GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL,
+                GeodePlusBlocksRegistry.DEEPSLATE_LAMP,
                 GeodePlusItemsRegistry.PINK_TOPAZ,
                 GeodePlusItemsRegistry.CELESTITE_SHARD,
                 GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ,
@@ -147,7 +148,11 @@ public class GeodePlusFabric implements ModInitializer {
                 GeodePlusBlocksRegistry.ECHO_CRYSTAL,
                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD,
                 GeodePlusBlocksRegistry.MEDIUM_ECHO_BUD,
-                GeodePlusBlocksRegistry.SMALL_ECHO_BUD
+                GeodePlusBlocksRegistry.SMALL_ECHO_BUD,
+
+                GeodePlusBlocksRegistry.WRAPPIST_GLASS,
+                GeodePlusBlocksRegistry.CELESTITE_GLASS,
+                GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS
         ).map(item -> item.get().asItem().getDefaultInstance()).toList()));
     }
 }

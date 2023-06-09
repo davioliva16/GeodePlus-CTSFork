@@ -6,6 +6,8 @@ architectury {
     forge()
 }
 
+//apply plugin: 'org.spongepowered.mixin'
+
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
@@ -29,6 +31,7 @@ loom {
         dataGen {
             mod "geode_plus"
         }
+        mixinConfig "geode-plus.mixins.json"
     }
 
     launches {

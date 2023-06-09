@@ -369,6 +369,14 @@ public class GeodePlusBlocksRegistry {
                 return 8;
             })));
 
+    public static final Supplier<GlassBlock> WRAPPIST_GLASS = registerBlock("wrappist_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+    public static final Supplier<GlassBlock> CELESTITE_GLASS = registerBlock("celestite_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+    public static final Supplier<GlassBlock> PINK_TOPAZ_GLASS = registerBlock("pink_topaz_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+
+    public static final Supplier<DeepslateLampBlock> DEEPSLATE_LAMP = registerBlock("deepslate_lamp",
+            () -> new DeepslateLampBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).noOcclusion().lightLevel((p_60929_) -> {
+                return 8;
+            })));
     private static <T extends Block> Supplier<T> reregisterBlock(String name, Supplier<T> block) {
         return RegistryHelper.registerBlock(name, block);
     }
