@@ -20,7 +20,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 import net.yeoxuhang.geodeplus.common.block.entity.DeepslateLampBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
@@ -99,7 +98,7 @@ public class DeepslateLampBlock extends BaseEntityBlock {
                     heldItem.shrink(1);
                 }
                 return InteractionResult.SUCCESS;
-            }else if(deepslateLampBlockEntity.getItem(0).sameItem(stack) && deepslateLampBlockEntity.getItem(0).getMaxStackSize() > deepslateLampBlockEntity.getItem(0).getCount() + stack.getCount()){
+            }else if(deepslateLampBlockEntity.getItem(0).is(stack.getItem()) && deepslateLampBlockEntity.getItem(0).getMaxStackSize() > deepslateLampBlockEntity.getItem(0).getCount() + stack.getCount()){
                 deepslateLampBlockEntity.getItem(0).grow(1);
                 if(!player.isCreative()){
                     heldItem.shrink(1);

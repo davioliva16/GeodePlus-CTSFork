@@ -56,7 +56,7 @@ public class WrappistPedestalBlock extends BaseEntityBlock {
                     heldItem.shrink(1);
                 }
                 return InteractionResult.SUCCESS;
-            }else if(wrappistPedestalBlock.getItem(0).sameItem(stack) && wrappistPedestalBlock.getItem(0).getMaxStackSize() > wrappistPedestalBlock.getItem(0).getCount() + stack.getCount()){
+            }else if(wrappistPedestalBlock.getItem(0).is(stack.getItem()) && wrappistPedestalBlock.getItem(0).getMaxStackSize() > wrappistPedestalBlock.getItem(0).getCount() + stack.getCount()){
                 wrappistPedestalBlock.getItem(0).grow(1);
                 if(!player.isCreative()){
                     heldItem.shrink(1);

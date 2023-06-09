@@ -2,6 +2,9 @@ package net.yeoxuhang.geodeplus.fabric;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -15,8 +18,7 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import java.util.stream.Stream;
 
 public class GeodePlusFabric implements ModInitializer {
-    private static final CreativeModeTab TAB = FabricItemGroup.builder(new ResourceLocation(GeodePlus.MOD_ID, "tab"))
-            .icon(() -> new ItemStack(GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get())).build();
+    private static final ResourceKey<CreativeModeTab> TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(GeodePlus.MOD_ID, "tab"));
     @Override
     public void onInitialize() {
         GeodePlus.init();
