@@ -49,7 +49,7 @@ public class GeodePlusForge {
     public static final DeferredRegister<CreativeModeTab> TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GeodePlus.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> GEODE_PLUS_TAB = TAB.register("geode_plus", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".tofus" + ".main_tab"))
+            .title(Component.translatable("itemGroup." + GeodePlus.MOD_ID + ".geode_plus" + ".tab"))
             .icon(() -> GeodePlusItemsRegistry.WRAPPIST_SHARD.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.acceptAll(Stream.of(
