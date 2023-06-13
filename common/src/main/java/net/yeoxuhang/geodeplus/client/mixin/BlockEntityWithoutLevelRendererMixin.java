@@ -12,8 +12,8 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.WrappistPedestalBlockEntityModel;
-import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
@@ -47,12 +47,11 @@ public class BlockEntityWithoutLevelRendererMixin {
             this.wrappistPedestal.renderToBuffer(poseStack, vertexConsumer2, i, j, 1.0F, 1.0F, 1.0F, 1.0F);
             this.wrappistPedestal.crystals.setRotation(0.0F, tick % 360.0F, 0.0F);
             poseStack.popPose();
-
         }
     }
     @Inject(method = "onResourceManagerReload", at = @At("RETURN"))
     public void onResourceManagerReloadGeodePlus(ResourceManager resourceManager, CallbackInfo ci) {
-        this.wrappistPedestal = new WrappistPedestalBlockEntityModel(this.entityModelSet.bakeLayer(GeodePlusModelLayersRegistry.WRAPPIST_PEDESTAL));
+        this.wrappistPedestal = new WrappistPedestalBlockEntityModel(this.entityModelSet.bakeLayer(GeodePlusClient.WRAPPIST_PEDESTAL));
     }
 
 }

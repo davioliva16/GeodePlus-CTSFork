@@ -25,7 +25,12 @@ public class GeodePlusLangProvider extends LanguageProvider {
         RegistryHelperImpl.BLOCKS.getEntries().forEach(this::addBlock);
         RegistryHelperImpl.ITEMS.getEntries().stream().filter(item -> !(item.get() instanceof BlockItem)).forEach(this::addItem);
         add("itemGroup.geode_plus", "Geode+");
-        add("itemGroup.geode_plus.tab", "Geode+");
+        add("trim_pattern.geode_plus.wrap", "Wrap Armor Trim");
+        add("trim_pattern.geode_plus.celeste", "Celeste Armor Trim");
+        add("trim_pattern.geode_plus.heart", "Heart Armor Trim");
+        add("trim_material.geode_plus.wrappist","Wrappist Material");
+        add("trim_material.geode_plus.celestite","Celestite Material");
+        add("trim_material.geode_plus.pink_topaz","Pink Topaz Material");
     }
 
     @Override

@@ -38,12 +38,12 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
     public OresClusterBlock(int box, int i, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
-        this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
-        this.downAabb = Block.box((double)i, (double)(16 - box), (double)i, (double)(16 - i), 16.0D, (double)(16 - i));
-        this.northAabb = Block.box((double)i, (double)i, (double)(16 - box), (double)(16 - i), (double)(16 - i), 16.0D);
-        this.southAabb = Block.box((double)i, (double)i, 0.0D, (double)(16 - i), (double)(16 - i), (double)box);
-        this.eastAabb = Block.box(0.0D, (double)i, (double)i, (double)box, (double)(16 - i), (double)(16 - i));
-        this.westAabb = Block.box((double)(16 - box), (double)i, (double)i, 16.0D, (double)(16 - i), (double)(16 - i));
+        this.upAabb = Block.box(i, 0.0D, i, (16 - i), box, (16 - i));
+        this.downAabb = Block.box(i, (16 - box), i, (16 - i), 16.0D, (16 - i));
+        this.northAabb = Block.box(i, i, (16 - box), (16 - i), (16 - i), 16.0D);
+        this.southAabb = Block.box(i, i, 0.0D, (16 - i), (16 - i), box);
+        this.eastAabb = Block.box(0.0D, i, i, box, (16 - i), (16 - i));
+        this.westAabb = Block.box((16 - box), i, i, 16.0D, (16 - i), (16 - i));
     }
 
     public VoxelShape getShape(BlockState p_152021_, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {

@@ -10,16 +10,13 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
+import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.WrappistPedestalBlockEntityModel;
-import net.yeoxuhang.geodeplus.client.model.layer.GeodePlusModelLayersRegistry;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
 import java.util.Calendar;
@@ -38,7 +35,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
     public WrappistPedestalBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
         this.itemRenderer = context.getItemRenderer();
         this.entityRenderer = context.getEntityRenderer();
-        wrappistPedestal = new WrappistPedestalBlockEntityModel(context.bakeLayer(GeodePlusModelLayersRegistry.WRAPPIST_PEDESTAL));
+        wrappistPedestal = new WrappistPedestalBlockEntityModel(context.bakeLayer(GeodePlusClient.WRAPPIST_PEDESTAL));
         Calendar calendar = Calendar.getInstance();
         if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 26) {
             this.xmasTextures = true;
@@ -48,9 +45,7 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
     @Override
     public void render(T entity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
         Level world = entity.getLevel();
-
         assert world != null;
-        Entity entity1 = EntityType.ENDER_DRAGON.create(Objects.requireNonNull(world));
         long gameTime = world.getGameTime();
         float offsetY = (float)Math.sin((float)gameTime / 8.0F) * 0.025F;
         float wrappistBlockEntity = WrappistPedestalBlockEntity.tick;
@@ -62,8 +57,6 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         } else wrappistPedestal.renderToBuffer(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(TEXTURE)), i, j, 1.0F, 1.0F, 1.0F, 1.0F);
         wrappistPedestal.wrappist_pedestal.setPos(8.0F, -2.0F, -8.0F);
         wrappistPedestal.crystals.setRotation(0.0F, -crystalTick % 360.0F, 0.0F);
-        this.entityRenderer.render(entity1, 0.0D, 0.0D, 0.0D, 0.0F, f, poseStack, multiBufferSource, j);
-
         if (entity.hasLevel() && !entity.isEmpty()) {
             poseStack.pushPose();
             poseStack.translate(0.5, (double)offsetY - 1.0, -0.5);

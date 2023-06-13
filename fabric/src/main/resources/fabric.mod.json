@@ -12,7 +12,7 @@
     "repo": "https://github.com/YeoXuHang/Geode-Plus",
     "issues": "https://github.com/YeoXuHang/Geode-Plus/issues"
   },
-  "license": "All Rights Reserved",
+  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
   "environment": "*",
   "entrypoints": {
     "main": [

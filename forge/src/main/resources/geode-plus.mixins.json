@@ -14,5 +14,5 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "chorus_lib.refmap.json"
+  "refmap": "geode-plus.refmap.json"
 }

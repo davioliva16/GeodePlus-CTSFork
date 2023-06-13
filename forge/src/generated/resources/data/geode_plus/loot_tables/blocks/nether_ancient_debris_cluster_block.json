@@ -16,5 +16,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "geode_plus:blocks/nether_ancient_debris_cluster_block"
 }

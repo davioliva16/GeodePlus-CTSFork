@@ -99,12 +99,6 @@ public class GeodePlusTagRegistry {
         }
     }
     public static class Items {
-        public static final TagKey<Item> CELESTITE
-                = itemTag("celestite");
-        public static final TagKey<Item> IS_GLASS
-                = itemTag("is_glass");
-
-
         private static TagKey<Item> itemTag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(GeodePlus.MOD_ID, name));
         }

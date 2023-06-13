@@ -2,7 +2,11 @@ package net.yeoxuhang.geodeplus.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -15,10 +19,14 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.List;
 
 public class PinkTopazCrystalBlock extends AmethystBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -33,12 +41,12 @@ public class PinkTopazCrystalBlock extends AmethystBlock implements SimpleWaterl
     public PinkTopazCrystalBlock(int box, int i, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
-        this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
-        this.downAabb = Block.box((double)i, (double)(16 - box), (double)i, (double)(16 - i), 16.0D, (double)(16 - i));
-        this.northAabb = Block.box((double)i, (double)i, (double)(16 - box), (double)(16 - i), (double)(16 - i), 16.0D);
-        this.southAabb = Block.box((double)i, (double)i, 0.0D, (double)(16 - i), (double)(16 - i), (double)box);
-        this.eastAabb = Block.box(0.0D, (double)i, (double)i, (double)box, (double)(16 - i), (double)(16 - i));
-        this.westAabb = Block.box((double)(16 - box), (double)i, (double)i, 16.0D, (double)(16 - i), (double)(16 - i));
+        this.upAabb = Block.box(i, 0.0D, i, (16 - i), box, (16 - i));
+        this.downAabb = Block.box(i, (16 - box), i, (16 - i), 16.0D, (16 - i));
+        this.northAabb = Block.box(i, i, (16 - box), (16 - i), (16 - i), 16.0D);
+        this.southAabb = Block.box(i, i, 0.0D, (16 - i), (16 - i), box);
+        this.eastAabb = Block.box(0.0D, i, i, box, (16 - i), (16 - i));
+        this.westAabb = Block.box((16 - box), i, i, 16.0D, (16 - i), (16 - i));
     }
 
     public VoxelShape getShape(BlockState p_152021_, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {
@@ -101,4 +109,13 @@ public class PinkTopazCrystalBlock extends AmethystBlock implements SimpleWaterl
         return PushReaction.DESTROY;
     }
 
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        int random = builder.getLevel().random.nextInt(10);
+        if (random == 0){
+            ItemStack itemStack = new ItemStack(GeodePlusItemsRegistry.HEART_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+            return Collections.singletonList(itemStack);
+        }
+        return super.getDrops(blockState, builder);
+    }
 }

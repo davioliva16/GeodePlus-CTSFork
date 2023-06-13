@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:stone_bricks"
+            "items": [
+              "geode_plus:smooth_end_stone"
+            ]
           }
         ]
       },
@@ -28,5 +30,6 @@
     "recipes": [
       "geode_plus:smooth_end_stone_stairs"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

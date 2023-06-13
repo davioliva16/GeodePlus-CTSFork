@@ -8,6 +8,8 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
@@ -17,6 +19,7 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.platform.forge.RegistryHelperImpl;
 
+import java.time.LocalTime;
 import java.util.Set;
 
 public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
@@ -41,10 +44,12 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK.get());
         dropSelf(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK.get());
-        dropSelf(GeodePlusBlocksRegistry.DEEPSLATE_LAMP.get());
+        dropSelf(GeodePlusBlocksRegistry.ECHO_CRYSTAL_BLOCK.get());
         add(GeodePlusBlocksRegistry.SMOOTH_END_STONE.get(), (arg) -> createSingleItemTableWithSilkTouch(arg, Blocks.END_STONE));
         dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get());
         dropSelf(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get());
+        dropSelf(GeodePlusBlocksRegistry.GALCITE_STAIRS.get());
+        dropSelf(GeodePlusBlocksRegistry.GALCITE_WALL.get());
         add(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(),
                 (arg) -> createSilkTouchDispatchTable(arg,
                         LootItem.lootTableItem(Items.ECHO_SHARD)
@@ -63,8 +68,6 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
                                         .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
                                 .otherwise(applyExplosionDecay(arg, LootItem.lootTableItem(Items.GOLD_NUGGET)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
-        /**add(GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(),
-         (block) -> createOreDrop(block, Items.ECHO_SHARD));**/
         add(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get(),
                 (arg) -> createSilkTouchDispatchTable(arg,
                         LootItem.lootTableItem(Items.QUARTZ)
@@ -239,6 +242,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_CELESTITE.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ.get());
         registerSlab(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB.get());
+        registerSlab(GeodePlusBlocksRegistry.GALCITE_SLAB.get());
 
         dropWhenSilkTouch(GeodePlusBlocksRegistry.WRAPPIST_GLASS.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.CELESTITE_GLASS.get());

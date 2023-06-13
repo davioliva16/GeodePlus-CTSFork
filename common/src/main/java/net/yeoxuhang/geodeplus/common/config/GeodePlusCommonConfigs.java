@@ -1,5 +1,6 @@
 package net.yeoxuhang.geodeplus.common.config;
 
+
 import com.kyanite.paragon.api.ConfigGroup;
 import com.kyanite.paragon.api.ConfigOption;
 import com.kyanite.paragon.api.interfaces.Config;
@@ -86,6 +87,8 @@ public class GeodePlusCommonConfigs implements Config {
     public static final ConfigOption<Integer> RARITY_BLACKSTONE_QUARTZ_GEODE = new ConfigOption<>("Rarity of Blackstone Quartz Geode", 32);
 
     public static final ConfigOption<Integer> RARITY_END_WRAPPIST_GEODE = new ConfigOption<>("Rarity of End Wrappist Geode", 48);
+    public static final ConfigGroup PINK_TOPAZ_GEODE = new ConfigGroup("Pink Topaz Geodes",
+            SHOULD_GENERATE_PINK_TOPAZ_GEODE);
     public static final ConfigGroup PRISMARINE_GEODE = new ConfigGroup("Prismarine Geodes",
             SHOULD_GENERATE_DEEP_OCEAN_PRISMARINE_GEODE);
 
@@ -113,7 +116,6 @@ public class GeodePlusCommonConfigs implements Config {
             SHOULD_GENERATE_CELESTITE_GEODE);
     public static final ConfigGroup LARGE_CRYSTALS = new ConfigGroup("Large Crystals",
             SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL ,SHOULD_GENERATE_LARGE_ECHO_CRYSTAL, SHOULD_GENERATE_LARGE_NETHER_QUARTZ_CRYSTAL, SHOULD_GENERATE_LARGE_NETHER_GLOWSTONE_CRYSTAL, SHOULD_GENERATE_LARGE_END_WRAPPIST_CRYSTAL);
-
 
     public static final ConfigGroup RARITY_GEODE = new ConfigGroup("Rarity of Geodes",
             RARITY_DEEP_OCEAN_PRISMARINE_GEODE,

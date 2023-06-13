@@ -1,7 +1,6 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -25,6 +24,10 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        itemModel(GeodePlusItemsRegistry.WRAP_ARMOR_TRIM_SMITHING_TEMPLATE, GENERATED);
+        itemModel(GeodePlusItemsRegistry.CELESTE_ARMOR_TRIM_SMITHING_TEMPLATE, GENERATED);
+        itemModel(GeodePlusItemsRegistry.HEART_ARMOR_TRIM_SMITHING_TEMPLATE, GENERATED);
+
         itemModel(GeodePlusItemsRegistry.PINK_TOPAZ, GENERATED);
         itemModel(GeodePlusItemsRegistry.CELESTITE_SHARD, GENERATED);
         itemModel(GeodePlusItemsRegistry.WRAPPIST_SHARD, GENERATED);
@@ -102,6 +105,71 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
         blockModel(GeodePlusBlocksRegistry.WRAPPIST_GLASS);
         blockModel(GeodePlusBlocksRegistry.CELESTITE_GLASS);
         blockModel(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_PINK_TOPAZ);
+        blockModel(GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_CELESTITE);
+        blockModel(GeodePlusBlocksRegistry.CELESTITE_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_PRISMARINE);
+        blockModel(GeodePlusBlocksRegistry.PRISMARINE_CLUSTER_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_LAPIS);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_LAPIS);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_SCULK_LAPIS);
+        blockModel(GeodePlusBlocksRegistry.LAPIS_CLUSTER_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_REDSTONE);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_REDSTONE);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_SCULK_REDSTONE);
+        blockModel(GeodePlusBlocksRegistry.REDSTONE_CRYSTAL_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_EMERALD);
+        blockModel(GeodePlusBlocksRegistry.EMERALD_CLUSTER_BLOCK);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_EMERALD);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_SCULK_EMERALD);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_DIAMOND);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_DEEPSLATE_DIAMOND);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_SCULK_DIAMOND);
+        blockModel(GeodePlusBlocksRegistry.DIAMOND_CRYSTAL_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_NETHER_QUARTZ);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BASALT_QUARTZ);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_QUARTZ);
+        blockModel(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET);
+        blockModel(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_GLOWSTONE);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BASALT_GLOWSTONE);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GLOWSTONE);
+        blockModel(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS);
+        blockModel(GeodePlusBlocksRegistry.ANCIENT_DEBRIS_CLUSTER_BLOCK);
+
+        blockModel(GeodePlusBlocksRegistry.SMOOTH_END_STONE);
+        blockModel(GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS);
+        blockModel(GeodePlusBlocksRegistry.SMOOTH_END_STONE_SLAB);
+        blockModel(GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL, "inventory");
+
+        blockModel(GeodePlusBlocksRegistry.GALCITE);
+        blockModel(GeodePlusBlocksRegistry.GALCITE_STAIRS);
+        blockModel(GeodePlusBlocksRegistry.GALCITE_SLAB);
+        blockModel(GeodePlusBlocksRegistry.GALCITE_WALL, "inventory");
+
+        blockModel(GeodePlusBlocksRegistry.WRAPPIST_BLOCK);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_WRAPPIST);
+
+        blockModel(GeodePlusBlocksRegistry.ECHO_CRYSTAL_BLOCK);
+        blockModel(GeodePlusBlocksRegistry.BUDDING_ECHO);
     }
 
     public void blockModel(Supplier<? extends Block> block) {

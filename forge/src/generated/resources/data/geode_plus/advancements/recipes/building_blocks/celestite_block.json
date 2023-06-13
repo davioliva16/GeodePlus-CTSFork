@@ -30,5 +30,6 @@
     "recipes": [
       "geode_plus:celestite_block"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

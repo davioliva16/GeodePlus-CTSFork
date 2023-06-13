@@ -30,7 +30,7 @@ public class GeodePlusDataGenerator {
         generator.addProvider(true, new GeodePlusBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new GeodePlusItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new GeodePlusLangProvider(packOutput, "en_us", false));
-        generator.addProvider(event.includeServer(), new GeodePlusWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new GeodePlusRegistryProvider(packOutput, lookupProvider));
         generator.addProvider(true ,new GeodePlusBiomeTagProvider(packOutput, lookupProvider, existingFileHelper));
     }
 }

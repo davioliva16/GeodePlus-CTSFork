@@ -101,7 +101,6 @@ public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyC
         if (!this.item.isEmpty()) {
             compoundTag.put("item", this.item.save(new CompoundTag()));
         }
-
     }
 
     public CompoundTag getUpdateTag() {

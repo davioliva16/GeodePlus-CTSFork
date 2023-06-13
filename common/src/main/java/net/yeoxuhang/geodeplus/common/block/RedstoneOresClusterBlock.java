@@ -48,12 +48,12 @@ public class RedstoneOresClusterBlock extends RedStoneOreBlock implements Simple
     public RedstoneOresClusterBlock(int box, int i, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(LIT, false).setValue(FACING, Direction.UP));
-        this.upAabb = Block.box((double)i, 0.0D, (double)i, (double)(16 - i), (double)box, (double)(16 - i));
-        this.downAabb = Block.box((double)i, (double)(16 - box), (double)i, (double)(16 - i), 16.0D, (double)(16 - i));
-        this.northAabb = Block.box((double)i, (double)i, (double)(16 - box), (double)(16 - i), (double)(16 - i), 16.0D);
-        this.southAabb = Block.box((double)i, (double)i, 0.0D, (double)(16 - i), (double)(16 - i), (double)box);
-        this.eastAabb = Block.box(0.0D, (double)i, (double)i, (double)box, (double)(16 - i), (double)(16 - i));
-        this.westAabb = Block.box((double)(16 - box), (double)i, (double)i, 16.0D, (double)(16 - i), (double)(16 - i));
+        this.upAabb = Block.box(i, 0.0D, i, (16 - i), box, (16 - i));
+        this.downAabb = Block.box(i, (16 - box), i, (16 - i), 16.0D, (16 - i));
+        this.northAabb = Block.box(i, i, (16 - box), (16 - i), (16 - i), 16.0D);
+        this.southAabb = Block.box(i, i, 0.0D, (16 - i), (16 - i), box);
+        this.eastAabb = Block.box(0.0D, i, i, box, (16 - i), (16 - i));
+        this.westAabb = Block.box((16 - box), i, i, 16.0D, (16 - i), (16 - i));
     }
 
     public VoxelShape getShape(BlockState p_152021_, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {
@@ -135,10 +135,10 @@ public class RedstoneOresClusterBlock extends RedStoneOreBlock implements Simple
             BlockPos blockPos2 = blockPos.relative(direction);
             if (!level.getBlockState(blockPos2).isSolidRender(level, blockPos2)) {
                 Direction.Axis axis = direction.getAxis();
-                double e = axis == Direction.Axis.X ? 0.5 + 0.5625 * (double)direction.getStepX() : (double)randomSource.nextFloat();
-                double f = axis == Direction.Axis.Y ? 0.5 + 0.5625 * (double)direction.getStepY() : (double)randomSource.nextFloat();
-                double g = axis == Direction.Axis.Z ? 0.5 + 0.5625 * (double)direction.getStepZ() : (double)randomSource.nextFloat();
-                level.addParticle(DustParticleOptions.REDSTONE, (double)blockPos.getX() + e, (double)blockPos.getY() + f, (double)blockPos.getZ() + g, 0.0, 0.0, 0.0);
+                double e = axis == Direction.Axis.X ? 0.5 + 0.5625 * direction.getStepX() : randomSource.nextFloat();
+                double f = axis == Direction.Axis.Y ? 0.5 + 0.5625 * direction.getStepY() : randomSource.nextFloat();
+                double g = axis == Direction.Axis.Z ? 0.5 + 0.5625 * direction.getStepZ() : randomSource.nextFloat();
+                level.addParticle(DustParticleOptions.REDSTONE, blockPos.getX() + e, blockPos.getY() + f, blockPos.getZ() + g, 0.0, 0.0, 0.0);
             }
         }
 

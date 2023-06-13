@@ -1,13 +1,24 @@
 package net.yeoxuhang.geodeplus.client;
 
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
+import net.yeoxuhang.geodeplus.GeodePlus;
+import net.yeoxuhang.geodeplus.client.model.WrappistPedestalBlockEntityModel;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.platform.ClientHelper;
+
+import java.util.function.Supplier;
 
 /*
  * Thx to Lucasmellof, Lucas de Mello Freitas created on 16/11/2022
  */
 public class GeodePlusClient {
+	public static final ModelLayerLocation WRAPPIST_PEDESTAL = register("wrappist_pedestal", "main", WrappistPedestalBlockEntityModel::createBodyLayer);
+	private static ModelLayerLocation register(String model, String layer, Supplier<LayerDefinition> createBodyLayer) {
+		return ClientHelper.registerModelLayer(new ModelLayerLocation(new ResourceLocation(GeodePlus.MOD_ID, model), layer), createBodyLayer);
+	}
 
 	public static void initClient() {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.PINK_TOPAZ_CRYSTAL.get(), RenderType.cutout());
@@ -39,7 +50,7 @@ public class GeodePlusClient {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_DIAMOND_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_DIAMOND_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_DIAMOND_BUD.get(), RenderType.cutout());
-		//Quartz Crystal
+
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get(), RenderType.cutout());
@@ -49,7 +60,7 @@ public class GeodePlusClient {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get(), RenderType.cutout());
-		//Glowstone Cluster
+
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.GLOWSTONE_CLUSTER.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.LARGE_GLOWSTONE_BUD.get(), RenderType.cutout());
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.MEDIUM_GLOWSTONE_BUD.get(), RenderType.cutout());
@@ -80,6 +91,6 @@ public class GeodePlusClient {
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get(), RenderType.cutout());
 
 		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get(), RenderType.cutout());
-		ClientHelper.putRenderLayer(GeodePlusBlocksRegistry.DEEPSLATE_LAMP.get(), RenderType.cutout());
 	}
+	public static void init(){}
 }

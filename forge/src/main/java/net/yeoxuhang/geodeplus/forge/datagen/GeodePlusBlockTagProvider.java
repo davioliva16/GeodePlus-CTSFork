@@ -80,12 +80,16 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(),
                 GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get(),
                 GeodePlusBlocksRegistry.GALCITE.get(),
+                GeodePlusBlocksRegistry.GALCITE_SLAB.get(),
+                GeodePlusBlocksRegistry.GALCITE_STAIRS.get(),
+                GeodePlusBlocksRegistry.GALCITE_WALL.get(),
                 GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get(),
                 GeodePlusBlocksRegistry.BUDDING_WRAPPIST.get(),
                 GeodePlusBlocksRegistry.WRAPPIST_CLUSTER.get(),
                 GeodePlusBlocksRegistry.LARGE_WRAPPIST_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_WRAPPIST_BUD.get(),
                 GeodePlusBlocksRegistry.SMALL_WRAPPIST_BUD.get(),
+                GeodePlusBlocksRegistry.ECHO_CRYSTAL_BLOCK.get(),
                 GeodePlusBlocksRegistry.BUDDING_ECHO.get(),
                 GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(),
                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get(),
@@ -126,9 +130,7 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
 
                 GeodePlusBlocksRegistry.WRAPPIST_GLASS.get(),
                 GeodePlusBlocksRegistry.CELESTITE_GLASS.get(),
-                GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get(),
-
-                GeodePlusBlocksRegistry.DEEPSLATE_LAMP.get()
+                GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get()
         );
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 GeodePlusBlocksRegistry.LAPIS_CLUSTER.get(),
@@ -162,6 +164,9 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.SMOOTH_END_STONE_STAIRS.get(),
                 GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get(),
                 GeodePlusBlocksRegistry.GALCITE.get(),
+                GeodePlusBlocksRegistry.GALCITE_SLAB.get(),
+                GeodePlusBlocksRegistry.GALCITE_STAIRS.get(),
+                GeodePlusBlocksRegistry.GALCITE_WALL.get(),
 
                 GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get(),
                 GeodePlusBlocksRegistry.PRISMARINE_CLUSTER.get(),
@@ -197,6 +202,7 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get(),
                 GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get(),
                 GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get(),
+                GeodePlusBlocksRegistry.ECHO_CRYSTAL_BLOCK.get(),
                 GeodePlusBlocksRegistry.BUDDING_ECHO.get(),
                 GeodePlusBlocksRegistry.ECHO_CRYSTAL.get(),
                 GeodePlusBlocksRegistry.LARGE_ECHO_BUD.get(),
@@ -255,7 +261,8 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 Blocks.VOID_AIR);
 
         this.tag(BlockTags.WALLS).add(
-                GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get()
+                GeodePlusBlocksRegistry.SMOOTH_END_STONE_WALL.get(),
+                GeodePlusBlocksRegistry.GALCITE_WALL.get()
         );
         this.tag(GeodePlusTagRegistry.Blocks.GEODE_INVALID_BLOCKS).add(
                 Blocks.BEDROCK,

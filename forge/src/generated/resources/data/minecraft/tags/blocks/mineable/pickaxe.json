@@ -58,12 +58,16 @@
     "geode_plus:smooth_end_stone_stairs",
     "geode_plus:smooth_end_stone_wall",
     "geode_plus:galcite",
+    "geode_plus:galcite_slab",
+    "geode_plus:galcite_stairs",
+    "geode_plus:galcite_wall",
     "geode_plus:wrappist_block",
     "geode_plus:budding_wrappist",
     "geode_plus:wrappist_cluster",
     "geode_plus:large_wrappist_bud",
     "geode_plus:medium_wrappist_bud",
     "geode_plus:small_wrappist_bud",
+    "geode_plus:echo_crystal_block",
     "geode_plus:budding_echo",
     "geode_plus:echo_crystal",
     "geode_plus:large_echo_bud",
@@ -103,7 +107,6 @@
     "geode_plus:small_pink_topaz_bud",
     "geode_plus:wrappist_glass",
     "geode_plus:celestite_glass",
-    "geode_plus:pink_topaz_glass",
-    "geode_plus:deepslate_lamp"
+    "geode_plus:pink_topaz_glass"
   ]
 }
