@@ -369,3 +369,42 @@ Change
 Fix
 ∎Blocks tag,Warppist instead of Wrappist
 ---------------------------------------------------------
+
+Changelog for 1.1.9
+---------------------------------------------------------
+Change
+∎Pink Topaz Geode (Now can found naturally in Cherry Grove)
+
+∎Pink Topaz now can make Luck Potion!
+
+∎Port to 1.19.4 (No longer support 1.19.3. Don't worry, 1.19.2 will still support)
+
+---------------------------------------------------------
+
+Changelog for 1.2.0
+---------------------------------------------------------
+Added Item
+∎Wrap Armor Trim Smithing Template
+∎Celeste Armor Trim Smithing Template
+∎Heart Armor Trim Smithing Template
+---------------------------------------------------------
+Added Blocks
+∎Galcite Slab
+∎Galcite Stairs
+∎Galcite Wall
+
+∎Wrappist Glass
+∎Celestite Glass
+∎Pink Topaz Glass
+---------------------------------------------------------
+Added Feature
+∎Wrappist Shard,Celestite Shard,Pink Topaz now can be for Trim Materials
+---------------------------------------------------------
+Change
+∎Port to 1.20, No longer support 1.19.3, 1.19.4
+∎Wrappist Pedestal Item now is animated
+∎Wrappist Shard now can make Slow Falling Potion!
+---------------------------------------------------------
+Fix
+∎Blocks sounds
+---------------------------------------------------------
