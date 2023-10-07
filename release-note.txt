@@ -409,3 +409,14 @@ Fix
 ∎Blocks sounds
 ∎Both Forge/Fabric client couldn't start
 ---------------------------------------------------------
+
+Changelog for 1.2.1
+---------------------------------------------------------
+Change
+∎Port to 1.20.1
+∎Now you craft crystals block back to items
+---------------------------------------------------------
+Fix
+∎Darker armour trims color didn't show properly
+∎Fixed Forge client couldn't start
+---------------------------------------------------------
