@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "net/yeoxuhang/geodeplus/mixin/BlockEntityWithoutLevelRendererMixin": {
+      "onResourceManagerReload": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;m_6213_(Lnet/minecraft/server/packs/resources/ResourceManager;)V",
+      "renderByItem": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;m_108829_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
+    }
+  },
+  "data": {
+    "searge": {
+      "net/yeoxuhang/geodeplus/mixin/BlockEntityWithoutLevelRendererMixin": {
+        "onResourceManagerReload": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;m_6213_(Lnet/minecraft/server/packs/resources/ResourceManager;)V",
+        "renderByItem": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;m_108829_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
+      }
+    }
+  }
+}

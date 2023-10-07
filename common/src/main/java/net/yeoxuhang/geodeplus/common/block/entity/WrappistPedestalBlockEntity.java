@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyContainer {
     ItemStack item;
-    public static float tick = 0;
+    static int tick = 0;
     public WrappistPedestalBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), pWorldPosition, pBlockState);
         this.item = ItemStack.EMPTY;
@@ -117,4 +117,7 @@ public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyC
         return 64;
     }
 
+    public static float tick(){
+        return ++tick;
+    }
 }

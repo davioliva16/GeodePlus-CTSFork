@@ -10,8 +10,6 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.geodeplus.GeodePlus;
@@ -20,7 +18,6 @@ import net.yeoxuhang.geodeplus.client.model.WrappistPedestalBlockEntityModel;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 
 import java.util.Calendar;
-import java.util.Objects;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
     public static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
@@ -48,9 +45,8 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
         assert world != null;
         long gameTime = world.getGameTime();
         float offsetY = (float)Math.sin((float)gameTime / 8.0F) * 0.025F;
-        float wrappistBlockEntity = WrappistPedestalBlockEntity.tick;
-        float crystalTick = wrappistBlockEntity / 35.0F;
-        float tick = wrappistBlockEntity / 10.0F;
+        float crystalTick = gameTime / 35.0F;
+        float tick = gameTime / 10.0F;
         poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
         if (xmasTextures) {
             wrappistPedestal.renderToBuffer(poseStack, multiBufferSource.getBuffer(RenderType.entityCutoutNoCull(XMAS)), i, j, 1.0F, 1.0F, 1.0F, 1.0F);

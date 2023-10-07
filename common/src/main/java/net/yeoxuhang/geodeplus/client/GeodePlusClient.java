@@ -15,6 +15,7 @@ import java.util.function.Supplier;
  * Thx to Lucasmellof, Lucas de Mello Freitas created on 16/11/2022
  */
 public class GeodePlusClient {
+
 	public static final ModelLayerLocation WRAPPIST_PEDESTAL = register("wrappist_pedestal", "main", WrappistPedestalBlockEntityModel::createBodyLayer);
 	private static ModelLayerLocation register(String model, String layer, Supplier<LayerDefinition> createBodyLayer) {
 		return ClientHelper.registerModelLayer(new ModelLayerLocation(new ResourceLocation(GeodePlus.MOD_ID, model), layer), createBodyLayer);

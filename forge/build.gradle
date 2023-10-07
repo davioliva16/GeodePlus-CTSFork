@@ -23,15 +23,13 @@ dependencies {
     runtimeOnly 'blue.endless:jankson:1.1.2'
     include modImplementation("maven.modrinth:paragon:forge-3.0.2-1.20x")
 }
-
-
 loom {
 
     forge {
         dataGen {
             mod "geode_plus"
         }
-        mixinConfig "geode-plus.mixins.json"
+        mixinConfig "geode_plus.forge.mixins.json"
     }
 
     launches {

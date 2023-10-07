@@ -1,4 +1,4 @@
-package net.yeoxuhang.geodeplus.client.mixin;
+package net.yeoxuhang.geodeplus.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -36,14 +36,13 @@ public class BlockEntityWithoutLevelRendererMixin {
     @Inject(method = "renderByItem", at = @At("RETURN"))
     private void renderByItemGeodePlus(ItemStack itemStack, ItemDisplayContext itemDisplayContext, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, CallbackInfo ci) {
         if (itemStack.is(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get().asItem())) {
-            float test = WrappistPedestalBlockEntity.tick;
-            float e = ++test;
-            float tick = e / 36.0F;
+            float tick1 = WrappistPedestalBlockEntity.tick();
+            float tick = tick1 / 36.0F;
             poseStack.pushPose();
             poseStack.scale(1.1F, 1.1F, 1.1F);
             poseStack.translate(0.8, 1, 0);
             poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
-            VertexConsumer vertexConsumer2 = ItemRenderer.getFoilBufferDirect(multiBufferSource, RenderType.entityCutoutNoCull(WrappistPedestalBlockEntityRenderer.TEXTURE), false, itemStack.hasFoil());
+            VertexConsumer vertexConsumer2 = ItemRenderer.getFoilBufferDirect(multiBufferSource, this.wrappistPedestal.renderType(WrappistPedestalBlockEntityRenderer.TEXTURE), false, itemStack.hasFoil());
             this.wrappistPedestal.renderToBuffer(poseStack, vertexConsumer2, i, j, 1.0F, 1.0F, 1.0F, 1.0F);
             this.wrappistPedestal.crystals.setRotation(0.0F, tick % 360.0F, 0.0F);
             poseStack.popPose();

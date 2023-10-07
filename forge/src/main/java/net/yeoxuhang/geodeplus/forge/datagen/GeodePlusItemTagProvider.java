@@ -4,17 +4,13 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
-import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
-import java.awt.*;
-import java.awt.event.WindowEvent;
 import java.util.concurrent.CompletableFuture;
 
 public class GeodePlusItemTagProvider extends ItemTagsProvider {

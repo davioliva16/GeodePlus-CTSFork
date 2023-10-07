@@ -3,7 +3,6 @@ package net.yeoxuhang.geodeplus.common.registry;
 import net.minecraft.world.level.block.*;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -380,6 +379,11 @@ public class GeodePlusBlocksRegistry {
     public static final Supplier<GlassBlock> WRAPPIST_GLASS = registerBlock("wrappist_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
     public static final Supplier<GlassBlock> CELESTITE_GLASS = registerBlock("celestite_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
     public static final Supplier<GlassBlock> PINK_TOPAZ_GLASS = registerBlock("pink_topaz_glass", ()-> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+
+    private static <T extends Block> Supplier<T> registerWithoutItemBlock(String name, Supplier<T> block) {
+        Supplier<T> toReturn = RegistryHelper.registerBlock(name, block);
+        return toReturn;
+    }
 
     private static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> toReturn = RegistryHelper.registerBlock(name, block);

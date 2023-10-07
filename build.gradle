@@ -24,7 +24,7 @@ subprojects {
 }
 
 repositories {
-
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
     mavenCentral()
 
     maven {

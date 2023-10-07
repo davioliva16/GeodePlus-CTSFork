@@ -3,7 +3,6 @@ package net.yeoxuhang.geodeplus.common.registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.yeoxuhang.geodeplus.GeodePlus;
-import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;

@@ -3,26 +3,18 @@ package net.yeoxuhang.geodeplus.fabric;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.flag.FeatureFlag;
-import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
-import net.yeoxuhang.geodeplus.common.registry.GeodePlusPlacedFeatureRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
-import java.util.Locale;
-
 public class GeodePlusGeodeBiomeModifier {
-
 
     public void biomeModificationHelper() {
         var modifications = BiomeModifications.create(new ResourceLocation(GeodePlus.MOD_ID, "biome_modifications"));
