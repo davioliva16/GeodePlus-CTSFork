@@ -5,6 +5,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -82,7 +83,7 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
     }
 
     protected static void crystalsFromCrystalsBlocks(Consumer<FinishedRecipe> consumer, ItemLike arg, ItemLike arg2, int i) {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, arg, i).requires(arg2).group("crystals").unlockedBy("has_crystal_block", has(arg2)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, arg, i).requires(arg2).group("crystals").unlockedBy("has_crystal_block", has(arg2)).save(consumer, getItemName(arg2) + "_to_" + getItemName(arg));
     }
 
     public static Map<Item, ResourceLocation> smithingTrims() {
