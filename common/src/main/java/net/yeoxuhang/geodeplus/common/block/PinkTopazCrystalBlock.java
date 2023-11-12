@@ -105,4 +105,15 @@ public class PinkTopazCrystalBlock extends AmethystBlock implements SimpleWaterl
     public PushReaction getPistonPushReaction(BlockState p_152047_) {
         return PushReaction.DESTROY;
     }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        int random = builder.getLevel().random.nextInt(20);
+        if (random == 0){
+            ItemStack itemStack = new ItemStack(GeodePlusItemsRegistry.HEART_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+            ItemStack itemStack2 = new ItemStack(GeodePlusItemsRegistry.PINK_TOPAZ.get());
+            return List.of(itemStack, itemStack2, itemStack2, itemStack2, itemStack2);
+        }
+        return super.getDrops(blockState, builder);
+    }
 }

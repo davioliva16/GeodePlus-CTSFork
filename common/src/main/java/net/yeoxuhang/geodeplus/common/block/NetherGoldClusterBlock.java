@@ -68,19 +68,19 @@ public class NetherGoldClusterBlock extends AmethystBlock implements SimpleWater
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.SMALL_GOLD_NUGGET_BUD.get())) {
             int i = 1;
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.MEDIUM_GOLD_NUGGET_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(2);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.LARGE_GOLD_NUGGET_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get())) {
             int i = 1 + serverLevel.random.nextInt(10);
             this.popExperience(serverLevel, blockPos, i);
         }

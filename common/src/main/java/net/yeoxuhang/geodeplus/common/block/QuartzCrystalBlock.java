@@ -68,19 +68,19 @@ public class QuartzCrystalBlock extends AmethystBlock implements SimpleWaterlogg
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.SMALL_QUARTZ_BUD.get())) {
             int i = 1;
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.MEDIUM_QUARTZ_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(2);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.LARGE_QUARTZ_BUD.get())) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0 && blockState.is(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get())) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack) && blockState.is(GeodePlusBlocksRegistry.QUARTZ_CRYSTAL.get())) {
             int i = 1 + serverLevel.random.nextInt(10);
             this.popExperience(serverLevel, blockPos, i);
         }

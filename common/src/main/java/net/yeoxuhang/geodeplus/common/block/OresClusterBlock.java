@@ -66,7 +66,7 @@ public class OresClusterBlock extends AmethystBlock implements SimpleWaterlogged
 
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack)) {
             int i = 10;
             this.popExperience(serverLevel, blockPos, i);
         }

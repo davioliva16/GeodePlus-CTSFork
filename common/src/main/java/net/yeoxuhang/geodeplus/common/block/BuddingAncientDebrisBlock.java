@@ -4,13 +4,20 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+
+import java.util.Collections;
+import java.util.List;
 
 public class BuddingAncientDebrisBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -47,8 +54,25 @@ public class BuddingAncientDebrisBlock extends AmethystBlock {
         }
     }
 
-
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        ItemStack pickaxe = builder.getLevel().players().get(0).getMainHandItem();
+        ItemStack nether = new ItemStack(GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get());
+        ItemStack basalt = new ItemStack(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get());
+        ItemStack blackstone = new ItemStack(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get());
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_ANCIENT_DEBRIS.get())){
+            return Collections.singletonList(nether);
+        }
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_BASALT_ANCIENT_DEBRIS.get())){
+            return Collections.singletonList(basalt);
+        }
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_ANCIENT_DEBRIS.get())){
+            return Collections.singletonList(blackstone);
+        }
+        return super.getDrops(blockState, builder);
     }
 }

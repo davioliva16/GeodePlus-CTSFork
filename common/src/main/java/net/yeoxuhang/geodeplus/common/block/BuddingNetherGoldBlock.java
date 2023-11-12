@@ -13,7 +13,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+
+import java.util.Collections;
+import java.util.List;
 
 public class BuddingNetherGoldBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;
@@ -53,7 +58,7 @@ public class BuddingNetherGoldBlock extends AmethystBlock {
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack)) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }
@@ -61,5 +66,23 @@ public class BuddingNetherGoldBlock extends AmethystBlock {
 
     public static boolean canClusterGrowAtState(BlockState p_152735_) {
         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        ItemStack pickaxe = builder.getLevel().players().get(0).getMainHandItem();
+        ItemStack nether = new ItemStack(GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET.get());
+        ItemStack basalt = new ItemStack(GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get());
+        ItemStack blackstone = new ItemStack(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get());
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_GOLD_NUGGET.get())){
+            return Collections.singletonList(nether);
+        }
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_BASALT_GOLD_NUGGET.get())){
+            return Collections.singletonList(basalt);
+        }
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get() && blockState.is(GeodePlusBlocksRegistry.BUDDING_BLACKSTONE_GOLD_NUGGET.get())){
+            return Collections.singletonList(blackstone);
+        }
+        return super.getDrops(blockState, builder);
     }
 }

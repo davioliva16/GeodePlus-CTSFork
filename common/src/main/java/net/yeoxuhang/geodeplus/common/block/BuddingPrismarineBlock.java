@@ -8,16 +8,22 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.block.AmethystBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.Vec3;
+import net.yeoxuhang.geodeplus.common.config.GeodePlusCommonConfigs;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.List;
 
 public class BuddingPrismarineBlock extends AmethystBlock {
     private static final Direction[] DIRECTIONS = Direction.values();
@@ -63,5 +69,15 @@ public class BuddingPrismarineBlock extends AmethystBlock {
 
     public static boolean canClusterGrowAtState(BlockState blockState) {
         return blockState.isAir() || blockState.is(Blocks.WATER) && blockState.getFluidState().getAmount() == 8;
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        ItemStack pickaxe = builder.getLevel().players().get(0).getMainHandItem();
+        ItemStack budding = new ItemStack(GeodePlusBlocksRegistry.BUDDING_PRISMARINE.get());
+        if (EnchantmentHelper.hasSilkTouch(pickaxe) && GeodePlusCommonConfigs.SHOULD_SILK_TOUCH_BUDDING_BLOCKS.get()){
+            return Collections.singletonList(budding);
+        }
+        return super.getDrops(blockState, builder);
     }
 }

@@ -4,6 +4,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 
 import javax.annotation.Nullable;
@@ -108,11 +111,11 @@ public class WrappistClusterBlock extends AmethystBlock implements SimpleWaterlo
 
     @Override
     public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
-        int random = builder.getLevel().random.nextInt(10);
+        int random = builder.getLevel().random.nextInt(20);
         if (random == 0){
             ItemStack itemStack = new ItemStack(GeodePlusItemsRegistry.WRAP_ARMOR_TRIM_SMITHING_TEMPLATE.get());
             ItemStack itemStack2 = new ItemStack(GeodePlusItemsRegistry.WRAPPIST_SHARD.get());
-            return List.of(itemStack, itemStack2);
+            return List.of(itemStack, itemStack2, itemStack2, itemStack2, itemStack2);
         }
         return super.getDrops(blockState, builder);
     }

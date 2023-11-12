@@ -63,7 +63,7 @@ public class BuddingEchoBlock extends AmethystBlock {
     @Override
     public void spawnAfterBreak(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, ItemStack itemStack, boolean bl) {
         super.spawnAfterBreak(blockState, serverLevel, blockPos, itemStack, bl);
-        if (bl && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, itemStack) == 0) {
+        if (bl && !EnchantmentHelper.hasSilkTouch(itemStack)) {
             int i = 1 + serverLevel.random.nextInt(5);
             this.popExperience(serverLevel, blockPos, i);
         }

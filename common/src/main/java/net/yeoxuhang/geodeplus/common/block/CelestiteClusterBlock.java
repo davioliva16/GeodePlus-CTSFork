@@ -104,4 +104,15 @@ public class CelestiteClusterBlock extends AmethystBlock implements SimpleWaterl
     public PushReaction getPistonPushReaction() {
         return PushReaction.DESTROY;
     }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        int random = builder.getLevel().random.nextInt(20);
+        if (random == 0){
+            ItemStack itemStack = new ItemStack(GeodePlusItemsRegistry.CELESTE_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+            ItemStack itemStack2 = new ItemStack(GeodePlusItemsRegistry.CELESTITE_SHARD.get());
+            return List.of(itemStack, itemStack2, itemStack2, itemStack2, itemStack2);
+        }
+        return super.getDrops(blockState, builder);
+    }
 }
