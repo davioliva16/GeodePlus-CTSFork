@@ -102,7 +102,7 @@ public class WrappistClusterBlock extends AmethystBlock implements SimpleWaterlo
         p_152043_.add(WATERLOGGED, FACING);
     }
 
-    public PushReaction getPistonPushReaction(BlockState p_152047_) {
+    public PushReaction getPistonPushReaction() {
         return PushReaction.DESTROY;
     }
 
@@ -111,7 +111,8 @@ public class WrappistClusterBlock extends AmethystBlock implements SimpleWaterlo
         int random = builder.getLevel().random.nextInt(10);
         if (random == 0){
             ItemStack itemStack = new ItemStack(GeodePlusItemsRegistry.WRAP_ARMOR_TRIM_SMITHING_TEMPLATE.get());
-            return Collections.singletonList(itemStack);
+            ItemStack itemStack2 = new ItemStack(GeodePlusItemsRegistry.WRAPPIST_SHARD.get());
+            return List.of(itemStack, itemStack2);
         }
         return super.getDrops(blockState, builder);
     }

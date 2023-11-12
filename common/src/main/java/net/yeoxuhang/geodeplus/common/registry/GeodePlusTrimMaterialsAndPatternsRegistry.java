@@ -58,5 +58,5 @@ public class GeodePlusTrimMaterialsAndPatternsRegistry {
     private static ResourceKey<TrimPattern> createTrimPattern(String string) {
         return ResourceKey.create(Registries.TRIM_PATTERN, new ResourceLocation(GeodePlus.MOD_ID, string));
     }
-    public static void initialize() {};
+    public static void init() {}
 }

@@ -16,7 +16,7 @@ import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
 public class GeodePlusGeodeBiomeModifier {
 
-    public void biomeModificationHelper() {
+    public void init() {
         var modifications = BiomeModifications.create(new ResourceLocation(GeodePlus.MOD_ID, "biome_modifications"));
         modifications.add(ModificationPhase.ADDITIONS, biomeSelectionContext -> true, (biomeSelectionContext, builder) -> {
             Holder<Biome> biome = biomeSelectionContext.getBiomeRegistryEntry();

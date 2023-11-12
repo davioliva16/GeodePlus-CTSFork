@@ -1,16 +1,22 @@
 package net.yeoxuhang.geodeplus.forge.datagen;
 
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.MatchTool;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.*;
+import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
@@ -59,7 +65,7 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         add(GeodePlusBlocksRegistry.GOLD_NUGGET_CLUSTER.get(),
                 (arg) -> createSilkTouchDispatchTable(arg,
                         LootItem.lootTableItem(Items.GOLD_NUGGET)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4F)))
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
                                 .when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
                                         .of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
@@ -245,7 +251,6 @@ public class GeodePlusBlockLootTableProvider extends BlockLootSubProvider {
         dropWhenSilkTouch(GeodePlusBlocksRegistry.CELESTITE_GLASS.get());
         dropWhenSilkTouch(GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get());
     }
-
 
     private void registerSlab(Block b) {
         add(b, createSlabItemTable(b));

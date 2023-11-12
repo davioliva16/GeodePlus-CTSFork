@@ -7,7 +7,6 @@ import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -21,15 +20,16 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import net.minecraft.world.level.material.FluidState;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusTagRegistry;
 
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class OceanGeodeFeature extends Feature<GeodeConfiguration> {
+public class GeodeFeature extends Feature<GeodeConfiguration> {
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public OceanGeodeFeature(Codec<GeodeConfiguration> codec) {
+    public GeodeFeature(Codec<GeodeConfiguration> codec) {
         super(codec);
     }
 
@@ -67,7 +67,7 @@ public class OceanGeodeFeature extends Feature<GeodeConfiguration> {
             int q = geodeConfiguration.outerWallDistance.sample(randomSource);
             blockPos2 = blockPos.offset(o, p, q);
             blockState = worldGenLevel.getBlockState(blockPos2);
-            if (blockState.isAir() || blockState.is(BlockTags.GEODE_INVALID_BLOCKS)) {
+            if (blockState.isAir() || blockState.is(GeodePlusTagRegistry.Blocks.GEODE_INVALID_BLOCKS)) {
                 ++m;
                 if (m > geodeConfiguration.invalidBlocksThreshold) {
                     return false;

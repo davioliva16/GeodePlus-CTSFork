@@ -28,6 +28,10 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> save) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GUNPOWDER, 4).requires(GeodePlusItemsRegistry.CELESTITE_SHARD.get()).unlockedBy("has_celestite", has(GeodePlusItemsRegistry.CELESTITE_SHARD.get())).save(save);
+        crystalGlassFromGlassAndCrystal(save, GeodePlusBlocksRegistry.WRAPPIST_GLASS.get(), GeodePlusItemsRegistry.WRAPPIST_SHARD.get());
+        crystalGlassFromGlassAndCrystal(save, GeodePlusBlocksRegistry.CELESTITE_GLASS.get(), GeodePlusItemsRegistry.CELESTITE_SHARD.get());
+        crystalGlassFromGlassAndCrystal(save, GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS.get(), GeodePlusItemsRegistry.PINK_TOPAZ.get());
+
         crystalsFromCrystalsBlocks(save, GeodePlusItemsRegistry.WRAPPIST_SHARD.get(), GeodePlusBlocksRegistry.WRAPPIST_BLOCK.get(), 4);
         crystalsFromCrystalsBlocks(save, GeodePlusItemsRegistry.PINK_TOPAZ.get(), GeodePlusBlocksRegistry.PINK_TOPAZ_BLOCK.get(), 4);
         crystalsFromCrystalsBlocks(save, GeodePlusItemsRegistry.CELESTITE_SHARD.get(), GeodePlusBlocksRegistry.CELESTITE_BLOCK.get(), 4);
@@ -84,6 +88,10 @@ public class GeodePlusRecipeProvider extends RecipeProvider implements IConditio
 
     protected static void crystalsFromCrystalsBlocks(Consumer<FinishedRecipe> consumer, ItemLike arg, ItemLike arg2, int i) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, arg, i).requires(arg2).group("crystals").unlockedBy("has_crystal_block", has(arg2)).save(consumer, getItemName(arg2) + "_to_" + getItemName(arg));
+    }
+
+    protected static void crystalGlassFromGlassAndCrystal(Consumer<FinishedRecipe> consumer, ItemLike arg, ItemLike arg2) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, arg, 8).define('#', Blocks.GLASS).define('X', arg2).pattern("###").pattern("#X#").pattern("###").group("crystal_glass").unlockedBy("has_glass", has((ItemLike)Blocks.GLASS)).save(consumer);
     }
 
     public static Map<Item, ResourceLocation> smithingTrims() {

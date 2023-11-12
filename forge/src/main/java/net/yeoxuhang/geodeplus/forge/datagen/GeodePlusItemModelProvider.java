@@ -15,7 +15,6 @@ public class GeodePlusItemModelProvider extends ItemModelProvider {
 
     private final ModelFile GENERATED = getExistingFile(mcLoc("item/generated"));
     private final ModelFile HANDHELD = getExistingFile(mcLoc("item/handheld"));
-
     private final ModelFile GOAT_HORN = getExistingFile(mcLoc("item/goat_horn"));
 
     public GeodePlusItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {

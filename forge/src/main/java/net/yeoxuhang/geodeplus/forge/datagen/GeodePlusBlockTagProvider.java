@@ -3,6 +3,7 @@ package net.yeoxuhang.geodeplus.forge.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -271,6 +272,7 @@ public class GeodePlusBlockTagProvider extends BlockTagsProvider {
                 Blocks.PACKED_ICE,
                 Blocks.LAVA
         );
+        this.tag(GeodePlusTagRegistry.Blocks.GEODES_CANNOT_REPLACE).add(Blocks.BEDROCK, Blocks.SPAWNER, Blocks.CHEST, Blocks.END_PORTAL_FRAME, Blocks.REINFORCED_DEEPSLATE).addTags(BlockTags.STONE_BRICKS);
     }
 }
 

@@ -14,13 +14,6 @@ import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import java.util.function.Supplier;
 
 public class GeodePlusFeatureRegistry {
-
-    public static void bootstrap(BootstapContext<Registry<Feature>> context) {
-        HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
-
-        //Holder<ConfiguredFeature<?, ?>> holder16 = holderGetter.getOrThrow(GeodePlusConfiguredFeatureRegistry.ECHO_GEODE);
-        //register(context, ECHO_GEODE, holder16, new PlacementModifier[]{rarityEchoGeode(), inSquarePlacement(), placementDeepDarkModifier(), biomeFilter()});
-    }
     public static final Supplier<CrystalSpikeFeature> CRYSTAL_SPIKE = RegistryHelper.registerFeature("crystal_spike",
             () -> new CrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
 
@@ -33,8 +26,8 @@ public class GeodePlusFeatureRegistry {
     public static final Supplier<WrappistCrystalSpikeFeature> WRAPPIST_CRYSTAL_SPIKE = RegistryHelper.registerFeature("wrappist_crystal_spike",
             () -> new WrappistCrystalSpikeFeature(GeodeCrystalSpikeConfig.CODEC));
 
-    public static final Supplier<OceanGeodeFeature> OCEAN_GEODE = RegistryHelper.registerFeature("ocean_geode",
-            () -> new OceanGeodeFeature(GeodeConfiguration.CODEC));
+    public static final Supplier<GeodeFeature> GEODE = RegistryHelper.registerFeature("geode",
+            () -> new GeodeFeature(GeodeConfiguration.CODEC));
 
-    public static void initialize() {};
+    public static void init() {};
 }

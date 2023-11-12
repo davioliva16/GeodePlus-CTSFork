@@ -29,7 +29,7 @@ public class BlockEntityWithoutLevelRendererMixin {
     @Shadow
     private final EntityModelSet entityModelSet;
 
-    public BlockEntityWithoutLevelRendererMixin(EntityModelSet entityModelSet, BlockEntityRendererProvider.Context context) {
+    public BlockEntityWithoutLevelRendererMixin(EntityModelSet entityModelSet) {
         this.entityModelSet = entityModelSet;
     }
 

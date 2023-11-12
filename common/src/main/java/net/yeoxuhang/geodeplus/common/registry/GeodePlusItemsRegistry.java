@@ -24,5 +24,5 @@ public class GeodePlusItemsRegistry {
     /*public static final Supplier<WrappistGoatHornItem> WRAPPIST_GOAT_HORN = RegistryHelper.registerItem("wrappist_goat_horn",
             () -> new WrappistGoatHornItem(new Item.Properties().stacksTo(1)));*/
 
-    public static void initialize() {};
+    public static void init() {};
 }

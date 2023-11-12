@@ -93,6 +93,11 @@ public class GeodePlusTagRegistry {
 
         public static final TagKey<Block> GEODE_INVALID_BLOCKS
                 = blockTag("geode_invalid_blocks");
+
+        public static final TagKey<Block> GEODES_CANNOT_REPLACE
+                = blockTag("geodes_cannot_replace");
+
+
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(GeodePlus.MOD_ID, name));
         }

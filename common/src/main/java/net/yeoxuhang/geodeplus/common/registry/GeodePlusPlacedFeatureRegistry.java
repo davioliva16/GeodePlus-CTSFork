@@ -273,5 +273,5 @@ public class GeodePlusPlacedFeatureRegistry {
         register(context, key, configuration, List.of(modifiers));
     }
 
-    public static void initialize() {};
+    public static void init() {}
 }

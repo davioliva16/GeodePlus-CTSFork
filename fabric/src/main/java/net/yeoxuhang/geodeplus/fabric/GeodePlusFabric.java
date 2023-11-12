@@ -25,7 +25,7 @@ public class GeodePlusFabric implements ModInitializer {
         GeodePlus.init();
         registerCreativeTab();
         registerBrewingRecipes();
-        new GeodePlusGeodeBiomeModifier().biomeModificationHelper();
+        new GeodePlusGeodeBiomeModifier().init();
     }
 
     public static void registerBrewingRecipes(){

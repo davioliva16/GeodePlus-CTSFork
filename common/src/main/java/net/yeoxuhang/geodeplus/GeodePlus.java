@@ -8,13 +8,13 @@ public class GeodePlus {
 
     public static final String MOD_ID = "geode_plus";
     public static void init() {
-        GeodePlusTrimMaterialsAndPatternsRegistry.initialize();
-        GeodePlusItemsRegistry.initialize();
-        GeodePlusBlocksRegistry.initialize();
-        GeodePlusBlockEntityRegistry.initialize();
-        GeodePlusFeatureRegistry.initialize();
-        GeodePlusPlacedFeatureRegistry.initialize();
-        GeodePlusConfiguredFeatureRegistry.initialize();
+        GeodePlusTrimMaterialsAndPatternsRegistry.init();
+        GeodePlusItemsRegistry.init();
+        GeodePlusBlocksRegistry.init();
+        GeodePlusBlockEntityRegistry.init();
+        GeodePlusFeatureRegistry.init();
+        GeodePlusPlacedFeatureRegistry.init();
+        GeodePlusConfiguredFeatureRegistry.init();
         ConfigManager.register(GeodePlus.MOD_ID ,new GeodePlusCommonConfigs());
     }
 }
