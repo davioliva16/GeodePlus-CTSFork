@@ -420,3 +420,17 @@ Fix
 ∎Darker armour trims color didn't show properly
 ∎Fixed Forge client couldn't start
 ---------------------------------------------------------
+
+Changelog for 1.2.2
+---------------------------------------------------------
+Change
+∎Port to 1.20.1, No longer support 1.19.3, 1.19.4
+∎More config options now
+∎Now you can enable silk-touch budding blocks through config file!
+---------------------------------------------------------
+Fix
+∎When trims drop from crystals, doesn't drop crystal shards also
+∎Blocks color on maps doesn't match properly
+∎Recipes no longer override vanilla recipes
+∎Geodes now no longer replace other vanilla structures
+---------------------------------------------------------
