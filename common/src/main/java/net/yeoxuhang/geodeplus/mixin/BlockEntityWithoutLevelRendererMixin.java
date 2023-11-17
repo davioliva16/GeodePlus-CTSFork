@@ -7,27 +7,38 @@ import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BedBlockEntity;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
 import net.yeoxuhang.geodeplus.client.model.WrappistPedestalBlockEntityModel;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Objects;
+
 @Mixin(BlockEntityWithoutLevelRenderer.class)
 public class BlockEntityWithoutLevelRendererMixin {
     public WrappistPedestalBlockEntityModel wrappistPedestal;
     @Shadow
     private final EntityModelSet entityModelSet;
+    @Shadow @Final private BlockEntityRenderDispatcher blockEntityRenderDispatcher;
 
     public BlockEntityWithoutLevelRendererMixin(EntityModelSet entityModelSet) {
         this.entityModelSet = entityModelSet;
@@ -36,8 +47,8 @@ public class BlockEntityWithoutLevelRendererMixin {
     @Inject(method = "renderByItem", at = @At("RETURN"))
     private void renderByItemGeodePlus(ItemStack itemStack, ItemDisplayContext itemDisplayContext, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, CallbackInfo ci) {
         if (itemStack.is(GeodePlusBlocksRegistry.WRAPPIST_PEDESTAL.get().asItem())) {
-            float tick1 = WrappistPedestalBlockEntity.tick();
-            float tick = tick1 / 36.0F;
+            float worldTick = this.blockEntityRenderDispatcher.level.getGameTime();
+            float tick = worldTick / 10.0F;
             poseStack.pushPose();
             poseStack.scale(1.1F, 1.1F, 1.1F);
             poseStack.translate(0.8, 1, 0);

@@ -41,8 +41,8 @@ public class AncientDebrisClusterBlock extends AmethystBlock implements SimpleWa
         this.westAabb = Block.box((16 - box), i, i, 16.0D, (16 - i), (16 - i));
     }
 
-    public VoxelShape getShape(BlockState p_152021_, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {
-        Direction direction = p_152021_.getValue(FACING);
+    public VoxelShape getShape(BlockState blockState, BlockGetter p_152022_, BlockPos p_152023_, CollisionContext p_152024_) {
+        Direction direction = blockState.getValue(FACING);
         switch(direction) {
             case NORTH:
                 return this.northAabb;

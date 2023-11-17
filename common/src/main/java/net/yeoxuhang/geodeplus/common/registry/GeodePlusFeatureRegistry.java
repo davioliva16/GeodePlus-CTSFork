@@ -29,5 +29,8 @@ public class GeodePlusFeatureRegistry {
     public static final Supplier<GeodeFeature> GEODE = RegistryHelper.registerFeature("geode",
             () -> new GeodeFeature(GeodeConfiguration.CODEC));
 
+    public static final Supplier<OceanGeodeFeature> OCEAN_GEODE = RegistryHelper.registerFeature("ocean_geode",
+            () -> new OceanGeodeFeature(GeodeConfiguration.CODEC));
+
     public static void init() {};
 }

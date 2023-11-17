@@ -26,11 +26,7 @@ public class WrappistPedestalBlockEntityModel extends Model {
 		this.crystal2 = this.crystals.getChild("crystal2");
 		this.crystal3 = this.crystals.getChild("crystal3");
 		this.crystal4 = this.crystals.getChild("crystal4");
-
 	}
-
-	private static float y = 0;
-	public static float te = ++y;
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();

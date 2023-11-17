@@ -20,9 +20,8 @@ import net.yeoxuhang.geodeplus.common.block.entity.WrappistPedestalBlockEntity;
 import java.util.Calendar;
 
 public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlockEntity> implements BlockEntityRenderer<T> {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/wrappist_pedestal.png");
-    public static final ResourceLocation XMAS = new ResourceLocation(GeodePlus.MOD_ID, "textures/entity/wrappist_pedestal/christmas.png");
-
+    public static final ResourceLocation TEXTURE = GeodePlus.createID("textures/entity/wrappist_pedestal/wrappist_pedestal.png");
+    public static final ResourceLocation XMAS = GeodePlus.createID("textures/entity/wrappist_pedestal/christmas.png");
     private final ItemRenderer itemRenderer;
     private final EntityRenderDispatcher entityRenderer;
     private boolean xmasTextures;
@@ -59,7 +58,6 @@ public class WrappistPedestalBlockEntityRenderer<T extends WrappistPedestalBlock
             poseStack.scale(0.35F, 0.35F, 0.35F);
             poseStack.mulPose(Axis.YP.rotationDegrees(tick % 360.0F));
             poseStack.mulPose(Axis.XP.rotationDegrees(-180.0F));
-
             this.itemRenderer.renderStatic(entity.getItem(0), ItemDisplayContext.FIXED, i, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, entity.getLevel(), j);
             poseStack.popPose();
         }

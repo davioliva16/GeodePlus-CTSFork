@@ -14,23 +14,23 @@ import org.jetbrains.annotations.Nullable;
 
 public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyContainer {
     ItemStack item;
-    static int tick = 0;
+
     public WrappistPedestalBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), pWorldPosition, pBlockState);
         this.item = ItemStack.EMPTY;
     }
     @Override
-    public int[] getSlotsForFace(Direction p_19238_) {
+    public int[] getSlotsForFace(Direction direction) {
         return new int[0];
     }
 
     @Override
-    public boolean canPlaceItemThroughFace(int p_19235_, ItemStack p_19236_, @Nullable Direction p_19237_) {
+    public boolean canPlaceItemThroughFace(int i, ItemStack stack, @Nullable Direction direction) {
         return false;
     }
 
     @Override
-    public boolean canTakeItemThroughFace(int p_19239_, ItemStack p_19240_, Direction p_19241_) {
+    public boolean canTakeItemThroughFace(int i, ItemStack stack, Direction direction) {
         return false;
     }
 
@@ -115,9 +115,5 @@ public class WrappistPedestalBlockEntity extends BlockEntity implements WorldlyC
 
     public int getMaxStackSize() {
         return 64;
-    }
-
-    public static float tick(){
-        return ++tick;
     }
 }

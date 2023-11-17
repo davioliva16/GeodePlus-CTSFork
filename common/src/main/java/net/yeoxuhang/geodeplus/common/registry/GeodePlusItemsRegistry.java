@@ -1,6 +1,7 @@
 package net.yeoxuhang.geodeplus.common.registry;
 
 import net.minecraft.world.item.SmithingTemplateItem;
+import net.yeoxuhang.geodeplus.common.item.WrappistGoatHornItem;
 import net.yeoxuhang.geodeplus.platform.RegistryHelper;
 import net.minecraft.world.item.Item;
 

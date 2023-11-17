@@ -176,11 +176,11 @@ public class GeodePlusPlacedFeatureRegistry {
     private static RarityFilter rarityBlackstoneGoldNuggetGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_BLACKSTONE_GOLD_NUGGET_GEODE.get());}
     private static RarityFilter rarityBlackstoneQuartzGeode(){return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_BLACKSTONE_QUARTZ_GEODE.get());}
     private static CountPlacement placementCrystal() {
-        return CountPlacement.of(20);
+        return CountPlacement.of(5);
     }
 
     private static CountPlacement placementEndCrystal() {
-        return CountPlacement.of(5);
+        return CountPlacement.of(1);
     }
     private static RarityFilter rarityEndWrappistGeode() {
         return RarityFilter.onAverageOnceEvery(GeodePlusCommonConfigs.RARITY_END_WRAPPIST_GEODE.get());

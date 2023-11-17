@@ -1,8 +1,13 @@
 package net.yeoxuhang.geodeplus.platform.fabric;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.armortrim.TrimPattern;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.minecraft.core.Registry;
@@ -24,6 +29,11 @@ public class RegistryHelperImpl {
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
         T registry = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GeodePlus.MOD_ID, name), item.get());
+        return () -> registry;
+    }
+
+    public static <T extends Entity> Supplier<EntityType<T>> registerEntity(String name, EntityType.EntityFactory<T> entityFactory, MobCategory category, float width, float height, int clientTrackingRange) {
+        EntityType<T> registry = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(GeodePlus.MOD_ID, name), FabricEntityTypeBuilder.create(category, entityFactory).dimensions(EntityDimensions.scalable(width, height)).trackRangeChunks(clientTrackingRange).build());
         return () -> registry;
     }
 

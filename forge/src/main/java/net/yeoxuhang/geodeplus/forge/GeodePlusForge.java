@@ -2,6 +2,7 @@ package net.yeoxuhang.geodeplus.forge;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,9 +15,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
+import net.yeoxuhang.geodeplus.client.render.RenderNothing;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
+import net.yeoxuhang.geodeplus.common.registry.GeodePlusEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusBiomeModifierRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusLootModifierRegistry;
@@ -49,6 +52,7 @@ public class GeodePlusForge {
                     GeodePlusItemsRegistry.WRAPPIST_SHARD,
                     GeodePlusItemsRegistry.CELESTITE_SHARD,
                     GeodePlusItemsRegistry.PINK_TOPAZ,
+                    //GeodePlusItemsRegistry.WRAPPIST_GOAT_HORN,
                     GeodePlusBlocksRegistry.WRAPPIST_GLASS,
                     GeodePlusBlocksRegistry.CELESTITE_GLASS,
                     GeodePlusBlocksRegistry.PINK_TOPAZ_GLASS,
@@ -177,6 +181,7 @@ public class GeodePlusForge {
         DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> GeodePlusClient::init);
         RegistryHelperImpl.ITEMS.register(eventBus);
         RegistryHelperImpl.BLOCKS.register(eventBus);
+        //RegistryHelperImpl.ENTITY_TYPES.register(eventBus);
         BlockEntityTypeHelperImpl.BLOCK_ENTITIES.register(eventBus);
         RegistryHelperImpl.FEATURES.register(eventBus);
         RegistryHelperImpl.PLACED_FEATURES.register(eventBus);
@@ -203,6 +208,7 @@ public class GeodePlusForge {
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent e) {
             //GeodePlusClient.initClient();
+            EntityRenderers.register(GeodePlusEntityRegistry.WRAPPIST_HORN_EFFECT.get(), RenderNothing::new);
             BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), WrappistPedestalBlockEntityRenderer::new);
         }
 

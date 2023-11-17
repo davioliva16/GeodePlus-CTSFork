@@ -11,6 +11,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BuddingAmethystBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.*;
@@ -25,10 +26,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class GeodeFeature extends Feature<GeodeConfiguration> {
+public class OceanGeodeFeature extends Feature<GeodeConfiguration> {
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public GeodeFeature(Codec<GeodeConfiguration> codec) {
+    public OceanGeodeFeature(Codec<GeodeConfiguration> codec) {
         super(codec);
     }
 
@@ -131,7 +132,7 @@ public class GeodeFeature extends Feature<GeodeConfiguration> {
                                         blockState = blockState.setValue(BlockStateProperties.WATERLOGGED, blockState2.getFluidState().isSource());
                                     }
 
-                                    if (canClusterGrowAtState(blockState2)) {
+                                    if (BuddingAmethystBlock.canClusterGrowAtState(blockState2)) {
                                         this.safeSetBlock(worldGenLevel, blockPos6, blockState, predicate);
                                         break;
                                     }
@@ -160,7 +161,7 @@ public class GeodeFeature extends Feature<GeodeConfiguration> {
                 } while(s < h);
 
                 if (bl && t >= l && s < e) {
-                    this.safeSetBlock(worldGenLevel, blockPos3, Blocks.AIR.defaultBlockState(), predicate);
+                    this.safeSetBlock(worldGenLevel, blockPos3, Blocks.WATER.defaultBlockState(), predicate);
                     Direction[] var56 = DIRECTIONS;
                     int var59 = var56.length;
 
@@ -192,9 +193,5 @@ public class GeodeFeature extends Feature<GeodeConfiguration> {
                 }
             }
         }
-    }
-
-    public static boolean canClusterGrowAtState(BlockState blockState) {
-        return blockState.isAir() || blockState.is(Blocks.WATER) && blockState.getFluidState().getAmount() == 8;
     }
 }
