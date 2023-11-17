@@ -14,7 +14,7 @@ public class GeodePlus {
         GeodePlusBlocksRegistry.init();
         GeodePlusBlockEntityRegistry.init();
         GeodePlusFeatureRegistry.init();
-        GeodePlusEntityRegistry.init();
+        //GeodePlusEntityRegistry.init();
         GeodePlusPlacedFeatureRegistry.init();
         GeodePlusConfiguredFeatureRegistry.init();
         ConfigManager.register(GeodePlus.MOD_ID ,new GeodePlusCommonConfigs());

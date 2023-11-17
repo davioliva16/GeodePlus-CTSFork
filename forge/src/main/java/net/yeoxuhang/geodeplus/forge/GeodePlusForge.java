@@ -15,11 +15,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.yeoxuhang.geodeplus.GeodePlus;
 import net.yeoxuhang.geodeplus.client.GeodePlusClient;
-import net.yeoxuhang.geodeplus.client.render.RenderNothing;
 import net.yeoxuhang.geodeplus.client.render.WrappistPedestalBlockEntityRenderer;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlockEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusBlocksRegistry;
-import net.yeoxuhang.geodeplus.common.registry.GeodePlusEntityRegistry;
 import net.yeoxuhang.geodeplus.common.registry.GeodePlusItemsRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusBiomeModifierRegistry;
 import net.yeoxuhang.geodeplus.forge.registry.GeodePlusLootModifierRegistry;
@@ -208,7 +206,7 @@ public class GeodePlusForge {
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent e) {
             //GeodePlusClient.initClient();
-            EntityRenderers.register(GeodePlusEntityRegistry.WRAPPIST_HORN_EFFECT.get(), RenderNothing::new);
+            //EntityRenderers.register(GeodePlusEntityRegistry.WRAPPIST_HORN_EFFECT.get(), RenderNothing::new);
             BlockEntityRenderers.register(GeodePlusBlockEntityRegistry.WRAPPIST_PEDESTAL_ENTITY.get(), WrappistPedestalBlockEntityRenderer::new);
         }
 

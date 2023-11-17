@@ -434,3 +434,10 @@ Fix
 ∎Recipes no longer override vanilla recipes
 ∎Geodes now no longer replace other vanilla structures
 ---------------------------------------------------------
+
+Changelog for 1.2.3
+---------------------------------------------------------
+Fix
+∎Wrappist Pedestal animation speed up when there are stacks of them
+∎Remove water from geodes, except Prismarine Geode
+---------------------------------------------------------
