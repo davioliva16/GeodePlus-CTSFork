@@ -26,7 +26,7 @@ public class LargeEchoCrystalGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_CRYSTAL )&& GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_ECHO_CRYSTAL.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_CRYSTAL) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_ECHO_CRYSTAL.get()) {
             this.features.forEach((holder) -> {
                 builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, holder);
             });

@@ -25,7 +25,7 @@ public class CelestiteGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_CELESTITE_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_CELESTITE_GEODE) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_CELESTITE_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

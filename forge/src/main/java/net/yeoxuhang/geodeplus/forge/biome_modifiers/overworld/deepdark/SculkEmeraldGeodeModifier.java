@@ -25,7 +25,7 @@ public class SculkEmeraldGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_SCULK_EMERALD_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_ECHO_GEODE) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_SCULK_EMERALD_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

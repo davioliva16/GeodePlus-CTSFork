@@ -25,7 +25,7 @@ public class GlowstoneGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_NETHER_GLOWSTONE_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_NETHER_GLOWSTONE_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_NETHER_GLOWSTONE_GEODE) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_NETHER_GLOWSTONE_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

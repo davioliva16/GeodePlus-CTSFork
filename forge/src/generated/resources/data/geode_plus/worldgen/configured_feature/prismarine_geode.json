@@ -1,5 +1,5 @@
 {
-  "type": "geode_plus:geode",
+  "type": "geode_plus:ocean_geode",
   "config": {
     "blocks": {
       "alternate_inner_layer_provider": {

@@ -2,14 +2,14 @@
   "mappings": {
     "net/yeoxuhang/geode_plus/client/mixin/BlockEntityWithoutLevelRendererMixin": {
       "onResourceManagerReload": "Lnet/minecraft/class_756;method_14491(Lnet/minecraft/class_3300;)V",
-      "renderByItem": "Lnet/minecraft/class_756;method_3166(Lnet/minecraft/class_1799;Lnet/minecraft/class_811;Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;II)V"
+      "renderByItem": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;renderByItem(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
     }
   },
   "data": {
     "named:intermediary": {
       "net/yeoxuhang/geode_plus/client/mixin/BlockEntityWithoutLevelRendererMixin": {
         "onResourceManagerReload": "Lnet/minecraft/class_756;method_14491(Lnet/minecraft/class_3300;)V",
-        "renderByItem": "Lnet/minecraft/class_756;method_3166(Lnet/minecraft/class_1799;Lnet/minecraft/class_811;Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;II)V"
+        "renderByItem": "Lnet/minecraft/client/renderer/BlockEntityWithoutLevelRenderer;renderByItem(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
       }
     }
   }

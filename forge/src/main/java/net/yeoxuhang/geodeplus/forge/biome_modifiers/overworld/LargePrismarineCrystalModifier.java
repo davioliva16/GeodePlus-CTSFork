@@ -25,7 +25,7 @@ public class LargePrismarineCrystalModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL )&& GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PRISMARINE_CRYSTAL) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_LARGE_PRISMARINE_CRYSTAL.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

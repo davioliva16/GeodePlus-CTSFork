@@ -25,7 +25,7 @@ public class WrappistGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_WRAPPIST_GEODE) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_END_WRAPPIST_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

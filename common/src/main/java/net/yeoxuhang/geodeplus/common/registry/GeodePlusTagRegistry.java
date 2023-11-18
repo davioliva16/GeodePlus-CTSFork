@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.Block;
 
 public class GeodePlusTagRegistry {
     public static class Biomes {
+        public static final TagKey<Biome> BLACKLIST_BIOMES
+                = biomeTag("blacklist_biomes");
         //Geodes
         public static final TagKey<Biome> HAS_PRISMARINE_GEODE
                 = biomeTag("has_prismarine_geode");

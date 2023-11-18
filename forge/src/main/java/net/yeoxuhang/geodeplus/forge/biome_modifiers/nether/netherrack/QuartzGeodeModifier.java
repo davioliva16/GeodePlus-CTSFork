@@ -25,7 +25,7 @@ public class QuartzGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_NETHER_QUARTZ_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_NETHER_QUARTZ_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_NETHER_QUARTZ_GEODE) && !biome.is(GeodePlusTagRegistry.Biomes.BLACKLIST_BIOMES) && GeodePlusCommonConfigs.SHOULD_GENERATE_NETHER_QUARTZ_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }

@@ -25,7 +25,7 @@ public class PinkTopazGeodeModifier implements BiomeModifier {
     }
 
     private void biomeModificationAddPhase(Holder<Biome> biome, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PINK_TOPAZ_GEODE )&& GeodePlusCommonConfigs.SHOULD_GENERATE_PINK_TOPAZ_GEODE.get()) {
+        if (biome.is(GeodePlusTagRegistry.Biomes.HAS_PINK_TOPAZ_GEODE) && GeodePlusCommonConfigs.SHOULD_GENERATE_PINK_TOPAZ_GEODE.get()) {
             builder.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, features);
         }
     }
