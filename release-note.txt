@@ -441,3 +441,15 @@ Fix
 ∎Wrappist Pedestal animation speed up when there are stacks of them
 ∎Remove water from geodes, except Prismarine Geode
 ---------------------------------------------------------
+
+
+Changelog for 1.2.4
+---------------------------------------------------------
+Added Feature
+∎Blacklist biomes tag (geode_plus:blacklist_biomes), add all the biomes that you dont want geodes to be generate
+∎Added comapt with Deeper and Darker
+---------------------------------------------------------
+Fix
+∎Crash when fabric setup
+∎Data pack codes
+---------------------------------------------------------
