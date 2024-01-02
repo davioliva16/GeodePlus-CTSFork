@@ -99,9 +99,22 @@ public class GeodePlusTagRegistry {
         public static final TagKey<Block> GEODES_CANNOT_REPLACE
                 = blockTag("geodes_cannot_replace");
 
+        // Common
+        public static final TagKey<Block> BUDS
+                = commonBlockTag("buds");
+
+        public static final TagKey<Block> CLUSTERS
+                = commonBlockTag("clusters");
+
+        public static final TagKey<Block> BUDDING_BLOCKS
+                = commonBlockTag("budding_blocks");
 
         private static TagKey<Block> blockTag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(GeodePlus.MOD_ID, name));
+        }
+
+        private static TagKey<Block> commonBlockTag(String name) {
+            return TagKey.create(Registries.BLOCK, new ResourceLocation("c", name));
         }
     }
     public static class Items {
