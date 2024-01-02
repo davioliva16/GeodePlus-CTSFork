@@ -1,0 +1,15 @@
+{
+  "values": [
+    "geode_plus:celestite_cluster",
+    "geode_plus:nether_ancient_debris_cluster",
+    "geode_plus:diamond_crystal_block",
+    "geode_plus:emerald_cluster",
+    "geode_plus:nether_glowstone_cluster",
+    "geode_plus:nether_gold_nugget_cluster_block",
+    "geode_plus:lapis_cluster_block",
+    "geode_plus:prismarine_cluster_block",
+    "geode_plus:nether_quartz_crystal_block",
+    "geode_plus:redstone_crystal_block",
+    "geode_plus:wrappist_cluster"
+  ]
+}
