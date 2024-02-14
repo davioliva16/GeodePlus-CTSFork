@@ -2,6 +2,7 @@ package net.yeoxuhang.geodeplus.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -37,7 +38,20 @@ public class BuddingPrismarineBlock extends AmethystBlock {
     }
 
     public void randomTick(BlockState p_220898_, ServerLevel p_220899_, BlockPos p_220900_, RandomSource p_220901_) {
-        if (p_220901_.nextInt(10) == 0) {
+
+        //Create To Skies Changes: ----------------------------------------------------------------------------
+        int GrowthChance = 0;
+        //Set growth factor based on how many layers of ice are on top of prismarine
+        for(int i = 1; i < 11; i++) {
+            BlockState state = p_220899_.getLevel().getBlockState(p_220900_.above(i));
+            if(state.getFluidState().getType()== Fluids.WATER){
+                GrowthChance++;
+            } else {
+                break;
+            }
+        }
+        //------------------------------------------------------------------------------------------------------
+        if (p_220901_.nextInt(10) <= GrowthChance) {
             Direction direction = DIRECTIONS[p_220901_.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = p_220900_.relative(direction);
             BlockState blockstate = p_220899_.getBlockState(blockpos);
